@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOURA'S BUTTERFLIES - فراشات نورا</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <!-- Logo -->
+                <div class="logo">
+                    <h1>NOURA'S <span class="butterfly-icon">🦋</span> BUTTERFLIES</h1>
+                </div>
+                
+                <!-- Navigation Menu -->
+                <ul id="navMenu" class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link active">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#products" class="nav-link">المنتجات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">من نحن</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">تواصل معنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#cart" class="nav-link cart-link">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <!-- Mobile Menu Toggle -->
+                <div id="hamburger" class="hamburger" aria-label="Toggle Menu" aria-expanded="false" aria-controls="navMenu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">اكتشفي جمال الفراشات مع نورا</h1>
+                <p class="hero-subtitle">مجموعة فريدة من الإكسسوارات والديكورات المستوحاة من جمال الفراشات</p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn btn-primary">تسوقي الآن</a>
+                    <a href="#about" class="btn btn-secondary">اعرفي أكثر</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="butterfly-animation">
+                    <span class="butterfly">🦋</span>
+                    <span class="butterfly">🦋</span>
+                    <span class="butterfly">🦋</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section id="products" class="featured-products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">منتجاتنا المميزة</h2>
+                <p class="section-subtitle">اختاري من مجموعتنا الحصرية</p>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/300x300/FFB6C1/FFFFFF?text=🦋+Butterfly+Necklace" alt="قلادة الفراشة الذهبية">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">نظرة سريعة</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">قلادة الفراشة الذهبية</h3>
+                        <p class="product-price">250 ج.م</p>
+                        <button class="add-to-cart-btn" data-product="butterfly-necklace">
+                            <i class="fas fa-shopping-cart"></i>
+                            أضيفي للسلة
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/300x300/DDA0DD/FFFFFF?text=🦋+Butterfly+Earrings" alt="أقراط الفراشات الملونة">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">نظرة سريعة</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">أقراط الفراشات الملونة</h3>
+                        <p class="product-price">180 ج.م</p>
+                        <button class="add-to-cart-btn" data-product="butterfly-earrings">
+                            <i class="fas fa-shopping-cart"></i>
+                            أضيفي للسلة
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/300x300/98FB98/FFFFFF?text=🦋+Butterfly+Bracelet" alt="سوار الفراشة الأنيق">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">نظرة سريعة</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">سوار الفراشة الأنيق</h3>
+                        <p class="product-price">320 ج.م</p>
+                        <button class="add-to-cart-btn" data-product="butterfly-bracelet">
+                            <i class="fas fa-shopping-cart"></i>
+                            أضيفي للسلة
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/300x300/F0E68C/FFFFFF?text=🦋+Butterfly+Ring" alt="خاتم الفراشة الفضي">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">نظرة سريعة</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">خاتم الفراشة الفضي</h3>
+                        <p class="product-price">150 ج.م</p>
+                        <button class="add-to-cart-btn" data-product="butterfly-ring">
+                            <i class="fas fa-shopping-cart"></i>
+                            أضيفي للسلة
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/300x300/FFE4E1/FFFFFF?text=🦋+Butterfly+Brooch" alt="بروش الفراشة الكريستالي">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">نظرة سريعة</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">بروش الفراشة الكريستالي</h3>
+                        <p class="product-price">280 ج.م</p>
+                        <button class="add-to-cart-btn" data-product="butterfly-brooch">
+                            <i class="fas fa-shopping-cart"></i>
+                            أضيفي للسلة
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/300x300/E6E6FA/FFFFFF?text=🦋+Butterfly+Hairpin" alt="دبوس شعر الفراشة">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">نظرة سريعة</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">دبوس شعر الفراشة</h3>
+                        <p class="product-price">120 ج.م</p>
+                        <button class="add-to-cart-btn" data-product="butterfly-hairpin">
+                            <i class="fas fa-shopping-cart"></i>
+                            أضيفي للسلة
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">تصنيفاتنا</h2>
+                <p class="section-subtitle">اكتشفي مجموعاتنا المتنوعة</p>
+            </div>
+            
+            <div class="categories-grid">
+                <!-- Category 1 -->
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://via.placeholder.com/300x200/e8c8b5/8d6b58?text=🦋+إكسسوارات+الشعر" alt="إكسسوارات الشعر">
+                        <div class="category-overlay">
+                            <h3>إكسسوارات الشعر</h3>
+                            <p>دبابيس وربطات شعر أنيقة</p>
+                            <a href="#products" class="category-btn">تسوقي الآن</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 2 -->
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://via.placeholder.com/300x200/bb9c8b/fbfbfa?text=🦋+المجوهرات" alt="المجوهرات">
+                        <div class="category-overlay">
+                            <h3>المجوهرات</h3>
+                            <p>قلادات وأقراط مميزة</p>
+                            <a href="#products" class="category-btn">تسوقي الآن</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 3 -->
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://via.placeholder.com/300x200/8d6b58/e8c8b5?text=🦋+الأساور" alt="الأساور">
+                        <div class="category-overlay">
+                            <h3>الأساور</h3>
+                            <p>أساور أنيقة لكل المناسبات</p>
+                            <a href="#products" class="category-btn">تسوقي الآن</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 4 -->
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://via.placeholder.com/300x200/fbfbfa/bb9c8b?text=🦋+البروشات" alt="البروشات">
+                        <div class="category-overlay">
+                            <h3>البروشات</h3>
+                            <p>بروشات كريستالية فاخرة</p>
+                            <a href="#products" class="category-btn">تسوقي الآن</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offers Section -->
+    <section id="offers" class="offers">
+        <div class="container">
+            <div class="offers-content">
+                <div class="offer-main">
+                    <div class="offer-badge">
+                        <span class="discount-text">خصم</span>
+                        <span class="discount-percent">30%</span>
+                    </div>
+                    <div class="offer-details">
+                        <h2 class="offer-title">عرض خاص على المجموعة الجديدة</h2>
+                        <p class="offer-description">
+                            اكتشفي مجموعتنا الجديدة من إكسسوارات الفراشات الأنيقة واحصلي على خصم 30% 
+                            على جميع القطع لفترة محدودة فقط!
+                        </p>
+                        <div class="offer-features">
+                            <div class="feature-item">
+                                <i class="fas fa-shipping-fast"></i>
+                                <span>شحن مجاني للطلبات أكثر من 200 ج.م</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-gift"></i>
+                                <span>هدية مجانية مع كل طلب</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-clock"></i>
+                                <span>العرض ساري حتى نهاية الشهر</span>
+                            </div>
+                        </div>
+                        <div class="offer-actions">
+                            <a href="#products" class="btn btn-primary offer-btn">
+                                <i class="fas fa-shopping-bag"></i>
+                                تسوقي الآن
+                            </a>
+                            <div class="offer-timer">
+                                <span class="timer-label">ينتهي العرض خلال:</span>
+                                <div class="countdown">
+                                    <div class="time-unit">
+                                        <span class="time-number" id="days">15</span>
+                                        <span class="time-label">يوم</span>
+                                    </div>
+                                    <div class="time-unit">
+                                        <span class="time-number" id="hours">08</span>
+                                        <span class="time-label">ساعة</span>
+                                    </div>
+                                    <div class="time-unit">
+                                        <span class="time-number" id="minutes">45</span>
+                                        <span class="time-label">دقيقة</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="offer-visual">
+                    <div class="offer-image">
+                        <img src="https://via.placeholder.com/400x300/e8c8b5/8d6b58?text=🦋+عرض+خاص" alt="عرض خاص">
+                        <div class="floating-elements">
+                            <span class="float-butterfly">🦋</span>
+                            <span class="float-butterfly">🦋</span>
+                            <span class="float-star">✨</span>
+                            <span class="float-star">✨</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">عن فراشات نورا</h2>
+                <p class="section-subtitle">قصة إبداع وجمال</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-story">
+                        <h3>قصتنا</h3>
+                        <p class="about-description">
+                            بدأت رحلتنا من حب عميق لجمال الفراشات وسحرها الأخاذ. في فراشات نورا، نؤمن بأن كل امرأة تستحق أن تشع جمالاً وأناقة كالفراشة. 
+                            لذلك نصمم إكسسوارات فريدة تعكس روحكِ المتألقة وتضيف لمسة سحرية لإطلالتكِ.
+                        </p>
+                    </div>
+                    
+                    <div class="about-mission">
+                        <h3>رسالتنا</h3>
+                        <p>
+                            نسعى لتمكين كل امرأة من التعبير عن شخصيتها الفريدة من خلال إكسسوارات عالية الجودة، مصنوعة بحب وعناية فائقة، 
+                            لتكون رفيقة دائمة في رحلة جمالها وأناقتها.
+                        </p>
+                    </div>
+                    
+                    <div class="about-values">
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-gem"></i>
+                            </div>
+                            <div class="value-content">
+                                <h4>جودة استثنائية</h4>
+                                <p>نختار أجود الخامات والمواد المقاومة للتآكل</p>
+                            </div>
+                        </div>
+                        
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <div class="value-content">
+                                <h4>تصاميم حصرية</h4>
+                                <p>إبداعات فريدة مستوحاة من جمال الطبيعة</p>
+                            </div>
+                        </div>
+                        
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="value-content">
+                                <h4>صنع بحب</h4>
+                                <p>كل قطعة مصنوعة بعناية وحب لتكون مميزة</p>
+                            </div>
+                        </div>
+                        
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-shipping-fast"></i>
+                            </div>
+                            <div class="value-content">
+                                <h4>خدمة متميزة</h4>
+                                <p>توصيل سريع وخدمة عملاء على مدار الساعة</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-visual">
+                    <div class="about-image-main">
+                        <img src="https://via.placeholder.com/400x300/e8c8b5/8d6b58?text=🦋+فراشات+نورا" alt="عن فراشات نورا">
+                        <div class="image-decoration">
+                            <span class="butterfly-float">🦋</span>
+                            <span class="butterfly-float">🦋</span>
+                            <span class="butterfly-float">🦋</span>
+                        </div>
+                    </div>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">عميلة سعيدة</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100+</div>
+                            <div class="stat-label">تصميم فريد</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">سنوات خبرة</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">آراء عملائنا</h2>
+                <p class="section-subtitle">ما تقوله عملاؤنا عن تجربتهن معنا</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "منتجات رائعة وجودة عالية جداً! القلادة التي اشتريتها أصبحت قطعتي المفضلة. 
+                            التصميم أنيق والخامة ممتازة. بالتأكيد سأشتري مرة أخرى."
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://via.placeholder.com/60x60/bb9c8b/ffffff?text=س" alt="سارة أحمد">
+                        </div>
+                        <div class="author-info">
+                            <h4 class="author-name">سارة أحمد</h4>
+                            <p class="author-location">القاهرة</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "خدمة عملاء ممتازة وتوصيل سريع! الأقراط وصلت في تغليف جميل جداً. 
+                            التصميم فريد ومميز، وأحببت فكرة الفراشات كثيراً."
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://via.placeholder.com/60x60/e8c8b5/ffffff?text=م" alt="مريم محمد">
+                        </div>
+                        <div class="author-info">
+                            <h4 class="author-name">مريم محمد</h4>
+                            <p class="author-location">الإسكندرية</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "أجمل إكسسوارات شفتها! السوار اللي اشتريته بقى محور إعجاب كل صحباتي. 
+                            جودة عالية وسعر مناسب. شكراً فراشات نورا!"
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://via.placeholder.com/60x60/8d6b58/ffffff?text=ن" alt="نورا علي">
+                        </div>
+                        <div class="author-info">
+                            <h4 class="author-name">نورا علي</h4>
+                            <p class="author-location">الجيزة</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonials-stats">
+                <div class="stat-box">
+                    <div class="stat-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-number">98%</span>
+                        <span class="stat-label">رضا العملاء</span>
+                    </div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-number">4.9</span>
+                        <span class="stat-label">تقييم المنتجات</span>
+                    </div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">عميلة سعيدة</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2 class="newsletter-title">اشتركي في نشرتنا الإخبارية</h2>
+                    <p class="newsletter-description">
+                        كوني أول من يعرف عن المنتجات الجديدة والعروض الحصرية والنصائح الجمالية
+                    </p>
+                    <div class="newsletter-benefits">
+                        <div class="benefit-item">
+                            <i class="fas fa-gift"></i>
+                            <span>خصم 10% على أول طلب</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-bell"></i>
+                            <span>إشعارات العروض الحصرية</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-sparkles"></i>
+                            <span>نصائح جمالية أسبوعية</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="newsletter-form">
+                    <form class="subscription-form" id="newsletterForm">
+                        <div class="form-group">
+                            <input type="text" id="subscriberName" placeholder="اسمكِ الكريم" required>
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="subscriberEmail" placeholder="بريدكِ الإلكتروني" required>
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <button type="submit" class="subscribe-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            اشتركي الآن
+                        </button>
+                    </form>
+                    <p class="privacy-note">
+                        <i class="fas fa-lock"></i>
+                        نحن نحترم خصوصيتك ولن نشارك بياناتك مع أي طرف ثالث
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3>NOURA'S <span class="butterfly-icon">🦋</span> BUTTERFLIES</h3>
+                        <p>جمالكِ يستحق الأفضل</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#products">المنتجات</a></li>
+                        <li><a href="#about">من نحن</a></li>
+                        <li><a href="#contact">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>تواصلي معنا</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> info@nourasbutterflies.com</p>
+                        <p><i class="fas fa-phone"></i> +20 123 456 7890</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>تابعينا</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="#" class="social-link whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 NOURA'S BUTTERFLIES. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
