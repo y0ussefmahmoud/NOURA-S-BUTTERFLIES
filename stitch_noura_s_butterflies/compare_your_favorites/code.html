@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Compare Your Favorites - Noura's Butterflies</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2b1c1",
+                        "background-light": "#ffffff",
+                        "background-dark": "#1d202b",
+                        "soft-beige": "#FDF8F3",
+                        "muted-taupe": "#86656d",
+                        "deep-charcoal": "#171213"
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Noto Sans', sans-serif;
+        }
+        .font-display {
+            font-family: 'Noto Serif', serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-deep-charcoal dark:text-white antialiased">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-solid border-[#f4f0f1] dark:border-gray-800">
+<div class="max-w-[1200px] mx-auto px-6 h-16 flex items-center justify-between">
+<div class="flex items-center gap-10">
+<div class="flex items-center gap-2 group cursor-pointer">
+<span class="material-symbols-outlined text-primary text-3xl">flutter_dash</span>
+<h1 class="font-display text-xl font-bold tracking-tight text-deep-charcoal dark:text-white">Noura's Butterflies</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Shop</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Sustainability</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+</div>
+<div class="flex items-center gap-5">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-muted-taupe text-lg">search</span>
+<input class="pl-10 pr-4 py-1.5 bg-[#f4f0f1] dark:bg-gray-800 border-none rounded-full text-sm focus:ring-1 focus:ring-primary w-48 transition-all focus:w-64" placeholder="Find a glow..." type="text"/>
+</div>
+<div class="flex items-center gap-3">
+<button class="p-2 hover:bg-primary/10 rounded-full transition-colors">
+<span class="material-symbols-outlined text-xl">favorite</span>
+</button>
+<button class="p-2 hover:bg-primary/10 rounded-full transition-colors relative">
+<span class="material-symbols-outlined text-xl">shopping_bag</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-primary rounded-full"></span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-[1200px] mx-auto px-6 py-10">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-2 mb-8 text-sm font-medium text-muted-taupe dark:text-gray-400">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Shop</a>
+<span class="material-symbols-outlined text-xs text-deep-charcoal dark:text-white">chevron_right</span>
+<span class="text-deep-charcoal dark:text-white">Compare Products</span>
+</nav>
+<!-- Page Heading -->
+<div class="mb-12">
+<h2 class="font-display text-4xl font-bold mb-4 tracking-tight">Compare Your Favorites</h2>
+<p class="text-muted-taupe dark:text-gray-400 max-w-2xl text-lg">
+                Discover the perfect match for your skin. Side-by-side comparison of our artisanal, vegan essentials crafted with botanical purity.
+            </p>
+</div>
+<!-- Comparison Table Structure -->
+<div class="relative overflow-hidden rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm">
+<div class="grid grid-cols-4 min-w-[900px]">
+<!-- Headers Column (Sticky visual) -->
+<div class="col-span-1 bg-white dark:bg-background-dark border-r border-gray-100 dark:border-gray-800">
+<div class="h-[420px] p-8 flex flex-col justify-end">
+<p class="font-display text-xl font-bold text-muted-taupe dark:text-gray-300">Specifications</p>
+</div>
+<!-- Attribute Labels -->
+<div class="divide-y divide-gray-100 dark:divide-gray-800">
+<div class="h-16 flex items-center px-8 font-display font-medium text-muted-taupe dark:text-gray-400 bg-soft-beige dark:bg-gray-800/20">Price</div>
+<div class="h-24 flex items-center px-8 font-display font-medium text-muted-taupe dark:text-gray-400">Key Ingredients</div>
+<div class="h-16 flex items-center px-8 font-display font-medium text-muted-taupe dark:text-gray-400 bg-soft-beige dark:bg-gray-800/20">Skin Type</div>
+<div class="h-16 flex items-center px-8 font-display font-medium text-muted-taupe dark:text-gray-400">Benefit</div>
+<div class="h-16 flex items-center px-8 font-display font-medium text-muted-taupe dark:text-gray-400 bg-soft-beige dark:bg-gray-800/20">Certification</div>
+</div>
+</div>
+<!-- Product 1 -->
+<div class="col-span-1 border-r border-gray-100 dark:border-gray-800 group transition-colors hover:bg-soft-beige/30">
+<div class="h-[420px] p-6 flex flex-col items-center text-center">
+<div class="relative w-full aspect-square bg-[#fcfcfc] dark:bg-gray-900 rounded-lg overflow-hidden mb-6">
+<img class="w-full h-full object-cover mix-blend-multiply dark:mix-blend-normal opacity-90 group-hover:scale-105 transition-transform duration-500" data-alt="Luxurious glass bottle of golden radiant facial serum" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIpxAYSv1K8AweMurapgfQ7a6e-DLs3MAkQ4LOFQyKx5m8fSv9gu90Yzq0KJUE5CZHIyrvX0jcEIpB8y460J0SpCJ6b_xqk4_Rto9zRdtz3UO_dkbqyj58nZIgjRH17mqYTEH1cJaNNXa5OX-0caYOAsPjjavI3C_yELUXW7Xj_YYuziCE4w7YcEyzTMF-t2OAQ3Y0OTNK89g9FPi00lqPxSXVO0a-YALe9wUHla6PURzIqMdefi-jigseFeRaXun46GnZjL6n5eM"/>
+<button class="absolute top-2 right-2 p-1.5 bg-white/80 dark:bg-black/50 backdrop-blur rounded-full hover:text-red-400 transition-colors">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+<h3 class="font-display text-lg font-bold mb-1">Radiant Glow Serum</h3>
+<p class="text-sm text-muted-taupe mb-4">Aura Collection</p>
+<button class="w-full bg-primary text-white font-bold py-2.5 rounded-lg hover:bg-primary/90 transition-all shadow-sm">
+                            Add to Cart
+                        </button>
+</div>
+<div class="divide-y divide-gray-100 dark:divide-gray-800 text-center text-sm">
+<div class="h-16 flex items-center justify-center font-bold bg-soft-beige dark:bg-gray-800/20">$42.00</div>
+<div class="h-24 flex items-center justify-center px-4 leading-relaxed">Rosehip Oil, Vitamin C, Hyaluronic Acid</div>
+<div class="h-16 flex items-center justify-center bg-soft-beige dark:bg-gray-800/20">All Skin Types</div>
+<div class="h-16 flex items-center justify-center">Brightening &amp; Firming</div>
+<div class="h-16 flex items-center justify-center bg-soft-beige dark:bg-gray-800/20 gap-2">
+<span class="material-symbols-outlined text-primary text-xl">flutter_dash</span>
+<span class="font-medium">100% Vegan</span>
+</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="col-span-1 border-r border-gray-100 dark:border-gray-800 group transition-colors hover:bg-soft-beige/30">
+<div class="h-[420px] p-6 flex flex-col items-center text-center">
+<div class="relative w-full aspect-square bg-[#fcfcfc] dark:bg-gray-900 rounded-lg overflow-hidden mb-6">
+<img class="w-full h-full object-cover mix-blend-multiply dark:mix-blend-normal opacity-90 group-hover:scale-105 transition-transform duration-500" data-alt="Matte lipstick in soft velvet pink rose shade" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWJhHIa2p-7XhjFfzQO3f-WGRg5PgGecIpI7AsSfgY3HTycvRYs4av5XP-uy0LBexqWqyWKAX0pqEcsujFWDz1QkGg1InhFBHaabjnxldIzVvkr91wEWdHAi8KWmXIigVvhdgZUzCHQ3BByaUe2AFi9KRSfmvyB8etEvx5Jznn7qGtzk1yThgyiwv1alB8RUKDq-AMeJSJnDo2qiQVw5AtJWcBplYtGrNrUUrbIetd1n-y8xXQlSXAslKK-Kejj0MB2582xHDNi-k"/>
+<button class="absolute top-2 right-2 p-1.5 bg-white/80 dark:bg-black/50 backdrop-blur rounded-full hover:text-red-400 transition-colors">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+<h3 class="font-display text-lg font-bold mb-1">Velvet Matte Lipstick</h3>
+<p class="text-sm text-muted-taupe mb-4">Petal Kiss Series</p>
+<button class="w-full bg-primary text-white font-bold py-2.5 rounded-lg hover:bg-primary/90 transition-all shadow-sm">
+                            Add to Cart
+                        </button>
+</div>
+<div class="divide-y divide-gray-100 dark:divide-gray-800 text-center text-sm">
+<div class="h-16 flex items-center justify-center font-bold bg-soft-beige dark:bg-gray-800/20">$28.00</div>
+<div class="h-24 flex items-center justify-center px-4 leading-relaxed">Shea Butter, Jojoba Oil, Mineral Pigments</div>
+<div class="h-16 flex items-center justify-center bg-soft-beige dark:bg-gray-800/20">Nurturing Formula</div>
+<div class="h-16 flex items-center justify-center">High-Pigment Matte</div>
+<div class="h-16 flex items-center justify-center bg-soft-beige dark:bg-gray-800/20 gap-2">
+<span class="material-symbols-outlined text-primary text-xl">flutter_dash</span>
+<span class="font-medium">Cruelty-Free</span>
+</div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="col-span-1 group transition-colors hover:bg-soft-beige/30">
+<div class="h-[420px] p-6 flex flex-col items-center text-center">
+<div class="relative w-full aspect-square bg-[#fcfcfc] dark:bg-gray-900 rounded-lg overflow-hidden mb-6">
+<img class="w-full h-full object-cover mix-blend-multiply dark:mix-blend-normal opacity-90 group-hover:scale-105 transition-transform duration-500" data-alt="Frosted glass mist bottle with dried petals nearby" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2-sKpJ46Ty3BwfiW65SyrB1M0C5qwWQ6GVglmdFO_GvIaAG0gGnlXC1vcAAU3cAc1yWdWMJRfoHrbvW0yMyrqJuKmp3_4FllAKqYprJPaSJIfKeGkkHlGLVETsMjYlua3_O7ipmDeC23ranzVDxG3meICyrvBlKVmaAkjLbiM9iva_lFAZRX7vNGogHhdlPWI4YzykuKcozJkORZBNXBdZ_58HNgTw69eM6Ex2sonXbB95kcpfe_YCoyl8BbUg5tgnm_h9wLOcmA"/>
+<button class="absolute top-2 right-2 p-1.5 bg-white/80 dark:bg-black/50 backdrop-blur rounded-full hover:text-red-400 transition-colors">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+<h3 class="font-display text-lg font-bold mb-1">Hydrating Petal Mist</h3>
+<p class="text-sm text-muted-taupe mb-4">Zen Garden Mist</p>
+<button class="w-full bg-primary text-white font-bold py-2.5 rounded-lg hover:bg-primary/90 transition-all shadow-sm">
+                            Add to Cart
+                        </button>
+</div>
+<div class="divide-y divide-gray-100 dark:divide-gray-800 text-center text-sm">
+<div class="h-16 flex items-center justify-center font-bold bg-soft-beige dark:bg-gray-800/20">$35.00</div>
+<div class="h-24 flex items-center justify-center px-4 leading-relaxed">Bulgarian Rose Water, Aloe Vera, Witch Hazel</div>
+<div class="h-16 flex items-center justify-center bg-soft-beige dark:bg-gray-800/20">Dry &amp; Sensitive</div>
+<div class="h-16 flex items-center justify-center">Soothing Refresh</div>
+<div class="h-16 flex items-center justify-center bg-soft-beige dark:bg-gray-800/20 gap-2">
+<span class="material-symbols-outlined text-primary text-xl">flutter_dash</span>
+<span class="font-medium">Organic Natural</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Add Another Slot (Call to Action) -->
+<div class="mt-12 flex justify-center">
+<button class="flex items-center gap-3 px-8 py-4 border-2 border-dashed border-primary/40 rounded-xl text-primary font-bold hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined">add_circle</span>
+                Add another product to compare
+            </button>
+</div>
+<!-- Sustainability Footer Section -->
+<section class="mt-24 pt-16 border-t border-gray-100 dark:border-gray-800">
+<div class="grid md:grid-cols-3 gap-12 text-center">
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 bg-soft-beige dark:bg-gray-800 rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">eco</span>
+</div>
+<h4 class="font-display text-lg font-bold mb-2">Sustainable Sourcing</h4>
+<p class="text-sm text-muted-taupe dark:text-gray-400 leading-relaxed">We partner with ethical farmers to ensure every petal is picked with respect for the Earth.</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 bg-soft-beige dark:bg-gray-800 rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">cruelty_free</span>
+</div>
+<h4 class="font-display text-lg font-bold mb-2">Always Cruelty-Free</h4>
+<p class="text-sm text-muted-taupe dark:text-gray-400 leading-relaxed">Tested on beauty lovers, never on animals. Leaping Bunny certified for a kind future.</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 bg-soft-beige dark:bg-gray-800 rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">recycling</span>
+</div>
+<h4 class="font-display text-lg font-bold mb-2">Plastic Neutral</h4>
+<p class="text-sm text-muted-taupe dark:text-gray-400 leading-relaxed">Our glass bottles and eco-luxe packaging are designed for a circular lifecycle.</p>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-soft-beige dark:bg-gray-900/50 py-16 mt-20 border-t border-gray-100 dark:border-gray-800">
+<div class="max-w-[1200px] mx-auto px-6 grid md:grid-cols-4 gap-12">
+<div class="col-span-2">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">flutter_dash</span>
+<h2 class="font-display text-2xl font-bold">Noura's Butterflies</h2>
+</div>
+<p class="text-muted-taupe dark:text-gray-400 max-w-sm mb-8">
+                    Elevating your daily ritual with the purest botanical extracts. Natural, vegan, and mindfully crafted for the modern individual.
+                </p>
+<div class="flex gap-4">
+<a class="p-2 bg-white dark:bg-gray-800 rounded-full hover:text-primary transition-colors shadow-sm" href="#">
+<span class="material-symbols-outlined text-lg">public</span>
+</a>
+<a class="p-2 bg-white dark:bg-gray-800 rounded-full hover:text-primary transition-colors shadow-sm" href="#">
+<span class="material-symbols-outlined text-lg">share</span>
+</a>
+</div>
+</div>
+<div>
+<h5 class="font-bold mb-6">Discover</h5>
+<ul class="space-y-4 text-sm text-muted-taupe dark:text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">Our Story</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">The Lab</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Store Locator</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Blog</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6">Support</h5>
+<ul class="space-y-4 text-sm text-muted-taupe dark:text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">Shipping &amp; Returns</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">FAQ</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Wholesale</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Accessibility</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-[1200px] mx-auto px-6 mt-16 pt-8 border-t border-gray-200 dark:border-gray-800 text-center text-xs text-muted-taupe">
+            © 2024 Noura's Butterflies Cosmetics. All rights reserved.
+        </div>
+</footer>
+</body></html>

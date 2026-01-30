@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ac777b",
+                        "accent-gold": "#D4AF37",
+                        "background-light": "#fbf9f4",
+                        "background-dark": "#1b1717",
+                        "cream": "#f7f6f7",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        h1, h2, h3 {
+            font-family: 'Noto Serif', serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen transition-colors duration-300">
+<!-- Main Layout Container -->
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header / Navigation Component -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 px-6 py-4 md:px-20 lg:px-40 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md sticky top-0 z-50">
+<div class="flex items-center gap-3">
+<div class="text-primary">
+<span class="material-symbols-outlined text-3xl">flutter_dash</span>
+</div>
+<h2 class="text-primary text-xl font-bold leading-tight tracking-tight font-display">Noura's Butterflies</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-10 items-center">
+<nav class="flex items-center gap-8">
+<a class="text-primary/80 hover:text-primary text-sm font-semibold transition-colors" href="#">Shop All</a>
+<a class="text-primary/80 hover:text-primary text-sm font-semibold transition-colors" href="#">Our Story</a>
+<a class="text-primary/80 hover:text-primary text-sm font-semibold transition-colors" href="#">Journal</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center p-2 text-primary">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-full h-10 px-5 bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all">
+<span class="truncate">Cart (0)</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content (404 Section) -->
+<main class="flex-1 flex flex-col items-center justify-center px-6 py-12 md:py-20">
+<div class="max-w-[800px] w-full flex flex-col items-center text-center">
+<!-- Whimsical Illustration Container -->
+<div class="w-full max-w-[500px] mb-8 relative">
+<div class="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl shadow-primary/10 bg-white dark:bg-zinc-900 border border-primary/5 p-4 flex items-center justify-center">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover rounded-2xl" data-alt="Soft watercolor illustration of butterflies flying over a misty flower path" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAKOkjE4Zsh-umh0NE54cW0swVscao2MwRM9Rhfrz4Q9EFRmTucRw-7gRV2PgdNxdV25ogz4gfimpfyKfAqdbD5E5lZz-RkDHoJmbGcZxYFxeFd1ehwjseE_L5MZ8zPA2t1xWDe02oF32dHRy08Gp_bbLqtd1IgVNHcwnm-p7qeYrGP-X-aNNY53TsLTU7KgrjfYUamvZaf2owerKhn10d73YHT2W2OQ_ptW5x4gszmv2CvAvgzYUUPACuy1DeB7yR4igaLw9fjeWQ");'>
+<!-- Overlay for artistic feel -->
+<div class="w-full h-full bg-primary/5 mix-blend-soft-light"></div>
+</div>
+</div>
+<!-- Decorative Floating Icons -->
+<span class="material-symbols-outlined absolute -top-4 -right-4 text-accent-gold text-4xl opacity-60">flare</span>
+<span class="material-symbols-outlined absolute bottom-12 -left-6 text-primary text-3xl opacity-40">filter_vintage</span>
+</div>
+<!-- Headline Component -->
+<h1 class="text-primary dark:text-primary tracking-tight text-4xl md:text-5xl lg:text-6xl font-bold leading-tight px-4 pb-6 pt-4 font-display">
+                    404 - Looks like this butterfly wandered off!
+                </h1>
+<!-- Body Text Component -->
+<p class="text-zinc-600 dark:text-zinc-400 text-lg md:text-xl font-normal leading-relaxed max-w-2xl px-4 pb-10">
+                    The page you are looking for doesn't exist or has moved to a new flower. 
+                    Let's get you back on your nectar-filled journey with our natural beauty essentials.
+                </p>
+<!-- Button Group Component -->
+<div class="flex flex-col sm:flex-row gap-4 w-full max-w-[500px] px-4">
+<button class="group flex flex-1 min-w-[180px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-14 px-8 bg-primary text-white text-base font-bold shadow-xl shadow-primary/20 hover:translate-y-[-2px] transition-all">
+<span class="material-symbols-outlined mr-2 group-hover:animate-pulse">home</span>
+<span class="truncate">Fly Back Home</span>
+</button>
+<button class="group flex flex-1 min-w-[180px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-14 px-8 bg-accent-gold text-white text-base font-bold shadow-xl shadow-accent-gold/20 hover:translate-y-[-2px] transition-all">
+<span class="material-symbols-outlined mr-2">shopping_bag</span>
+<span class="truncate">Shop New Arrivals</span>
+</button>
+</div>
+<!-- Subtle Decorative Footer Anchor -->
+<div class="mt-20 flex flex-col items-center opacity-40">
+<div class="h-20 w-[1px] bg-gradient-to-b from-primary to-transparent mb-4"></div>
+<span class="material-symbols-outlined text-primary">flutter_dash</span>
+</div>
+</div>
+</main>
+<!-- Minimal Footer -->
+<footer class="px-6 py-8 md:px-20 lg:px-40 flex flex-col md:flex-row items-center justify-between text-zinc-500 text-xs border-t border-primary/5 dark:bg-background-dark">
+<p>© 2024 Noura's Butterflies. All Rights Reserved.</p>
+<div class="flex gap-6 mt-4 md:mt-0">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Sustainability Report</a>
+</div>
+</footer>
+</div>
+</body></html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Noura's Butterflies - Join the Club</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eebfc5",
+                        "gold-accent": "#C9A961",
+                        "charcoal": "#4A4A4A",
+                        "background-light": "#f9f8f6",
+                        "background-dark": "#1b2a32",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .butterfly-glow {
+            filter: drop-shadow(0 0 8px rgba(201, 169, 97, 0.4));
+        }
+        .modal-overlay {
+            background-color: rgba(27, 42, 50, 0.4);
+            backdrop-filter: blur(4px);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-sans text-charcoal antialiased">
+<!-- Navbar Background Placeholder for Context -->
+<div class="fixed top-0 w-full z-0 opacity-20 pointer-events-none">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f4f1f1] px-10 py-3 bg-white">
+<div class="flex items-center gap-4 text-[#171213]">
+<div class="size-6 text-primary">
+<span class="material-symbols-outlined text-3xl">flutter_dash</span>
+</div>
+<h2 class="text-[#171213] text-lg font-bold leading-tight tracking-[-0.015em] font-display">Noura's Butterflies</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<span class="text-[#171213] text-sm font-medium">Shop All</span>
+<span class="text-[#171213] text-sm font-medium">Skincare</span>
+<span class="text-[#171213] text-sm font-medium">Sustainability</span>
+</div>
+</div>
+</header>
+</div>
+<!-- Modal Overlay Container -->
+<div class="fixed inset-0 z-50 flex items-center justify-center modal-overlay p-4">
+<!-- Decorative Butterfly Elements (Floating outside modal) -->
+<div class="absolute top-1/2 left-1/2 -translate-x-[480px] -translate-y-[280px] text-gold-accent opacity-80 butterfly-glow">
+<span class="material-symbols-outlined text-4xl rotate-[-15deg]">flutter_dash</span>
+</div>
+<div class="absolute top-1/2 left-1/2 translate-x-[420px] translate-y-[200px] text-gold-accent opacity-60 butterfly-glow">
+<span class="material-symbols-outlined text-3xl rotate-[25deg]">flutter_dash</span>
+</div>
+<!-- Main Modal Container -->
+<div class="relative w-full max-w-[900px] bg-white dark:bg-zinc-900 rounded-xl overflow-hidden shadow-2xl flex flex-col md:flex-row min-h-[500px]">
+<!-- Close Button -->
+<button class="absolute top-5 right-5 z-10 p-1.5 rounded-full border border-gold-accent/30 text-gold-accent hover:bg-gold-accent/10 transition-colors">
+<span class="material-symbols-outlined text-2xl">close</span>
+</button>
+<!-- Left Side: Visual Experience -->
+<div class="w-full md:w-1/2 relative min-h-[300px] md:min-h-full bg-primary/20">
+<div class="absolute inset-0 bg-center bg-no-repeat bg-cover" data-alt="Aesthetic closeup of a butterfly on a pink flower" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAd8H5Eiw0IOvcBuk7SwfDgOG7RuOOAV-wlOTzullsPX8AB24GwNwHilkUHBep34YGO0zlhZum81R2-dP6GD6SHbgAPsc1UxZqH4kM-M-leJOoSBJWhAAtbjnFCUnBD1O4CqJX9ozKzKdbrzAFIBELszPiWpM2L9vT4Mg1O8k4-S6NZhKbTOzSB8vZOi68E9SY5sVeZSxF-kDuX6fphWbd8wDBk1JR0oLmKKB2z6HWYlgSNowgw8fpn3zSw0ahkiIqBIxAa6pyhGoI");'>
+</div>
+<!-- Artistic Overlay -->
+<div class="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent"></div>
+<div class="absolute bottom-8 left-8 text-white">
+<div class="flex items-center gap-2 mb-2">
+<span class="h-px w-8 bg-white/60"></span>
+<span class="text-xs uppercase tracking-[0.2em] font-medium">Pure Nature</span>
+</div>
+<p class="font-display text-xl italic italic">Ethically Sourced. Vegan. Divine.</p>
+</div>
+</div>
+<!-- Right Side: Interaction -->
+<div class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center bg-background-light dark:bg-zinc-900">
+<div class="mb-8">
+<h2 class="text-charcoal dark:text-white text-3xl md:text-4xl font-bold leading-tight tracking-tight font-display mb-4">
+                        Join the <span class="text-primary italic">Butterfly Club</span>
+</h2>
+<p class="text-charcoal/80 dark:text-zinc-400 text-base leading-relaxed font-display">
+                        Experience the gentle touch of nature. Subscribe to our newsletter and unlock <strong class="text-charcoal dark:text-white">15% off</strong> your first order.
+                    </p>
+</div>
+<div class="space-y-4">
+<div class="flex flex-col gap-2">
+<label class="text-charcoal/60 dark:text-zinc-500 text-xs font-bold uppercase tracking-widest pl-1">
+                            Email Address
+                        </label>
+<input class="w-full h-14 px-5 rounded-xl border border-primary/30 focus:border-gold-accent focus:ring-1 focus:ring-gold-accent outline-none bg-white dark:bg-zinc-800 text-charcoal dark:text-white placeholder:text-charcoal/30 transition-all font-display" placeholder="Enter your email address" type="email"/>
+</div>
+<div class="pt-2">
+<button class="w-full h-14 bg-gold-accent hover:bg-[#B89852] text-white font-bold text-lg rounded-xl shadow-lg shadow-gold-accent/20 transition-all active:scale-[0.98] font-display tracking-wide flex items-center justify-center gap-3">
+<span>Claim My Discount</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="mt-8 text-center">
+<button class="text-charcoal/40 dark:text-zinc-500 text-sm font-medium hover:text-charcoal dark:hover:text-zinc-300 transition-colors underline underline-offset-4 decoration-primary/30">
+                        No thanks, I'll pay full price
+                    </button>
+</div>
+<!-- Small Decorative Icon at bottom -->
+<div class="mt-auto pt-8 flex justify-center opacity-20">
+<span class="material-symbols-outlined text-xl text-gold-accent">eco</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Background Content for Realism -->
+<main class="relative z-0 max-w-[1200px] mx-auto px-10 pt-32 pb-20 blur-sm pointer-events-none">
+<h1 class="text-6xl font-display font-bold mb-8 text-[#171213]">Wings of Beauty</h1>
+<div class="grid grid-cols-3 gap-8">
+<div class="aspect-[4/5] bg-primary/10 rounded-xl"></div>
+<div class="aspect-[4/5] bg-primary/10 rounded-xl"></div>
+<div class="aspect-[4/5] bg-primary/10 rounded-xl"></div>
+</div>
+</main>
+</body></html>

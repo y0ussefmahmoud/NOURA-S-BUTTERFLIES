@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Join the Butterfly Club | Noura's Butterflies</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Noto+Serif:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#732640",
+                        "accent-pink": "#F7C4CC",
+                        "gold-brand": "#DBB342",
+                        "background-light": "#f4f3f0",
+                        "background-dark": "#22262a",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "serif": ["Noto Serif", "serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        .dark .glass-card {
+            background: rgba(34, 38, 42, 0.95);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen flex flex-col transition-colors duration-300">
+<div class="flex-1 flex flex-col items-center justify-center p-6 md:p-12">
+<!-- Logo Area -->
+<div class="mb-8 flex flex-col items-center">
+<div class="text-gold-brand mb-2">
+<span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1, 'wght' 200;">article</span>
+<!-- Since the prompt specifically asked for a butterfly logo, I'm using the symbol but styled elegantly -->
+<svg class="w-12 h-12" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 40C24 40 12 36 8 24C4 12 12 8 20 12C22 13 24 16 24 16C24 16 26 13 28 12C36 8 44 12 40 24C36 36 24 40 24 40Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+<path d="M24 16V40" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path>
+<path d="M20 20C16 18 10 18 10 24" stroke="currentColor" stroke-dasharray="2 2" stroke-width="1"></path>
+<path d="M28 20C32 18 38 18 38 24" stroke="currentColor" stroke-dasharray="2 2" stroke-width="1"></path>
+</svg>
+</div>
+<h2 class="text-primary dark:text-accent-pink font-serif text-xs uppercase tracking-[0.4em] mb-1">Noura's Butterflies</h2>
+</div>
+<!-- Main Card -->
+<div class="glass-card w-full max-w-[480px] rounded-xl shadow-2xl overflow-hidden border border-white/20 dark:border-white/5">
+<div class="p-8 md:p-12 flex flex-col gap-8">
+<!-- Header Component -->
+<div class="text-center space-y-2">
+<h1 class="text-3xl md:text-4xl font-serif text-[#161214] dark:text-white leading-tight">Join the Butterfly Club</h1>
+<p class="text-[#816a71] dark:text-gray-400 text-sm font-light">Experience the essence of natural, vegan beauty.</p>
+</div>
+<!-- Registration Form -->
+<form class="flex flex-col gap-5">
+<!-- Name Field -->
+<div class="flex flex-col gap-1.5">
+<label class="text-[#161214] dark:text-gray-200 text-xs font-bold uppercase tracking-wider ml-1">Full Name</label>
+<input class="w-full h-12 rounded-lg border-[#e3dddf] dark:border-gray-700 bg-white dark:bg-gray-800 text-[#161214] dark:text-white focus:ring-1 focus:ring-primary focus:border-primary px-4 text-sm transition-all" placeholder="Laila Al-Masri" type="text"/>
+</div>
+<!-- Email Field -->
+<div class="flex flex-col gap-1.5">
+<label class="text-[#161214] dark:text-gray-200 text-xs font-bold uppercase tracking-wider ml-1">Email Address</label>
+<input class="w-full h-12 rounded-lg border-[#e3dddf] dark:border-gray-700 bg-white dark:bg-gray-800 text-[#161214] dark:text-white focus:ring-1 focus:ring-primary focus:border-primary px-4 text-sm transition-all" placeholder="laila@example.com" type="email"/>
+</div>
+<!-- Phone Field (Specialized Egypt/Gulf) -->
+<div class="flex flex-col gap-1.5">
+<label class="text-[#161214] dark:text-gray-200 text-xs font-bold uppercase tracking-wider ml-1">Phone Number</label>
+<div class="flex gap-2">
+<div class="relative min-w-[100px]">
+<select class="w-full h-12 rounded-lg border-[#e3dddf] dark:border-gray-700 bg-white dark:bg-gray-800 text-[#161214] dark:text-white focus:ring-1 focus:ring-primary focus:border-primary px-3 text-sm appearance-none cursor-pointer">
+<option value="+20">🇪🇬 +20</option>
+<option value="+966">🇸🇦 +966</option>
+<option value="+971">🇦🇪 +971</option>
+<option value="+965">🇰🇼 +965</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none text-lg">expand_more</span>
+</div>
+<input class="flex-1 h-12 rounded-lg border-[#e3dddf] dark:border-gray-700 bg-white dark:bg-gray-800 text-[#161214] dark:text-white focus:ring-1 focus:ring-primary focus:border-primary px-4 text-sm transition-all" placeholder="123 456 7890" type="tel"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="flex flex-col gap-1.5">
+<label class="text-[#161214] dark:text-gray-200 text-xs font-bold uppercase tracking-wider ml-1">Create Password</label>
+<div class="relative">
+<input class="w-full h-12 rounded-lg border-[#e3dddf] dark:border-gray-700 bg-white dark:bg-gray-800 text-[#161214] dark:text-white focus:ring-1 focus:ring-primary focus:border-primary px-4 pr-12 text-sm transition-all" placeholder="••••••••" type="password"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-xl">visibility</span>
+</button>
+</div>
+</div>
+<!-- Checkboxes -->
+<div class="mt-2 space-y-3">
+<label class="flex items-start gap-3 cursor-pointer group">
+<input class="mt-0.5 rounded border-[#e3dddf] text-primary focus:ring-primary h-4 w-4 transition-all" type="checkbox"/>
+<span class="text-xs text-[#816a71] dark:text-gray-400 leading-relaxed group-hover:text-[#161214] dark:group-hover:text-gray-200 transition-colors">
+                                Join the Butterfly Club newsletter for exclusive offers and natural beauty tips.
+                            </span>
+</label>
+<label class="flex items-start gap-3 cursor-pointer group">
+<input class="mt-0.5 rounded border-[#e3dddf] text-primary focus:ring-primary h-4 w-4 transition-all" required="" type="checkbox"/>
+<span class="text-xs text-[#816a71] dark:text-gray-400 leading-relaxed group-hover:text-[#161214] dark:group-hover:text-gray-200 transition-colors">
+                                I accept the <a class="text-primary hover:underline underline-offset-2" href="#">Terms of Service</a> and <a class="text-primary hover:underline underline-offset-2" href="#">Privacy Policy</a>.
+                            </span>
+</label>
+</div>
+<!-- CTA Button -->
+<button class="w-full h-14 mt-4 bg-primary hover:bg-[#5a1d32] text-white rounded-lg font-bold text-sm tracking-widest uppercase shadow-lg shadow-primary/20 transition-all active:scale-[0.98]" type="submit">
+                        Create Account
+                    </button>
+</form>
+<!-- Footer Navigation -->
+<div class="flex flex-col items-center gap-6">
+<div class="h-[1px] w-12 bg-[#e3dddf] dark:bg-gray-700"></div>
+<a class="text-sm text-[#816a71] dark:text-gray-400 hover:text-primary dark:hover:text-accent-pink transition-colors flex items-center gap-2 group" href="#">
+<span class="material-symbols-outlined text-base group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                        Back to Login
+                    </a>
+</div>
+</div>
+</div>
+<!-- Decorative Element -->
+<div class="mt-12 opacity-30 dark:opacity-10 pointer-events-none hidden lg:block">
+<div class="grid grid-cols-3 gap-8">
+<div class="w-32 h-32 rounded-full overflow-hidden border border-primary/20">
+<div class="w-full h-full bg-cover bg-center" data-alt="Soft pink flower petals macro shot" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAR-hCLJrVbPsfZmoVEqTnStdp5qrJ1x6FTFnuAIL3qNhoDi2Fwj9F0App89T7esCOuEPYXi7o86-K4j2TT1SUnJ5xJ5OrRw2PnedtybAO69OHcGEXZ9U1rBcPkKqyutp9qxxm2DKxXPVC6PLUlf0HgEKdvOfT2x0ATC_phBcM_dVJ6dJjlFtSWSbS76zVlkTk0WLd6UCh6JiO5g66ln2crJ9hocFmb5Yva6fx5VusyHaeZ8AeuYrqfE62nGvuUp5oMH3Yx6uXqMUY');"></div>
+</div>
+<div class="w-32 h-32 rounded-full overflow-hidden border border-primary/20 mt-8">
+<div class="w-full h-full bg-cover bg-center" data-alt="Abstract golden silk texture wave" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD-qhd_a3mQVrmbV8FJdB4jsr_WLLWN9KfKLBhk1to3g3haA3kOK-Jebw_AGDrUb2394ICs0wsz8sLxWdr-vIJodminR7cnLyu6iaUURaMci8e7YxaYmSsjIaPC4bG4w4Nvev3oO7IXQF4_yT3hppPN33ezP95GVTDPhPzCVZEB9oUAL59woJM7cKa2dpXIPjpdi6lnQs49UBXKZKxMAU7kYrmtJj5Vf8cK3tWyZBPyXDDqC4odOAoTNXrDmpUy7XygtlSCMVD1aUw');"></div>
+</div>
+<div class="w-32 h-32 rounded-full overflow-hidden border border-primary/20">
+<div class="w-full h-full bg-cover bg-center" data-alt="Natural skincare product ingredients arrangement" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDk33MSYGZO2v_0fKJC_o0ZN6PDvV-9lRfknEOV9DWtjKYyf1cMjgXicFS5Fpnq3LlyFZ47h05q2J_9Camr5BQHH3TUQxQRmObyi7SUw6d7XJusrVfI0wbuCh9iw-cZp5qicIHdhbNlKLo6ztiAPt3L3J9cDx3Tb2VAear14BPHMEcsrO-1KJGC-SgntKdKItbRR0Of0q16zozyjbhVUeMMi79HD4Rm6OrCs6uewVnASlmrJX_sGWp8yTxPF9c14zZ6_oxyVQSOwDU');"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Theme Toggle (Bonus) -->
+<button class="fixed bottom-6 right-6 p-3 rounded-full bg-white dark:bg-gray-800 shadow-xl border border-primary/10 transition-transform active:scale-90" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-symbols-outlined text-primary dark:text-accent-pink block dark:hidden">dark_mode</span>
+<span class="material-symbols-outlined text-accent-pink hidden dark:block">light_mode</span>
+</button>
+</body></html>

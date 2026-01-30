@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Fluttering Favorites - Noura's Butterflies</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e698ac",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#1f1316",
+                        "gold-accent": "#D4AF37",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .custom-shadow {
+            box-shadow: 0 10px 30px -10px rgba(230, 152, 172, 0.15);
+        }
+        .sidebar-active {
+            background-color: rgba(230, 152, 172, 0.1);
+            border-right: 3px solid #e698ac;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen">
+<div class="layout-container flex flex-col min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-[#f4f1f1] dark:border-zinc-800 px-6 lg:px-20 py-4">
+<div class="max-w-[1440px] mx-auto flex items-center justify-between">
+<div class="flex items-center gap-12">
+<div class="flex items-center gap-3 text-[#171213] dark:text-white">
+<div class="text-primary">
+<span class="material-symbols-outlined text-3xl">flutter_dash</span>
+</div>
+<h2 class="text-xl font-extrabold tracking-tight">Noura's Butterflies</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-semibold text-[#171213] dark:text-zinc-300 hover:text-primary transition-colors" href="#">Shop</a>
+<a class="text-sm font-semibold text-[#171213] dark:text-zinc-300 hover:text-primary transition-colors" href="#">About</a>
+<a class="text-sm font-semibold text-[#171213] dark:text-zinc-300 hover:text-primary transition-colors" href="#">Sustainability</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400 text-xl">search</span>
+<input class="bg-[#f4f1f1] dark:bg-zinc-800 border-none rounded-full pl-10 pr-4 py-2 text-sm w-64 focus:ring-2 focus:ring-primary/50" placeholder="Search products..." type="text"/>
+</div>
+<button class="p-2 hover:bg-primary/10 rounded-full transition-colors relative">
+<span class="material-symbols-outlined text-zinc-700 dark:text-zinc-300">shopping_bag</span>
+<span class="absolute top-1 right-1 bg-primary text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">3</span>
+</button>
+<div class="size-10 rounded-full bg-cover bg-center border-2 border-primary/20" data-alt="User profile avatar portrait" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCqV7CevYEpauA86ejjCsHF_zJgjifhtu7dS5GjqqJt24ui5AoqGkzj4bNP9H_YOzV8h9zXINulSXyFblBjdnZSTXUrRZnCXtp5j7rqhTsePYIAfYpR4yKDkaVL8z7IwkWAjfH5zfBiGC1VHXJ0nAFLlZrTcgPDH_IkZ9yQr-JfyR2xuR23Nu8jWSvYYybwkAjT2FVN__u8PViSfhQDWSoZmI6BnwDh-IlEUQ8hXAcLGd2_XIluf9euPkeYQTm2ynrOWdODCvuv2yI");'></div>
+</div>
+</div>
+</header>
+<div class="flex flex-1 max-w-[1440px] mx-auto w-full px-6 lg:px-20 py-10 gap-10">
+<!-- Sidebar Navigation -->
+<aside class="w-64 flex-shrink-0 hidden lg:block">
+<div class="sticky top-28 space-y-8">
+<div class="space-y-1">
+<h3 class="text-xs font-bold uppercase tracking-widest text-zinc-400 mb-4 px-4">Account Menu</h3>
+<a class="flex items-center gap-3 px-4 py-3 text-zinc-600 dark:text-zinc-400 hover:text-primary transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-medium text-sm">Profile Settings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 sidebar-active text-primary transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">favorite</span>
+<span class="font-bold text-sm">My Wishlist</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-zinc-600 dark:text-zinc-400 hover:text-primary transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined">package_2</span>
+<span class="font-medium text-sm">Order History</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-zinc-600 dark:text-zinc-400 hover:text-primary transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-medium text-sm">Preferences</span>
+</a>
+</div>
+<div class="bg-primary/5 p-6 rounded-2xl border border-primary/10 text-center">
+<p class="text-xs font-bold text-primary uppercase tracking-tighter mb-2">Member Benefit</p>
+<p class="text-sm text-zinc-700 dark:text-zinc-300 mb-4">You have 1,240 Butterfly Points!</p>
+<button class="w-full py-2 bg-primary text-white text-xs font-bold rounded-xl hover:shadow-lg transition-all">Redeem Rewards</button>
+</div>
+<button class="flex items-center gap-3 px-4 py-3 text-red-400 hover:text-red-500 transition-all">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-medium text-sm">Logout</span>
+</button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1">
+<!-- Heading Section -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-4xl">eco</span>
+</div>
+<h1 class="text-4xl lg:text-5xl font-extrabold text-[#171213] dark:text-white tracking-tight">Your Fluttering Favorites</h1>
+<p class="text-zinc-500 dark:text-zinc-400 max-w-lg text-lg">A curated collection of your most-loved vegan beauty essentials, saved just for you.</p>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 px-6 py-3 bg-white dark:bg-zinc-800 border border-[#f4f1f1] dark:border-zinc-700 rounded-xl text-sm font-bold text-zinc-700 dark:text-zinc-200 hover:bg-[#f4f1f1] transition-all">
+<span class="material-symbols-outlined text-xl">ios_share</span>
+                            Share Wishlist
+                        </button>
+<button class="flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-xl text-sm font-bold shadow-lg hover:bg-primary/90 transition-all">
+<span class="material-symbols-outlined text-xl">shopping_cart_checkout</span>
+                            Buy All
+                        </button>
+</div>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
+<!-- Product Card 1 -->
+<div class="group relative bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden custom-shadow border border-zinc-50 dark:border-zinc-800 flex flex-col">
+<button class="absolute top-4 right-4 z-10 size-10 flex items-center justify-center bg-white/80 dark:bg-black/40 backdrop-blur rounded-full text-zinc-400 hover:text-red-400 transition-colors">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+<div class="aspect-[4/5] overflow-hidden bg-[#fafafa] dark:bg-zinc-800">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Nectar Glow Serum bottle on soft pink background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBzch6CRfEWF-FpJGHeqfysyw9SXSJ2I3_saewQRdwPcSvp7CDzUBgNIcOSrC65E2kK9at1b0l-9qEaAjVJlXIKhBFgVj3aldp9lZhK-ERU8A_pBkgURFixMQ-onu52mTCYPQk84LCvUefJLES3B-VSW9tadDrTKhYIGCbRTfZoBXuOw1YbNU4OX-NFPUEi24Q-jmU7SsrT724bGXXuws7B91Qf9H2ca8o6Dzui5D1SNxrj7JM8CrJ_SNwhlYDRoUq6rTSrlaIEitE");'></div>
+</div>
+<div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-lg font-bold text-zinc-800 dark:text-white">Nectar Glow Serum</h3>
+<span class="text-lg font-bold text-gold-accent">$42.00</span>
+</div>
+<p class="text-sm text-zinc-500 dark:text-zinc-400">Natural / Vegan / 30ml</p>
+</div>
+<button class="w-full py-3 bg-primary text-white font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-primary/90 transition-all">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+                                Add to Cart
+                            </button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group relative bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden custom-shadow border border-zinc-50 dark:border-zinc-800 flex flex-col">
+<button class="absolute top-4 right-4 z-10 size-10 flex items-center justify-center bg-white/80 dark:bg-black/40 backdrop-blur rounded-full text-zinc-400 hover:text-red-400 transition-colors">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+<div class="aspect-[4/5] overflow-hidden bg-[#fafafa] dark:bg-zinc-800">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Petal Soft Blush compact palette" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD1RA6QCB1XrV_Q4szY3Gr2VJoiNdp3puKF2WQ1GUoZe-9mUShcFz0lyR4TzSC6OBRNpRKQ7Mb2lFz7pO_5wZ6KacqZgcmeqs9cQjRYXUca9NMmOYKggIvfhTbQqC7SQvezk33B_DkHCSs9WNlcqet09Mo2cEAoQvjMsTedC7ZYciViAQEnoFYTpHr9uTbBi7L6ZfTt6BYdmc0QmpjXVVNEQ_SvBx4Nbz3sk-hfLjEFr-gaH6y0jILkJRQbTvnPzCBwhgzeF-rRbf0");'></div>
+</div>
+<div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-lg font-bold text-zinc-800 dark:text-white">Petal Soft Blush</h3>
+<span class="text-lg font-bold text-gold-accent">$28.00</span>
+</div>
+<div class="inline-block px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase tracking-wider mb-1">Limited Edition</div>
+<p class="text-sm text-zinc-500 dark:text-zinc-400">High-pigment butterfly rose</p>
+</div>
+<button class="w-full py-3 bg-primary text-white font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-primary/90 transition-all">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+                                Add to Cart
+                            </button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group relative bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden custom-shadow border border-zinc-50 dark:border-zinc-800 flex flex-col">
+<button class="absolute top-4 right-4 z-10 size-10 flex items-center justify-center bg-white/80 dark:bg-black/40 backdrop-blur rounded-full text-zinc-400 hover:text-red-400 transition-colors">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+<div class="aspect-[4/5] overflow-hidden bg-[#fafafa] dark:bg-zinc-800">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Silk Wing Eyeliner precision pen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAuBITPmcTccuP38XPaN739n_oJdINGM_DAO-CeYwuWL68zg-D3pWTjUHvfVWeZvDQ5nAAXlFcUmMmMpBUGg7VXSknsGtBn8qtW_vMYQxqHqqmnnho8OIvHIlOAKslcSDeXogA5FwD66n2QJikYjbdWsBxxhOExA6QEGPoCiqXw42uTzc7iW4wk3LbaPfjnhwyTdgHKv1tir6O7PAXh-doHQ6lQvjEAhNN9e0bVVxMtyIGmFro1QiZscvpG6Uuhb_W7AetmVNsB31g");'></div>
+</div>
+<div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-lg font-bold text-zinc-800 dark:text-white">Silk Wing Eyeliner</h3>
+<span class="text-lg font-bold text-gold-accent">$24.00</span>
+</div>
+<p class="text-sm text-zinc-500 dark:text-zinc-400">Waterproof Smudge-proof</p>
+</div>
+<button class="w-full py-3 bg-primary text-white font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-primary/90 transition-all">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+                                Add to Cart
+                            </button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group relative bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden custom-shadow border border-zinc-50 dark:border-zinc-800 flex flex-col">
+<button class="absolute top-4 right-4 z-10 size-10 flex items-center justify-center bg-white/80 dark:bg-black/40 backdrop-blur rounded-full text-zinc-400 hover:text-red-400 transition-colors">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+<div class="aspect-[4/5] overflow-hidden bg-[#fafafa] dark:bg-zinc-800">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Botanical Balm tube with floral accents" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBzVNtqL0U3oHuW4W6RqwrpnK3zhpoXIt3kTed6ucN_B5d6VE_GMovnghLjL6wDtMUE1KRGJj-_QFQ6yrqJFS9Ts7z5h8tDPYaFAnwCuIbOMYK4k5P9EaRHxwyU2-U7HF_1vMlkmTd5wP0fRHZ2QiS8HUUvlTOWOeSeLDrw7GQn4LjTz1LwFudx6DXIGD7P4Q4n9b-UL5toB8F_UsUeqsMTBQYfVGkLxTiz_wH-gJONNanclC4Za98jmDomYV6Ovlg-cpRuBTY37Qo");'></div>
+</div>
+<div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-lg font-bold text-zinc-800 dark:text-white">Botanical Balm</h3>
+<span class="text-lg font-bold text-gold-accent">$18.00</span>
+</div>
+<div class="flex items-center gap-1 text-gold-accent mb-1">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1">stars</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Award Winner</span>
+</div>
+<p class="text-sm text-zinc-500 dark:text-zinc-400">24hr Deep hydration</p>
+</div>
+<button class="w-full py-3 bg-primary text-white font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-primary/90 transition-all">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+                                Add to Cart
+                            </button>
+</div>
+</div>
+</div>
+<!-- Subtle Section Divider -->
+<div class="my-20 flex flex-col items-center text-center space-y-4">
+<div class="w-px h-16 bg-gradient-to-b from-primary to-transparent"></div>
+<p class="text-zinc-400 italic text-sm">"Beauty in flight, kindness in heart."</p>
+</div>
+<!-- Recommendations (Empty state preview context) -->
+<section class="mt-20">
+<h2 class="text-2xl font-extrabold text-[#171213] dark:text-white mb-8 px-4">Pairs Beautifully With...</h2>
+<div class="flex gap-6 overflow-x-auto pb-8 px-4 scrollbar-hide">
+<div class="min-w-[200px] bg-white dark:bg-zinc-900 p-4 rounded-2xl custom-shadow border border-zinc-50 dark:border-zinc-800 text-center">
+<div class="size-24 mx-auto rounded-full bg-[#f8f6f6] mb-4 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">flare</span>
+</div>
+<h4 class="font-bold text-sm mb-1 text-zinc-800 dark:text-zinc-100">Gilded Glow Highlighter</h4>
+<p class="text-primary font-bold text-sm">$32</p>
+<button class="mt-3 text-xs font-bold text-zinc-400 hover:text-primary transition-colors">Quick Add +</button>
+</div>
+<div class="min-w-[200px] bg-white dark:bg-zinc-900 p-4 rounded-2xl custom-shadow border border-zinc-50 dark:border-zinc-800 text-center">
+<div class="size-24 mx-auto rounded-full bg-[#f8f6f6] mb-4 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">brush</span>
+</div>
+<h4 class="font-bold text-sm mb-1 text-zinc-800 dark:text-zinc-100">Angled Flutter Brush</h4>
+<p class="text-primary font-bold text-sm">$18</p>
+<button class="mt-3 text-xs font-bold text-zinc-400 hover:text-primary transition-colors">Quick Add +</button>
+</div>
+<div class="min-w-[200px] bg-white dark:bg-zinc-900 p-4 rounded-2xl custom-shadow border border-zinc-50 dark:border-zinc-800 text-center">
+<div class="size-24 mx-auto rounded-full bg-[#f8f6f6] mb-4 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">auto_awesome</span>
+</div>
+<h4 class="font-bold text-sm mb-1 text-zinc-800 dark:text-zinc-100">Dewy Wing Mist</h4>
+<p class="text-primary font-bold text-sm">$22</p>
+<button class="mt-3 text-xs font-bold text-zinc-400 hover:text-primary transition-colors">Quick Add +</button>
+</div>
+</div>
+</section>
+</main>
+</div>
+<!-- Footer -->
+<footer class="bg-white dark:bg-zinc-950 py-12 px-6 lg:px-20 border-t border-[#f4f1f1] dark:border-zinc-800 mt-20">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="space-y-4">
+<div class="flex items-center gap-2 text-[#171213] dark:text-white">
+<span class="material-symbols-outlined text-primary">flutter_dash</span>
+<h2 class="font-extrabold tracking-tight">Noura's Butterflies</h2>
+</div>
+<p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">Pioneering ethical, high-performance cosmetics inspired by the delicate grace of nature.</p>
+</div>
+<div>
+<h4 class="font-bold text-sm mb-6 uppercase tracking-widest text-zinc-400">Shop</h4>
+<ul class="space-y-4 text-sm text-zinc-600 dark:text-zinc-300">
+<li><a class="hover:text-primary" href="#">Skincare</a></li>
+<li><a class="hover:text-primary" href="#">Eyes</a></li>
+<li><a class="hover:text-primary" href="#">Lips</a></li>
+<li><a class="hover:text-primary" href="#">Limited Editions</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-sm mb-6 uppercase tracking-widest text-zinc-400">Support</h4>
+<ul class="space-y-4 text-sm text-zinc-600 dark:text-zinc-300">
+<li><a class="hover:text-primary" href="#">Shipping Info</a></li>
+<li><a class="hover:text-primary" href="#">Returns</a></li>
+<li><a class="hover:text-primary" href="#">Sustainability Report</a></li>
+<li><a class="hover:text-primary" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-sm mb-6 uppercase tracking-widest text-zinc-400">Newsletter</h4>
+<div class="flex gap-2">
+<input class="flex-1 bg-background-light dark:bg-zinc-900 border-none rounded-xl text-sm px-4" placeholder="Email address" type="email"/>
+<button class="bg-primary text-white p-3 rounded-xl">
+<span class="material-symbols-outlined text-lg">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto pt-12 mt-12 border-t border-[#f4f1f1] dark:border-zinc-800 text-center text-xs text-zinc-400">
+                © 2024 Noura's Butterflies. All Rights Reserved. Pure. Ethical. Radiant.
+            </div>
+</footer>
+</div>
+</body></html>

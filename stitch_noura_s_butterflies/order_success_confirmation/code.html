@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Order Success - Noura's Butterflies</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#db7090",
+                        "accent-gold": "#EBC863",
+                        "background-light": "#faf8f5",
+                        "background-dark": "#1f1317",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .floating-butterfly {
+            position: absolute;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-sans text-[#191012] dark:text-gray-100 transition-colors duration-300">
+<div class="layout-container flex h-full grow flex-col min-h-screen">
+<!-- Navigation Header -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#f1e9eb] dark:border-[#33252a] px-10 py-4 bg-white/50 dark:bg-black/20 backdrop-blur-md sticky top-0 z-50">
+<div class="flex items-center gap-4">
+<div class="size-8 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M39.5563 34.1455V13.8546C39.5563 15.708 36.8773 17.3437 32.7927 18.3189C30.2914 18.916 27.263 19.2655 24 19.2655C20.737 19.2655 17.7086 18.916 15.2073 18.3189C11.1227 17.3437 8.44365 15.708 8.44365 13.8546V34.1455C8.44365 35.9988 11.1227 37.6346 15.2073 38.6098C17.7086 39.2069 20.737 39.5564 24 39.5564C27.1288 39.5564 30.2914 39.2069 32.7927 38.6098C36.8773 37.6346 39.5563 35.9988 39.5563 34.1455Z"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold font-display tracking-tight">Noura's Butterflies</h2>
+</div>
+<div class="flex gap-4">
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-[#f1e9eb] dark:bg-[#33252a] text-[#191012] dark:text-white">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-[#f1e9eb] dark:bg-[#33252a] text-[#191012] dark:text-white">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</header>
+<main class="flex-1 flex flex-col items-center py-12 px-4 max-w-[800px] mx-auto w-full relative">
+<!-- Hero Section -->
+<div class="relative w-full mb-12 flex flex-col items-center">
+<!-- Decorative Butterflies (Simulated with icons for cleanliness) -->
+<span class="material-symbols-outlined text-primary/40 absolute -top-10 -left-10 text-4xl transform rotate-45">flutter_dash</span>
+<span class="material-symbols-outlined text-accent-gold/50 absolute -top-4 right-10 text-3xl transform -rotate-12">flutter_dash</span>
+<span class="material-symbols-outlined text-primary/30 absolute bottom-0 -right-12 text-5xl transform rotate-90">flutter_dash</span>
+<div class="w-24 h-24 mb-6 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-5xl">check_circle</span>
+</div>
+<h1 class="font-display text-4xl md:text-5xl text-center font-bold mb-4 tracking-tight leading-tight">
+                    Thank you for being part of the metamorphosis.
+                </h1>
+<p class="text-lg text-center opacity-80 max-w-[500px]">
+                    Your vegan beauty essentials are being prepared with care. We've sent a confirmation email to you.
+                </p>
+<div class="mt-8 px-6 py-2 bg-accent-gold/10 border border-accent-gold/20 rounded-full">
+<span class="font-bold text-accent-gold tracking-widest text-sm">ORDER #NB-12345</span>
+</div>
+</div>
+<!-- Order Content Card -->
+<div class="w-full bg-white dark:bg-[#2a1b1f] rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.04)] dark:shadow-none overflow-hidden mb-8">
+<div class="p-8 border-b border-[#f1e9eb] dark:border-[#33252a]">
+<h3 class="text-xl font-display font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">shopping_basket</span>
+                        Order Summary
+                    </h3>
+<!-- Item List -->
+<div class="space-y-6">
+<div class="flex items-center justify-between group">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 bg-[#fbf9f9] dark:bg-[#1f1317] rounded-lg overflow-hidden border border-[#f1e9eb] dark:border-[#33252a]">
+<div class="w-full h-full bg-gradient-to-br from-primary/20 to-accent-gold/20 flex items-center justify-center" data-alt="Vegan silk lip tint in a rose hue">
+<span class="material-symbols-outlined text-primary/40">sanitizer</span>
+</div>
+</div>
+<div>
+<p class="font-bold">Silk Petal Lip Tint</p>
+<p class="text-sm opacity-60">Shade: Dusty Rose • Qty: 1</p>
+</div>
+</div>
+<p class="font-bold">$24.00</p>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 bg-[#fbf9f9] dark:bg-[#1f1317] rounded-lg overflow-hidden border border-[#f1e9eb] dark:border-[#33252a]">
+<div class="w-full h-full bg-gradient-to-br from-accent-gold/20 to-primary/20 flex items-center justify-center" data-alt="Butterfly glow highlighter palette">
+<span class="material-symbols-outlined text-accent-gold/40">grid_view</span>
+</div>
+</div>
+<div>
+<p class="font-bold">Butterfly Glow Highlighter</p>
+<p class="text-sm opacity-60">Palette: Golden Hour • Qty: 1</p>
+</div>
+</div>
+<p class="font-bold">$38.00</p>
+</div>
+</div>
+</div>
+<!-- Price Breakdown -->
+<div class="p-8 bg-[#fbf9f9]/50 dark:bg-black/10 flex flex-col gap-3">
+<div class="flex justify-between text-sm">
+<span class="opacity-70">Subtotal</span>
+<span class="font-medium">$62.00</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="opacity-70">Shipping (Eco-friendly)</span>
+<span class="font-medium">$5.00</span>
+</div>
+<div class="flex justify-between text-xl font-display font-bold mt-2 border-t border-[#f1e9eb] dark:border-[#33252a] pt-4">
+<span>Total</span>
+<span class="text-primary">$67.00</span>
+</div>
+</div>
+</div>
+<!-- Shipping Information -->
+<div class="w-full grid md:grid-cols-2 gap-4 mb-12">
+<div class="p-6 bg-white dark:bg-[#2a1b1f] rounded-xl shadow-sm border border-[#f1e9eb] dark:border-[#33252a]">
+<div class="flex items-center gap-2 mb-3 text-primary">
+<span class="material-symbols-outlined text-sm">local_shipping</span>
+<span class="font-bold uppercase text-xs tracking-wider">Shipping To</span>
+</div>
+<p class="font-medium">Elena Richardson</p>
+<p class="text-sm opacity-70">123 Flutter Lane, Unit 4B<br/>Savannah, GA 31401</p>
+</div>
+<div class="p-6 bg-white dark:bg-[#2a1b1f] rounded-xl shadow-sm border border-[#f1e9eb] dark:border-[#33252a]">
+<div class="flex items-center gap-2 mb-3 text-accent-gold">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span class="font-bold uppercase text-xs tracking-wider">Estimated Delivery</span>
+</div>
+<p class="font-medium">October 14th — 16th</p>
+<p class="text-sm opacity-70">Carrier: EcoSwift Express<br/>Status: Processing</p>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col sm:flex-row gap-4 w-full justify-center mb-16">
+<button class="flex-1 max-w-[280px] bg-primary text-white font-bold py-4 rounded-full shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">map</span>
+                    Track My Journey
+                </button>
+<button class="flex-1 max-w-[280px] bg-white dark:bg-transparent text-[#191012] dark:text-white border-2 border-accent-gold/50 font-bold py-4 rounded-full hover:bg-accent-gold/5 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">shopping_cart</span>
+                    Continue Shopping
+                </button>
+</div>
+<!-- Footer Community Section -->
+<div class="w-full border-t border-dashed border-[#f1e9eb] dark:border-[#33252a] pt-12 text-center relative">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-background-light dark:bg-background-dark px-6">
+<span class="material-symbols-outlined text-accent-gold">auto_awesome</span>
+</div>
+<h4 class="font-display text-2xl font-bold mb-4">Join the Butterfly Club</h4>
+<p class="text-sm opacity-70 max-w-[460px] mx-auto mb-8">
+                    Show off your glow! Tag us <strong>@NourasButterflies</strong> for a chance to be featured and earn wings for your next order.
+                </p>
+<div class="flex justify-center gap-8 mb-12">
+<a class="group flex flex-col items-center gap-2" href="#">
+<div class="size-12 rounded-full border border-[#f1e9eb] dark:border-[#33252a] flex items-center justify-center group-hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined text-primary">camera</span>
+</div>
+<span class="text-xs font-bold uppercase tracking-tighter">Instagram</span>
+</a>
+<a class="group flex flex-col items-center gap-2" href="#">
+<div class="size-12 rounded-full border border-[#f1e9eb] dark:border-[#33252a] flex items-center justify-center group-hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined text-primary">loyalty</span>
+</div>
+<span class="text-xs font-bold uppercase tracking-tighter">Rewards</span>
+</a>
+<a class="group flex flex-col items-center gap-2" href="#">
+<div class="size-12 rounded-full border border-[#f1e9eb] dark:border-[#33252a] flex items-center justify-center group-hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined text-primary">mail</span>
+</div>
+<span class="text-xs font-bold uppercase tracking-tighter">Contact</span>
+</a>
+</div>
+<p class="text-[10px] uppercase tracking-[0.2em] opacity-40">
+                    A copy of your receipt has been sent to elena.r@example.com
+                </p>
+</div>
+</main>
+<!-- Subtle Decorative Map Element (Abstract Background) -->
+<div class="fixed bottom-0 left-0 w-full h-1 bg-gradient-to-r from-accent-gold via-primary to-accent-gold opacity-30"></div>
+</div>
+</body></html>

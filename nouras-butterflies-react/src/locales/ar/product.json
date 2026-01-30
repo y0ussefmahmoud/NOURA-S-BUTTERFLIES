@@ -1,0 +1,63 @@
+{
+  "catalog": {
+    "title": "المنتجات",
+    "subtitle": "اكتشف مجموعتنا",
+    "filters": {
+      "title": "الفلاتر",
+      "categories": "الفئات",
+      "priceRange": "نطاق السعر",
+      "brand": "العلامة التجارية",
+      "size": "المقاس",
+      "color": "اللون",
+      "sortBy": "ترتيب حسب",
+      "options": {
+        "featured": "المميزة",
+        "priceLowHigh": "السعر: من الأقل للأعلى",
+        "priceHighLow": "السعر: من الأعلى للأقل",
+        "newest": "الأحدث",
+        "bestselling": "الأكثر مبيعاً",
+        "rating": "التقييم"
+      }
+    },
+    "noResults": "لم يتم العثور على منتجات",
+    "resetFilters": "إعادة تعيين الفلاتر",
+    "results": "{{count}} منتج تم العثور عليه"
+  },
+  "details": {
+    "addToCart": "أضف إلى السلة",
+    "buyNow": "اشتر الآن",
+    "outOfStock": "نفد المخزون",
+    "inStock": "متوفر",
+    "description": "الوصف",
+    "ingredients": "المكونات",
+    "howToUse": "طريقة الاستخدام",
+    "reviews": "التقييمات",
+    "writeReview": "اكتب تقييماً",
+    "relatedProducts": "منتجات ذات صلة",
+    "youMayAlsoLike": "قد يعجبك أيضاً",
+    "share": "مشاركة",
+    "addToWishlist": "أضف إلى قائمة الأمنيات",
+    "removeFromWishlist": "إزالة من قائمة الأمنيات",
+    "compare": "مقارنة",
+    "zoom": "تكبير",
+    "quantity": "الكمية",
+    "size": "المقاس",
+    "color": "اللون"
+  },
+  "reviews": {
+    "title": "تقييمات العملاء",
+    "rating": "التقييم",
+    "verifiedPurchase": "شراء موثق",
+    "helpful": "مفيد",
+    "notHelpful": "غير مفيد",
+    "report": "إبلاغ",
+    "noReviews": "لا توجد تقييمات بعد",
+    "beFirst": "كن أول من يقيم هذا المنتج",
+    "writeReview": "اكتب تقييماً",
+    "yourReview": "تقييمك",
+    "ratingRequired": "الرجاء اختيار تقييم",
+    "reviewRequired": "الرجاء كتابة تقييم",
+    "submitReview": "إرسال التقييم",
+    "thankYou": "شكراً لتقييمك!"
+  }
+}

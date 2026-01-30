@@ -1,0 +1,214 @@
+/* Modal-specific styles */
+
+/* Frosted glass effect */
+.frosted-glass {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Butterfly glow effect */
+.butterfly-glow {
+  filter: drop-shadow(0 0 8px rgba(201, 169, 97, 0.4));
+  transition: filter 0.3s ease;
+}
+
+.butterfly-glow:hover {
+  filter: drop-shadow(0 0 12px rgba(201, 169, 97, 0.6));
+}
+
+/* Modal entrance animations */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes modalFadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+@keyframes drawerSlideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes drawerSlideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+/* Modal animations */
+.modal-enter {
+  animation: modalFadeIn 0.2s ease-out;
+}
+
+.modal-exit {
+  animation: modalFadeOut 0.2s ease-in;
+}
+
+.drawer-enter {
+  animation: drawerSlideIn 0.3s ease-out;
+}
+
+.drawer-exit {
+  animation: drawerSlideOut 0.3s ease-in;
+}
+
+/* Butterfly float animation */
+@keyframes butterflyFloat {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(5deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(-5deg);
+  }
+  75% {
+    transform: translateY(-15px) rotate(3deg);
+  }
+}
+
+.butterfly-float {
+  animation: butterflyFloat 6s ease-in-out infinite;
+}
+
+/* Custom scrollbar for modal content */
+.modal-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-scrollbar::-webkit-scrollbar-track {
+  background: rgba(201, 169, 97, 0.1);
+  border-radius: 3px;
+}
+
+.modal-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(201, 169, 97, 0.3);
+  border-radius: 3px;
+}
+
+.modal-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(201, 169, 97, 0.5);
+}
+
+/* Focus styles for modal accessibility */
+.modal-focus-trap:focus {
+  outline: 2px solid #c8a962;
+  outline-offset: 2px;
+}
+
+/* Loading spinner for modals */
+.modal-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(201, 169, 97, 0.3);
+  border-radius: 50%;
+  border-top-color: #c8a962;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Success animation */
+@keyframes successCheckmark {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.success-checkmark {
+  animation: successCheckmark 0.6s ease-in-out;
+}
+
+/* Responsive modal adjustments */
+@media (max-width: 768px) {
+  .modal-mobile-full {
+    width: 100vw;
+    height: 100vh;
+    max-width: none;
+    border-radius: 0;
+  }
+
+  .drawer-mobile-full {
+    width: 100vw;
+    height: 50vh;
+    max-width: none;
+  }
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .frosted-glass {
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  .modal-scrollbar::-webkit-scrollbar-track {
+    background: rgba(201, 169, 97, 0.2);
+  }
+
+  .modal-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(201, 169, 97, 0.4);
+  }
+
+  .modal-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(201, 169, 97, 0.6);
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .butterfly-glow {
+    filter: none;
+  }
+
+  .modal-focus-trap:focus {
+    outline-width: 3px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .modal-enter,
+  .modal-exit,
+  .drawer-enter,
+  .drawer-exit,
+  .butterfly-float {
+    animation: none;
+  }
+
+  .modal-spinner {
+    animation: none;
+    border: 2px solid #c8a962;
+  }
+}

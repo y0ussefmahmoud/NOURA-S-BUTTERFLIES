@@ -1,0 +1,191 @@
+/* Import product-specific styles */
+@import './styles/product.css';
+
+/* Import animation utilities */
+@import './styles/animations.css';
+
+/* Import content styles */
+@import './styles/content.css';
+
+/* Import admin styles */
+@import './styles/admin.css';
+
+/* Import modal-specific styles */
+@import './styles/modals.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS Custom Properties for RTL/LTR Support */
+:root {
+  --direction: ltr;
+  --text-align-start: left;
+  --text-align-end: right;
+  --border-start: border-left;
+  --border-end: border-right;
+  --float-start: left;
+  --float-end: right;
+  --margin-start: margin-left;
+  --margin-end: margin-right;
+  --padding-start: padding-left;
+  --padding-end: padding-right;
+}
+
+[dir='rtl'] {
+  --direction: rtl;
+  --text-align-start: right;
+  --text-align-end: left;
+  --border-start: border-right;
+  --border-end: border-left;
+  --float-start: right;
+  --float-end: left;
+  --margin-start: margin-right;
+  --margin-end: margin-left;
+  --padding-start: padding-right;
+  --padding-end: padding-left;
+}
+
+@layer base {
+  html {
+    font-family: 'Plus Jakarta Sans', 'Noto Sans', sans-serif;
+    transition: direction 0.3s ease;
+  }
+
+  body {
+    @apply bg-background-light text-text-dark antialiased;
+    direction: var(--direction);
+    transition:
+      background-color 300ms ease,
+      color 300ms ease;
+  }
+
+  /* Dark mode styles */
+  .dark body {
+    @apply bg-background-dark text-text-light;
+  }
+
+  .font-serif {
+    font-family: 'Noto Serif', serif;
+  }
+
+  /* Arabic font styles */
+  [dir='rtl'] {
+    font-family: 'Noto Sans Arabic', 'Noto Sans', sans-serif;
+    line-height: 1.8; /* Increased line height for Arabic readability */
+    letter-spacing: 0; /* Remove letter spacing for Arabic */
+  }
+
+  [dir='rtl'] .font-display {
+    font-family: 'Noto Serif', serif;
+  }
+
+  [dir='rtl'] .font-body {
+    font-family: 'Noto Sans Arabic', 'Noto Sans', sans-serif;
+  }
+
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr; /* Keep icons LTR even in RTL mode */
+    -webkit-font-feature-settings: 'liga';
+    font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .material-symbols-filled {
+    font-family: 'Material Symbols Filled';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr; /* Keep icons LTR even in RTL mode */
+    -webkit-font-feature-settings: 'liga';
+    font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .material-symbols-rounded {
+    font-family: 'Material Symbols Rounded';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr; /* Keep icons LTR even in RTL mode */
+    -webkit-font-feature-settings: 'liga';
+    font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer utilities {
+  /* Custom shadow classes */
+  .butterfly-glow {
+    box-shadow: 0 10px 40px -10px rgba(255, 184, 196, 0.3);
+  }
+
+  .soft-card-shadow {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  }
+
+  /* Transition utilities */
+  .transition-smooth {
+    transition: all 300ms cubic-bezier(0.4, 0, 0.6, 1);
+  }
+
+  .transition-colors-smooth {
+    transition:
+      color 300ms cubic-bezier(0.4, 0, 0.6, 1),
+      background-color 300ms cubic-bezier(0.4, 0, 0.6, 1),
+      border-color 300ms cubic-bezier(0.4, 0, 0.6, 1);
+  }
+
+  /* RTL-safe text alignment utilities */
+  .text-start {
+    text-align: var(--text-align-start);
+  }
+
+  .text-end {
+    text-align: var(--text-align-end);
+  }
+
+  /* RTL-safe float utilities */
+  .float-start {
+    float: var(--float-start);
+  }
+
+  .float-end {
+    float: var(--float-end);
+  }
+
+  /* RTL flip utilities for icons */
+  .rtl-flip {
+    transform: scaleX(1);
+  }
+
+  [dir='rtl'] .rtl-flip {
+    transform: scaleX(-1);
+  }
+}
+
+@layer components {
+  /* Custom component styles will go here */
+}

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Butterfly Rewards Program | Noura's Butterflies</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Noto+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e6c689",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#201b12",
+                        "accent-pink": "#f5e6e8",
+                        "soft-gold": "#d4af37"
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Noto Sans', sans-serif;
+        }
+        h1, h2, h3, .font-display {
+            font-family: 'Noto Serif', serif;
+        }
+        .butterfly-bg {
+            background-image: radial-gradient(circle at 2px 2px, rgba(230, 198, 137, 0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+        .ethereal-blur {
+            backdrop-filter: blur(8px);
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#171512] dark:text-white butterfly-bg min-h-screen">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 ethereal-blur border-b border-solid border-primary/20 dark:border-white/10 px-4 md:px-20 lg:px-40 py-4 flex items-center justify-between">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="text-primary size-8">
+<span class="material-symbols-outlined text-3xl">flutter_dash</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-tight font-display">Noura's Butterflies</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Shop</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Our Story</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Rewards</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden sm:flex items-center bg-primary/10 rounded-full px-4 py-1.5 border border-primary/20">
+<span class="material-symbols-outlined text-primary text-sm mr-2">stars</span>
+<span class="text-xs font-bold text-primary tracking-wide">750 GLOW POINTS</span>
+</div>
+<button class="p-2 rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+<button class="p-2 rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</header>
+<main class="max-w-[1200px] mx-auto px-6 py-12 w-full">
+<!-- Hero Section -->
+<section class="text-center mb-16 relative">
+<div class="absolute -top-10 left-1/2 -translate-x-1/2 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[120px]">flutter_dash</span>
+</div>
+<h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4 font-display text-[#171512] dark:text-white">
+                    Your Journey to Radiant Rewards
+                </h1>
+<p class="text-[#857a66] dark:text-gray-400 text-lg max-w-2xl mx-auto italic">
+                    Embrace the metamorphosis. Each step you take with our natural cosmetics brings you closer to exclusive beauty rituals and velvet-soft surprises.
+                </p>
+</section>
+<!-- Progress & Stats Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+<!-- Gauge Card -->
+<div class="lg:col-span-2 bg-white dark:bg-background-dark/50 p-8 rounded-xl border border-primary/10 shadow-sm flex flex-col justify-between">
+<div class="flex justify-between items-start mb-8">
+<div>
+<p class="text-sm uppercase tracking-widest text-[#857a66] mb-1">Current Tier</p>
+<h3 class="text-3xl font-bold font-display text-primary">Satin Wings</h3>
+</div>
+<div class="text-right">
+<p class="text-sm uppercase tracking-widest text-[#857a66] mb-1">Status</p>
+<p class="text-xl font-medium">Metamorphosing</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<span class="text-xs font-bold text-[#857a66]">SILK</span>
+<span class="text-2xl font-bold font-display">750 <span class="text-sm font-sans font-normal opacity-60">/ 1000</span></span>
+<span class="text-xs font-bold text-[#857a66]">VELVET</span>
+</div>
+<div class="relative h-4 w-full bg-accent-pink/50 dark:bg-white/5 rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full bg-primary rounded-full" style="width: 75%;">
+<div class="absolute right-0 top-0 h-full w-4 bg-white/30 blur-sm"></div>
+</div>
+</div>
+<p class="text-center text-sm text-[#857a66] dark:text-gray-400 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">auto_awesome</span>
+                            Earn 250 more Glow Points to unlock <strong>Velvet Wings</strong> status
+                        </p>
+</div>
+</div>
+<!-- Fast Stats -->
+<div class="flex flex-col gap-4">
+<div class="bg-primary/10 dark:bg-primary/5 p-6 rounded-xl border border-primary/20 flex items-center gap-4">
+<div class="bg-primary text-white p-3 rounded-lg">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<div>
+<p class="text-xs uppercase tracking-tighter text-[#857a66] dark:text-gray-400">Total Points</p>
+<p class="text-2xl font-bold font-display">750</p>
+</div>
+</div>
+<div class="bg-white dark:bg-background-dark/50 p-6 rounded-xl border border-primary/10 flex items-center gap-4">
+<div class="bg-accent-pink text-[#171512] p-3 rounded-lg">
+<span class="material-symbols-outlined">redeem</span>
+</div>
+<div>
+<p class="text-xs uppercase tracking-tighter text-[#857a66] dark:text-gray-400">Rewards Ready</p>
+<p class="text-2xl font-bold font-display">2</p>
+</div>
+</div>
+<div class="bg-white dark:bg-background-dark/50 p-6 rounded-xl border border-primary/10 flex items-center gap-4">
+<div class="bg-[#e4e2dc] dark:bg-white/10 p-3 rounded-lg">
+<span class="material-symbols-outlined">group_add</span>
+</div>
+<div>
+<p class="text-xs uppercase tracking-tighter text-[#857a66] dark:text-gray-400">Referrals</p>
+<p class="text-2xl font-bold font-display">4</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Ways to Earn -->
+<section class="mb-16">
+<div class="flex items-center justify-between mb-8 px-2">
+<h2 class="text-2xl font-bold font-display">Ways to Earn</h2>
+<a class="text-sm font-medium text-primary hover:underline underline-offset-4" href="#">View All Activities</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Earn Card 1 -->
+<div class="group bg-white dark:bg-background-dark/50 p-6 rounded-xl border border-primary/10 hover:border-primary/50 transition-all duration-300">
+<div class="size-12 bg-accent-pink/50 rounded-lg flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">shopping_basket</span>
+</div>
+<h4 class="font-bold mb-2">Make a Purchase</h4>
+<p class="text-sm text-[#857a66] mb-4">Earn 5 Glow Points for every $1 spent in our boutique.</p>
+<div class="pt-4 border-t border-primary/5">
+<span class="text-xs font-bold text-primary">5 PTS / $1</span>
+</div>
+</div>
+<!-- Earn Card 2 -->
+<div class="group bg-white dark:bg-background-dark/50 p-6 rounded-xl border border-primary/10 hover:border-primary/50 transition-all duration-300">
+<div class="size-12 bg-accent-pink/50 rounded-lg flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">diversity_3</span>
+</div>
+<h4 class="font-bold mb-2">Refer a Friend</h4>
+<p class="text-sm text-[#857a66] mb-4">Give $10, get 50 Glow Points when they make their first order.</p>
+<div class="pt-4 border-t border-primary/5">
+<span class="text-xs font-bold text-primary">50 POINTS</span>
+</div>
+</div>
+<!-- Earn Card 3 -->
+<div class="group bg-white dark:bg-background-dark/50 p-6 rounded-xl border border-primary/10 hover:border-primary/50 transition-all duration-300">
+<div class="size-12 bg-accent-pink/50 rounded-lg flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">rate_review</span>
+</div>
+<h4 class="font-bold mb-2">Review a Product</h4>
+<p class="text-sm text-[#857a66] mb-4">Share your beauty experience and help others find their glow.</p>
+<div class="pt-4 border-t border-primary/5">
+<span class="text-xs font-bold text-primary">20 POINTS</span>
+</div>
+</div>
+<!-- Earn Card 4 -->
+<div class="group bg-white dark:bg-background-dark/50 p-6 rounded-xl border border-primary/10 hover:border-primary/50 transition-all duration-300">
+<div class="size-12 bg-accent-pink/50 rounded-lg flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">photo_camera</span>
+</div>
+<h4 class="font-bold mb-2">Follow on Instagram</h4>
+<p class="text-sm text-[#857a66] mb-4">Stay inspired by our natural beauty community and latest trends.</p>
+<div class="pt-4 border-t border-primary/5">
+<span class="text-xs font-bold text-primary">10 POINTS</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Available Rewards -->
+<section class="mb-16">
+<div class="flex items-center gap-3 mb-8 px-2">
+<h2 class="text-2xl font-bold font-display">Available Rewards</h2>
+<span class="bg-primary/20 text-primary text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-widest">Metamorphosis Ready</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Reward Card 1 -->
+<div class="flex flex-col bg-white dark:bg-background-dark/50 rounded-xl border border-primary/10 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="h-48 bg-accent-pink/30 flex items-center justify-center relative overflow-hidden">
+<span class="material-symbols-outlined text-6xl text-primary opacity-30 select-none">local_activity</span>
+<div class="absolute inset-0 bg-gradient-to-t from-white/80 dark:from-background-dark/80 to-transparent"></div>
+<div class="absolute bottom-4 left-6">
+<span class="bg-white dark:bg-background-dark px-3 py-1 rounded-full text-xs font-bold shadow-sm">500 POINTS</span>
+</div>
+</div>
+<div class="p-6 flex flex-col grow">
+<h4 class="text-lg font-bold mb-1">Enchanted $10 Voucher</h4>
+<p class="text-sm text-[#857a66] dark:text-gray-400 mb-6">Redeemable for any purchase over $40. Apply at checkout for instant radiant savings.</p>
+<button class="mt-auto w-full bg-primary text-[#171512] py-3 rounded-lg font-bold text-sm hover:bg-[#d4b97a] transition-colors flex items-center justify-center gap-2">
+                                Claim Now <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Reward Card 2 -->
+<div class="flex flex-col bg-white dark:bg-background-dark/50 rounded-xl border border-primary/10 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="h-48 bg-primary/10 flex items-center justify-center relative overflow-hidden">
+<span class="material-symbols-outlined text-6xl text-primary opacity-30 select-none">palette</span>
+<div class="absolute inset-0 bg-gradient-to-t from-white/80 dark:from-background-dark/80 to-transparent"></div>
+<div class="absolute bottom-4 left-6">
+<span class="bg-white dark:bg-background-dark px-3 py-1 rounded-full text-xs font-bold shadow-sm">250 POINTS</span>
+</div>
+</div>
+<div class="p-6 flex flex-col grow">
+<h4 class="text-lg font-bold mb-1">Sample Ritual Kit</h4>
+<p class="text-sm text-[#857a66] dark:text-gray-400 mb-6">A curated selection of 3 mini vegan best-sellers for your next travel adventure.</p>
+<button class="mt-auto w-full bg-primary text-[#171512] py-3 rounded-lg font-bold text-sm hover:bg-[#d4b97a] transition-colors flex items-center justify-center gap-2">
+                                Claim Now <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Reward Card 3 (Locked) -->
+<div class="flex flex-col bg-white dark:bg-background-dark/50 rounded-xl border border-primary/5 overflow-hidden opacity-70">
+<div class="h-48 bg-gray-100 dark:bg-white/5 flex items-center justify-center relative overflow-hidden grayscale">
+<span class="material-symbols-outlined text-6xl text-gray-400 opacity-30 select-none">spa</span>
+<div class="absolute inset-0 bg-white/20 dark:bg-black/20 backdrop-grayscale"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-gray-400">lock</span>
+</div>
+<div class="absolute bottom-4 left-6">
+<span class="bg-white dark:bg-background-dark px-3 py-1 rounded-full text-xs font-bold shadow-sm">1000 POINTS</span>
+</div>
+</div>
+<div class="p-6 flex flex-col grow">
+<h4 class="text-lg font-bold mb-1 text-gray-500">Velvet Satin Mascara</h4>
+<p class="text-sm text-gray-400 mb-6">Full-size award-winning vegan mascara. Unlock with Velvet Wings status.</p>
+<button class="mt-auto w-full bg-gray-200 dark:bg-white/10 text-gray-500 py-3 rounded-lg font-bold text-sm cursor-not-allowed" disabled="">
+                                250 Points Remaining
+                            </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-background-dark/80 py-12 border-t border-primary/10">
+<div class="max-w-[1200px] mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="md:col-span-2">
+<div class="flex items-center gap-2 mb-6 text-primary">
+<span class="material-symbols-outlined">flutter_dash</span>
+<h2 class="text-xl font-bold font-display text-[#171512] dark:text-white">Noura's Butterflies</h2>
+</div>
+<p class="text-[#857a66] dark:text-gray-400 text-sm max-w-sm">
+                        Born from nature, designed for grace. We believe in beauty that transforms the spirit while respecting the earth. Join our garden of radiant butterflies.
+                    </p>
+</div>
+<div>
+<h5 class="font-bold mb-4 uppercase tracking-widest text-xs">Explore</h5>
+<ul class="space-y-3 text-sm text-[#857a66] dark:text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">Our Story</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Vegan Promise</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Sustainablity</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Press</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-4 uppercase tracking-widest text-xs">Support</h5>
+<ul class="space-y-3 text-sm text-[#857a66] dark:text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">Shipping</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Returns</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Track Order</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-[1200px] mx-auto px-6 pt-12 mt-12 border-t border-primary/5 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-xs text-[#857a66]">© 2024 Noura's Butterflies. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-sm text-[#857a66] hover:text-primary transition-colors" href="#">Privacy</a>
+<a class="text-sm text-[#857a66] hover:text-primary transition-colors" href="#">Terms</a>
+<a class="text-sm text-[#857a66] hover:text-primary transition-colors" href="#">Accessibility</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

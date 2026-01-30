@@ -1,0 +1,557 @@
+/* Account-specific styles and animations */
+
+/* Custom animations */
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Utility classes */
+.animate-scale-in {
+  animation: scale-in 0.2s ease-out;
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 2s infinite;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.3s ease-out;
+}
+
+/* Account layout styles */
+.account-layout {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fef7f7 0%, #fdf3f3 100%);
+}
+
+/* Sidebar styles */
+.account-sidebar {
+  @apply bg-white border-r border-gray-200 h-full overflow-y-auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.account-sidebar-mobile {
+  @apply fixed inset-y-0 left-0 z-40 w-64 transform -translate-x-full;
+}
+
+.account-sidebar-mobile.open {
+  @apply translate-x-0;
+}
+
+/* Sidebar navigation active states */
+.sidebar-nav-item {
+  @apply w-full flex items-center px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200;
+}
+
+.sidebar-nav-item:hover {
+  @apply bg-gray-50 text-gray-900;
+}
+
+.sidebar-nav-item.active {
+  @apply bg-pink-50 text-pink-700 border-l-4 border-pink-500;
+}
+
+/* Profile card styles */
+.profile-card {
+  @apply bg-white rounded-lg border border-gray-200 p-6 shadow-sm;
+}
+
+.profile-avatar {
+  @apply relative w-20 h-20 mx-auto;
+}
+
+.profile-avatar img {
+  @apply w-full h-full rounded-full object-cover;
+}
+
+.profile-avatar-placeholder {
+  @apply w-full h-full rounded-full bg-pink-100 flex items-center justify-center;
+}
+
+.profile-avatar-placeholder span {
+  @apply text-pink-600 font-semibold text-2xl;
+}
+
+/* Membership badge styles */
+.membership-badge {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+}
+
+.membership-badge-bronze {
+  @apply bg-orange-600 text-white;
+}
+
+.membership-badge-silver {
+  @apply bg-gray-400 text-white;
+}
+
+.membership-badge-gold {
+  @apply bg-yellow-500 text-white;
+}
+
+.membership-badge-platinum {
+  @apply bg-gray-800 text-white;
+}
+
+/* Order status badges */
+.order-status-badge {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.order-status-processing {
+  @apply bg-yellow-100 text-yellow-800 border-yellow-200;
+}
+
+.order-status-shipped {
+  @apply bg-blue-100 text-blue-800 border-blue-200;
+}
+
+.order-status-out-for-delivery {
+  @apply bg-purple-100 text-purple-800 border-purple-200;
+}
+
+.order-status-delivered {
+  @apply bg-green-100 text-green-800 border-green-200;
+}
+
+.order-status-cancelled {
+  @apply bg-red-100 text-red-800 border-red-200;
+}
+
+/* Wishlist styles */
+.wishlist-grid {
+  @apply grid gap-6;
+}
+
+.wishlist-grid-mobile {
+  @apply grid-cols-1;
+}
+
+.wishlist-grid-tablet {
+  @apply grid-cols-2;
+}
+
+.wishlist-grid-desktop {
+  @apply grid-cols-3;
+}
+
+.wishlist-product-card {
+  @apply bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300 relative group;
+}
+
+.wishlist-remove-button {
+  @apply absolute top-3 right-3 p-2 bg-white rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200;
+}
+
+/* Comparison table styles */
+.comparison-table {
+  @apply bg-white rounded-lg border border-gray-200 overflow-hidden;
+}
+
+.comparison-table-container {
+  @apply overflow-x-auto;
+}
+
+.comparison-table table {
+  @apply w-full min-w-[600px];
+}
+
+.comparison-table th {
+  @apply sticky left-0 bg-gray-50 p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-r border-gray-200;
+}
+
+.comparison-table td {
+  @apply p-4 text-sm text-gray-700 border-r border-gray-200 last:border-r-0;
+}
+
+.comparison-table tr:nth-child(even) {
+  @apply bg-gray-50;
+}
+
+.comparison-table tr:hover {
+  @apply bg-gray-50;
+}
+
+/* Address card styles */
+.address-card {
+  @apply bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow duration-200 relative;
+}
+
+.address-card-actions {
+  @apply mt-4 pt-3 border-t border-gray-100 flex items-center justify-between transition-opacity duration-200;
+}
+
+.address-card-actions-desktop {
+  @apply opacity-60 lg:opacity-0;
+}
+
+.address-card:hover .address-card-actions-desktop {
+  @apply opacity-100;
+}
+
+/* Tracking progress styles */
+.tracking-progress {
+  @apply bg-white rounded-lg border border-gray-200 p-6 mb-6;
+}
+
+.tracking-step {
+  @apply relative flex flex-col items-center;
+}
+
+.tracking-step-circle {
+  @apply relative w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300;
+}
+
+.tracking-step-circle.completed {
+  @apply bg-green-500 text-white;
+}
+
+.tracking-step-circle.active {
+  @apply bg-pink-500 text-white ring-4 ring-pink-100 animate-pulse;
+}
+
+.tracking-step-circle.pending {
+  @apply bg-gray-200 text-gray-400;
+}
+
+.tracking-step-label {
+  @apply mt-3 text-center;
+}
+
+.tracking-step-label-text {
+  @apply text-sm font-medium mb-1;
+}
+
+.tracking-step-label-text.completed {
+  @apply text-green-600;
+}
+
+.tracking-step-label-text.active {
+  @apply text-pink-600;
+}
+
+.tracking-step-label-text.pending {
+  @apply text-gray-500;
+}
+
+/* Tracking history timeline */
+.tracking-timeline {
+  @apply space-y-4;
+}
+
+.tracking-timeline-item {
+  @apply relative pl-8 pb-6 last:pb-0;
+}
+
+.tracking-timeline-line {
+  @apply absolute left-4 top-8 bottom-0 w-0.5;
+}
+
+.tracking-timeline-line.completed {
+  @apply bg-pink-200;
+}
+
+.tracking-timeline-line.pending {
+  @apply bg-gray-200;
+}
+
+.tracking-timeline-dot {
+  @apply absolute left-2 top-2 w-4 h-4 rounded-full border-2;
+}
+
+.tracking-timeline-dot.completed {
+  @apply bg-pink-500 border-pink-500;
+}
+
+.tracking-timeline-dot.pending {
+  @apply bg-white border-gray-300;
+}
+
+.tracking-timeline-dot.latest {
+  @apply bg-pink-500 border-pink-500;
+}
+
+.tracking-timeline-dot.latest::after {
+  @apply w-2 h-2 bg-white rounded-full mx-auto mt-0.5 animate-pulse-dot;
+  content: '';
+  display: block;
+}
+
+/* Form styles */
+.floating-label-input {
+  @apply relative;
+}
+
+.floating-label-input input {
+  @apply w-full px-4 py-3 border rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed;
+}
+
+.floating-label-input input:focus ~ label,
+.floating-label-input input:not(:placeholder-shown) ~ label {
+  @apply -top-2 text-xs text-gray-500;
+}
+
+.floating-label-input label {
+  @apply absolute left-4 transition-all duration-200 pointer-events-none;
+}
+
+.floating-label-input.error input {
+  @apply border-red-500 focus:ring-red-500;
+}
+
+.floating-label-input.error label {
+  @apply text-red-500;
+}
+
+/* Password strength indicator */
+.password-strength {
+  @apply mt-3;
+}
+
+.password-strength-bar {
+  @apply w-full bg-gray-200 rounded-full h-2;
+}
+
+.password-strength-fill {
+  @apply h-2 rounded-full transition-all duration-300;
+}
+
+.password-strength-weak {
+  @apply bg-red-500;
+}
+
+.password-strength-fair {
+  @apply bg-yellow-500;
+}
+
+.password-strength-good {
+  @apply bg-blue-500;
+}
+
+.password-strength-strong {
+  @apply bg-green-500;
+}
+
+.password-requirements {
+  @apply mt-2 text-xs text-gray-500;
+}
+
+.password-requirements li {
+  @apply mt-1 space-y-1;
+}
+
+.password-requirements li.valid {
+  @apply text-green-600;
+}
+
+.password-requirements li.invalid {
+  @apply text-gray-400;
+}
+
+/* Avatar upload styles */
+.avatar-upload {
+  @apply relative;
+}
+
+.avatar-upload-preview {
+  @apply relative w-32 h-32 mx-auto cursor-pointer group;
+}
+
+.avatar-upload-preview img {
+  @apply w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg;
+}
+
+.avatar-upload-preview-placeholder {
+  @apply w-32 h-32 rounded-full bg-gray-100 border-4 border-white shadow-lg flex items-center justify-center;
+}
+
+.avatar-upload-overlay {
+  @apply absolute inset-0 w-32 h-32 rounded-full bg-black bg-opacity-50 flex items-center justify-center transition-opacity duration-200;
+}
+
+.avatar-upload-remove {
+  @apply absolute -top-2 -right-2 p-2 bg-red-500 text-white rounded-full shadow-lg hover:bg-red-600 transition-colors duration-200;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .account-sidebar {
+    @apply fixed inset-y-0 left-0 z-40 w-64 transform -translate-x-full;
+  }
+
+  .account-sidebar.open {
+    @apply translate-x-0;
+  }
+
+  .comparison-table {
+    @apply overflow-x-auto;
+  }
+
+  .comparison-table table {
+    @apply min-w-[600px];
+  }
+
+  .order-history-table {
+    @apply hidden;
+  }
+
+  .order-history-cards {
+    @apply block;
+  }
+
+  .tracking-history-table {
+    @apply hidden;
+  }
+
+  .tracking-history-timeline {
+    @apply block;
+  }
+}
+
+/* Tablet-specific styles */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .wishlist-grid {
+    @apply grid-cols-2;
+  }
+
+  .address-grid {
+    @apply grid-cols-2;
+  }
+}
+
+/* Desktop-specific styles */
+@media (min-width: 1025px) {
+  .wishlist-grid {
+    @apply grid-cols-3;
+  }
+
+  .address-grid {
+    @apply grid-cols-3;
+  }
+
+  .order-history-table {
+    @apply block;
+  }
+
+  .order-history-cards {
+    @apply hidden;
+  }
+
+  .tracking-history-table {
+    @apply block;
+  }
+
+  .tracking-history-timeline {
+    @apply hidden;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .account-layout {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  }
+
+  .account-sidebar {
+    @apply bg-gray-800 border-gray-700;
+  }
+
+  .sidebar-nav-item:hover {
+    @apply bg-gray-700 text-gray-100;
+  }
+
+  .sidebar-nav-item.active {
+    @apply bg-pink-900 text-pink-300;
+  }
+
+  .profile-card {
+    @apply bg-gray-800 border-gray-700;
+  }
+
+  .address-card {
+    @apply bg-gray-800 border-gray-700;
+  }
+
+  .comparison-table {
+    @apply bg-gray-800 border-gray-700;
+  }
+
+  .comparison-table th {
+    @apply bg-gray-700 text-gray-300 border-gray-600;
+  }
+
+  .comparison-table td {
+    @apply text-gray-300 border-gray-600;
+  }
+
+  .comparison-table tr:nth-child(even) {
+    @apply bg-gray-700;
+  }
+
+  .comparison-table tr:hover {
+    @apply bg-gray-700;
+  }
+
+  .floating-label-input input {
+    @apply bg-gray-700 border-gray-600 text-gray-100;
+  }
+
+  .floating-label-input input:focus {
+    @apply bg-gray-600 border-pink-500 text-white;
+  }
+
+  .floating-label-input label {
+    @apply text-gray-400;
+  }
+
+  .floating-label-input input:focus ~ label,
+  .floating-label-input input:not(:placeholder-shown) ~ label {
+    @apply text-gray-500;
+  }
+}
+
+/* Print styles */
+@media print {
+  .account-sidebar,
+  .avatar-upload-overlay,
+  .address-card-actions,
+  .wishlist-remove-button {
+    @apply hidden;
+  }
+
+  .comparison-table {
+    @apply block overflow-visible;
+  }
+
+  .comparison-table table {
+    @apply min-w-0;
+  }
+}

@@ -1,0 +1,259 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+env:
+  NODE_VERSION: '20'
+  FLUTTER_VERSION: '3.16.0'
+
+jobs:
+  # React App Tests
+  react-tests:
+    name: React Tests
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+        cache-dependency-path: nouras-butterflies-react/package-lock.json
+
+    - name: Install dependencies
+      working-directory: ./nouras-butterflies-react
+      run: npm ci
+
+    - name: Run linting
+      working-directory: ./nouras-butterflies-react
+      run: npm run lint
+
+    - name: Run type checking
+      working-directory: ./nouras-butterflies-react
+      run: npm run type-check
+
+    - name: Run unit tests
+      working-directory: ./nouras-butterflies-react
+      run: npm run test:run
+
+    - name: Run integration tests
+      working-directory: ./nouras-butterflies-react
+      run: npm run test:run
+
+    - name: Generate coverage report
+      working-directory: ./nouras-butterflies-react
+      run: npm run test:coverage
+
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v3
+      with:
+        file: ./nouras-butterflies-react/coverage/lcov.info
+        flags: react
+        name: react-coverage
+
+  # React E2E Tests
+  react-e2e:
+    name: React E2E Tests
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+        cache-dependency-path: nouras-butterflies-react/package-lock.json
+
+    - name: Install dependencies
+      working-directory: ./nouras-butterflies-react
+      run: npm ci
+
+    - name: Install Playwright browsers
+      working-directory: ./nouras-butterflies-react
+      run: npx playwright install --with-deps
+
+    - name: Build application
+      working-directory: ./nouras-butterflies-react
+      run: npm run build
+
+    - name: Run E2E tests
+      working-directory: ./nouras-butterflies-react
+      run: npm run test:e2e
+
+    - name: Upload E2E test results
+      uses: actions/upload-artifact@v3
+      if: failure()
+      with:
+        name: playwright-report
+        path: nouras-butterflies-react/playwright-report/
+        retention-days: 30
+
+  # Flutter Tests
+  flutter-tests:
+    name: Flutter Tests
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: ${{ env.FLUTTER_VERSION }}
+        channel: 'stable'
+        cache: true
+
+    - name: Install dependencies
+      working-directory: ./nouras_butterflies_admin
+      run: flutter pub get
+
+    - name: Analyze code
+      working-directory: ./nouras_butterflies_admin
+      run: flutter analyze
+
+    - name: Run unit tests
+      working-directory: ./nouras_butterflies_admin
+      run: flutter test --coverage
+
+    - name: Run widget tests
+      working-directory: ./nouras_butterflies_admin
+      run: flutter test test/widgets/
+
+    - name: Run BLoC tests
+      working-directory: ./nouras_butterflies_admin
+      run: flutter test test/bloc/
+
+    - name: Upload Flutter coverage to Codecov
+      uses: codecov/codecov-action@v3
+      with:
+        file: ./nouras_butterflies_admin/coverage/lcov.info
+        flags: flutter
+        name: flutter-coverage
+
+  # Security Scans
+  security-scan:
+    name: Security Scan
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Run Trivy vulnerability scanner
+      uses: aquasecurity/trivy-action@master
+      with:
+        scan-type: 'fs'
+        scan-ref: '.'
+        format: 'sarif'
+        output: 'trivy-results.sarif'
+
+    - name: Upload Trivy scan results to GitHub Security tab
+      uses: github/codeql-action/upload-sarif@v2
+      if: always()
+      with:
+        sarif_file: 'trivy-results.sarif'
+
+    - name: Run npm audit
+      working-directory: ./nouras-butterflies-react
+      run: npm audit --audit-level moderate
+
+  # Build and Deploy (only on main branch)
+  deploy:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+    needs: [react-tests, react-e2e, flutter-tests, security-scan]
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    
+    environment: production
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+        cache-dependency-path: nouras-butterflies-react/package-lock.json
+
+    - name: Setup Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: ${{ env.FLUTTER_VERSION }}
+        channel: 'stable'
+
+    - name: Build React app
+      working-directory: ./nouras-butterflies-react
+      run: npm run build
+
+    - name: Build Flutter app
+      working-directory: ./nouras_butterflies_admin
+      run: flutter build apk --release
+
+    - name: Deploy to staging
+      run: |
+        echo "Deploying to staging environment..."
+        # Add your deployment commands here
+        # For example: deploy to Vercel, Netlify, or your hosting provider
+
+    - name: Deploy to production
+      if: success()
+      run: |
+        echo "Deploying to production environment..."
+        # Add your production deployment commands here
+
+  # Performance Tests
+  performance-tests:
+    name: Performance Tests
+    runs-on: ubuntu-latest
+    needs: [deploy]
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+
+    - name: Install Lighthouse CI
+      run: npm install -g @lhci/cli@0.12.x
+
+    - name: Run Lighthouse CI
+      run: lhci autorun
+      env:
+        LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+
+  # Notification
+  notify:
+    name: Notify Results
+    runs-on: ubuntu-latest
+    needs: [react-tests, react-e2e, flutter-tests, security-scan, deploy, performance-tests]
+    if: always()
+    
+    steps:
+    - name: Notify on success
+      if: ${{ needs.react-tests.result == 'success' && needs.flutter-tests.result == 'success' }}
+      run: |
+        echo "✅ All tests passed successfully!"
+        # Add your notification logic here (Slack, Discord, Email, etc.)
+
+    - name: Notify on failure
+      if: ${{ needs.react-tests.result == 'failure' || needs.flutter-tests.result == 'failure' }}
+      run: |
+        echo "❌ Some tests failed!"
+        # Add your failure notification logic here

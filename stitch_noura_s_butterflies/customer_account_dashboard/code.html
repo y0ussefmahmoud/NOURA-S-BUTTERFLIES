@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Customer Account Dashboard - Noura's Butterflies</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;family=Poppins:wght@300;400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#141414",
+              "brand-pink": "#FDF2F2",
+              "brand-beige": "#F9F6F1",
+              "brand-gold": "#C5A059",
+              "background-light": "#f7f7f7",
+              "background-dark": "#191919",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "Poppins", "Cairo", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Plus Jakarta Sans', 'Poppins', 'Cairo', sans-serif;
+      }
+      .active-nav {
+        background-color: #141414;
+        color: white;
+      }
+      .sidebar-wash {
+        background: linear-gradient(180deg, #FDF2F2 0%, #F9F6F1 100%);
+      }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen text-primary dark:text-white">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-solid border-primary/10 px-6 lg:px-20 py-4">
+<div class="max-w-[1440px] mx-auto flex items-center justify-between">
+<div class="flex items-center gap-12">
+<div class="flex items-center gap-3 text-primary dark:text-white">
+<div class="size-8 flex items-center justify-center text-brand-gold">
+<span class="material-symbols-outlined text-3xl">flutter_dash</span>
+</div>
+<h2 class="text-xl font-bold leading-tight tracking-tight uppercase">Noura's Butterflies</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-semibold hover:text-brand-gold transition-colors" href="#">Shop</a>
+<a class="text-sm font-semibold hover:text-brand-gold transition-colors" href="#">About Us</a>
+<a class="text-sm font-semibold hover:text-brand-gold transition-colors" href="#">Collections</a>
+<a class="text-sm font-semibold hover:text-brand-gold transition-colors" href="#">Sustainability</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<label class="hidden sm:flex items-center bg-gray-100 dark:bg-zinc-800 rounded-full px-4 py-2 w-64 border border-transparent focus-within:border-brand-gold/30">
+<span class="material-symbols-outlined text-gray-500 text-xl">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full placeholder:text-gray-500" placeholder="Search products..." type="text"/>
+</label>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-brand-gold transition-colors">favorite</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-brand-gold transition-colors">shopping_bag</span>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-9 border-2 border-brand-gold/20" data-alt="User profile picture placeholder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDsMfqyQGR-ehRy5kVbmowtCW5C4ei4YsWvXbWqTdjfzsT_03XySCu0xvP_dIG3KKVpamXiEa1YxEUqRzArHxAsTzZJl_Xsi3yw6dNcU9s6HcluG6LybsaT6kd6UOTYFKDcVyoc1gEIAN3nPgLf7njDDrbyfRKSaJHJFQ1wtB-5DzSIyRyDqzvMlWI-jwF9xQFs30012X1LAQvxwSwDK9GJPXK9VuBjWrnWWQT6yWEZtbzwDWNu0kEqdkmS5ehmvuQIelOB8cprBNA");'></div>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-[1440px] mx-auto flex flex-col lg:flex-row gap-8 px-6 lg:px-20 py-10">
+<!-- Sidebar Navigation -->
+<aside class="w-full lg:w-72 shrink-0">
+<div class="sidebar-wash dark:bg-zinc-900 dark:border dark:border-zinc-800 rounded-xl p-6 sticky top-28 shadow-sm">
+<div class="flex items-center gap-4 mb-8">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-14 border-2 border-white dark:border-zinc-700 shadow-md" data-alt="Noura's profile headshot" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCWahoVwceTMgc_1kLOF9vMSALCKBlEGyrcdnvtz05iNiam-djey7wOO0OCDA-VrRALpowMJ1KfnTMMETkTWTpzhyYVgYSagbxTyfclqtXZAet0fVplmm63fnPPpNh1wEZnFraefB6VvxShAkIlvWwMvUS2aOQn7POwy0QZurjE_voBPJEwL0gHBDrxafwjew6r5Wf0UnC1C6AtP9MzYN5ygfS9jwyNfpiHIV8n-cZPPv8vgPqUFQij4YYUsdhHu-TsIF2CKKdJKP4");'></div>
+<div class="flex flex-col">
+<h1 class="text-lg font-bold">Hello, Noura!</h1>
+<p class="text-primary/60 dark:text-zinc-400 text-xs font-medium uppercase tracking-wider">Butterfly Member</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/50 dark:hover:bg-zinc-800 transition-all text-sm font-semibold" href="#">
+<span class="material-symbols-outlined">person</span>
+                        My Profile
+                    </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg active-nav shadow-lg shadow-primary/10 transition-all text-sm font-semibold" href="#">
+<span class="material-symbols-outlined">package_2</span>
+                        My Orders
+                    </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/50 dark:hover:bg-zinc-800 transition-all text-sm font-semibold" href="#">
+<span class="material-symbols-outlined">location_on</span>
+                        Saved Addresses
+                    </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/50 dark:hover:bg-zinc-800 transition-all text-sm font-semibold" href="#">
+<span class="material-symbols-outlined">favorite</span>
+                        Wishlist
+                    </a>
+<div class="h-px bg-primary/10 dark:bg-zinc-800 my-4"></div>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-red-50 text-red-600 transition-all text-sm font-semibold" href="#">
+<span class="material-symbols-outlined">logout</span>
+                        Log Out
+                    </a>
+</nav>
+</div>
+</aside>
+<!-- Main Content Area -->
+<div class="flex-1 flex flex-col gap-10">
+<!-- My Orders Section -->
+<section>
+<div class="flex items-end justify-between mb-6">
+<div>
+<h2 class="text-3xl font-black leading-tight tracking-tight dark:text-white">My Orders</h2>
+<p class="text-primary/60 dark:text-zinc-400 mt-1">Review and track your botanical beauty purchases.</p>
+</div>
+</div>
+<div class="bg-white dark:bg-zinc-900 rounded-xl border border-primary/5 dark:border-zinc-800 overflow-hidden shadow-sm">
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-brand-beige dark:bg-zinc-800/50">
+<tr>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-primary/60 dark:text-zinc-400">Order ID</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-primary/60 dark:text-zinc-400">Date</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-primary/60 dark:text-zinc-400">Status</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-primary/60 dark:text-zinc-400">Total</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-widest text-primary/60 dark:text-zinc-400 text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-primary/5 dark:divide-zinc-800">
+<tr class="hover:bg-brand-pink/30 dark:hover:bg-zinc-800/30 transition-colors">
+<td class="px-6 py-6 font-bold text-sm">#NB-9042</td>
+<td class="px-6 py-6 text-sm text-primary/70 dark:text-zinc-400">Oct 24, 2023</td>
+<td class="px-6 py-6">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400 text-xs font-bold uppercase tracking-tighter">
+<span class="size-1.5 rounded-full bg-blue-600 animate-pulse"></span>
+                                            In Transit
+                                        </span>
+</td>
+<td class="px-6 py-6 font-semibold text-sm">$189.00</td>
+<td class="px-6 py-6 text-right">
+<button class="text-brand-gold hover:underline text-sm font-bold uppercase tracking-wider">View Details</button>
+</td>
+</tr>
+<tr class="hover:bg-brand-pink/30 dark:hover:bg-zinc-800/30 transition-colors">
+<td class="px-6 py-6 font-bold text-sm">#NB-8821</td>
+<td class="px-6 py-6 text-sm text-primary/70 dark:text-zinc-400">Oct 12, 2023</td>
+<td class="px-6 py-6">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-green-50 text-green-700 dark:bg-green-900/30 dark:text-green-400 text-xs font-bold uppercase tracking-tighter">
+<span class="size-1.5 rounded-full bg-green-600"></span>
+                                            Delivered
+                                        </span>
+</td>
+<td class="px-6 py-6 font-semibold text-sm">$145.00</td>
+<td class="px-6 py-6 text-right">
+<button class="text-brand-gold hover:underline text-sm font-bold uppercase tracking-wider">View Details</button>
+</td>
+</tr>
+<tr class="hover:bg-brand-pink/30 dark:hover:bg-zinc-800/30 transition-colors">
+<td class="px-6 py-6 font-bold text-sm">#NB-8740</td>
+<td class="px-6 py-6 text-sm text-primary/70 dark:text-zinc-400">Sep 28, 2023</td>
+<td class="px-6 py-6">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-green-50 text-green-700 dark:bg-green-900/30 dark:text-green-400 text-xs font-bold uppercase tracking-tighter">
+<span class="size-1.5 rounded-full bg-green-600"></span>
+                                            Delivered
+                                        </span>
+</td>
+<td class="px-6 py-6 font-semibold text-sm">$82.50</td>
+<td class="px-6 py-6 text-right">
+<button class="text-brand-gold hover:underline text-sm font-bold uppercase tracking-wider">View Details</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Saved Addresses Section -->
+<section>
+<div class="flex items-center justify-between mb-6">
+<div>
+<h2 class="text-2xl font-bold dark:text-white">Saved Addresses</h2>
+<p class="text-primary/60 dark:text-zinc-400 text-sm">Manage your delivery locations for faster checkout.</p>
+</div>
+<button class="flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-lg text-sm font-bold hover:bg-zinc-800 transition-all shadow-md shadow-primary/20">
+<span class="material-symbols-outlined text-lg">add</span>
+                        New Address
+                    </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Home Address -->
+<div class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-primary/5 dark:border-zinc-800 relative group transition-all hover:shadow-lg hover:border-brand-gold/30">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-2 text-brand-gold">
+<span class="material-symbols-outlined">home</span>
+<span class="text-xs font-extrabold uppercase tracking-widest">Home</span>
+</div>
+<div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 hover:bg-gray-100 dark:hover:bg-zinc-800 rounded-full transition-colors">
+<span class="material-symbols-outlined text-primary/60 dark:text-zinc-400 text-lg">edit</span>
+</button>
+<button class="p-2 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-full transition-colors">
+<span class="material-symbols-outlined text-red-400 text-lg">delete</span>
+</button>
+</div>
+</div>
+<h3 class="font-bold text-lg mb-1 dark:text-white">Noura Al-Amri</h3>
+<p class="text-primary/70 dark:text-zinc-400 text-sm leading-relaxed">
+                            1234 Butterfly Lane, Floral Heights<br/>
+                            Jeddah, Saudi Arabia 23451
+                        </p>
+<p class="mt-4 text-xs font-bold text-primary/40 dark:text-zinc-500 uppercase tracking-tighter flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+                            Default Shipping
+                        </p>
+</div>
+<!-- Work Address -->
+<div class="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-primary/5 dark:border-zinc-800 relative group transition-all hover:shadow-lg hover:border-brand-gold/30">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-2 text-brand-gold">
+<span class="material-symbols-outlined">work</span>
+<span class="text-xs font-extrabold uppercase tracking-widest">Work</span>
+</div>
+<div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 hover:bg-gray-100 dark:hover:bg-zinc-800 rounded-full transition-colors">
+<span class="material-symbols-outlined text-primary/60 dark:text-zinc-400 text-lg">edit</span>
+</button>
+<button class="p-2 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-full transition-colors">
+<span class="material-symbols-outlined text-red-400 text-lg">delete</span>
+</button>
+</div>
+</div>
+<h3 class="font-bold text-lg mb-1 dark:text-white">Noura Al-Amri</h3>
+<p class="text-primary/70 dark:text-zinc-400 text-sm leading-relaxed">
+                            Skyline Towers, Office 502<br/>
+                            King Abdullah Financial District<br/>
+                            Riyadh, Saudi Arabia 13511
+                        </p>
+</div>
+</div>
+</section>
+<!-- Personal Care Recommendation (Unexpected Choice) -->
+<section class="bg-primary text-white rounded-xl p-8 relative overflow-hidden">
+<div class="relative z-10 max-w-md">
+<span class="text-brand-gold font-bold uppercase tracking-[0.2em] text-[10px] mb-3 block">Personalized Selection</span>
+<h3 class="text-2xl font-bold mb-4 leading-snug">Because you loved the Rose Petal Serum...</h3>
+<p class="text-white/70 text-sm mb-6 leading-relaxed">We've reserved a Lavender Glow Mist just for you. Vegan, natural, and locally sourced.</p>
+<button class="bg-brand-gold hover:bg-brand-gold/90 text-primary font-black px-6 py-3 rounded-lg text-xs uppercase transition-all tracking-widest">Claim 20% Discount</button>
+</div>
+<!-- Abstract Gradient Decor -->
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">
+<div class="absolute top-[-10%] right-[-10%] w-[120%] h-[120%] bg-gradient-to-br from-brand-gold via-brand-pink to-transparent rounded-full blur-[100px]"></div>
+</div>
+</section>
+</div>
+</main>
+<footer class="bg-white dark:bg-background-dark border-t border-primary/10 py-12 px-6 mt-10">
+<div class="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col items-center md:items-start gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-brand-gold">flutter_dash</span>
+<span class="text-lg font-bold uppercase tracking-widest">Noura's Butterflies</span>
+</div>
+<p class="text-primary/50 dark:text-zinc-500 text-xs text-center md:text-left">© 2024 Noura's Butterflies. All Rights Reserved. Vegan &amp; Cruelty Free.</p>
+</div>
+<div class="flex gap-8 text-sm font-semibold uppercase tracking-widest text-primary/60 dark:text-zinc-400">
+<a class="hover:text-brand-gold transition-colors" href="#">Privacy</a>
+<a class="hover:text-brand-gold transition-colors" href="#">Terms</a>
+<a class="hover:text-brand-gold transition-colors" href="#">Help</a>
+</div>
+</div>
+</footer>
+</body></html>

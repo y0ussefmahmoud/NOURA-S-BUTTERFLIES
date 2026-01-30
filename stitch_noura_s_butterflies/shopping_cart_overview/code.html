@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shopping Bag | Noura's Butterflies</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&amp;family=Noto+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#dbd1bd",
+                        "background-light": "#fbfaf9",
+                        "background-dark": "#1c1a16",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>body {
+    font-family: "Noto Sans", sans-serif
+    }
+.serif-text {
+    font-family: "Noto Serif", serif
+    }
+.butterfly-bg {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuC_VWM3X-Oy_S79rT8jK8iREyGfvN8IFIqMlG5bW8n7Th2SbTsOI2ef7G9ynRj8HYcN3Z883wV5jbkDecYpSWBDuSlZ-ZXp8BJ-6Uu2_3eeFWBIGKQws_iQVGvNKAo4dbZgIAjEAsG5RhLkLVeSaCBbQzT-Z0x2nMjcvSjfmJY_MeivxpY0wOKWBptZIJ2skItERmdYU3224VxLpsnhXLcOeWKQ6cCCVJP2ly94s6mkD4DhOmadhaOdKo0tB18bBIvNHjzEXZl9yuM);
+    background-blend-mode: soft-light
+    }</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#171512] dark:text-gray-100 min-h-screen">
+<!-- Navigation Bar -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-solid border-[#efeeeb] dark:border-gray-800">
+<div class="max-w-[1200px] mx-auto flex items-center justify-between px-6 py-4">
+<div class="flex items-center gap-12">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">flutter_dash</span>
+<h2 class="serif-text text-xl font-bold leading-tight tracking-tight">Noura's Butterflies</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Shop All</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Skincare</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Makeup</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Our Story</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center bg-[#efeeeb] dark:bg-gray-800 rounded-xl px-3 py-1.5">
+<span class="material-symbols-outlined text-[#817765] text-xl">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-40 placeholder:text-[#817765]" placeholder="Find your glow..." type="text"/>
+</div>
+<button class="flex items-center justify-center rounded-full w-10 h-10 bg-[#efeeeb] dark:bg-gray-800 hover:bg-primary/20 transition-all">
+<span class="material-symbols-outlined text-xl">shopping_bag</span>
+</button>
+<div class="h-10 w-10 rounded-full bg-cover bg-center border border-primary/30" data-alt="Portrait of a smiling customer with natural makeup" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAjmusmy38QrugiKvgDwf8icaZBNTIq51D7Ip176IAdTR0551S3wPhyaPuu1m553_KR6XvxJ-ONTMNv25FnTzv8WoMJXCJd1_eflEsyiQAHO8LR-W7CZeHST0ly0fetslCnLwfOhxG-8SeHbLJvDycYLwAXSMBIlr156dZshauRzT2ocozYX30VHolJIcyufnM-GhXR09ruXNU9j0Xp53TGyDpgt6asghy5HnACvNfH-4vAdHg1GoRzHvQiCz7fZGmS8RnP5pXlTbs");'></div>
+</div>
+</div>
+</header>
+<main class="max-w-[1200px] mx-auto px-6 py-12 relative">
+<!-- Decorative background element -->
+<div class="absolute top-40 right-10 opacity-5 pointer-events-none select-none rotate-12">
+<span class="material-symbols-outlined text-[300px]">flutter_dash</span>
+</div>
+<!-- Progress Stepper -->
+<div class="flex justify-center mb-16">
+<div class="flex items-center w-full max-w-2xl">
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+<span class="material-symbols-outlined text-sm">shopping_basket</span>
+</div>
+<span class="text-xs font-bold tracking-widest uppercase text-primary">Bag</span>
+</div>
+<div class="flex-1 h-[2px] bg-primary/30 mb-6 mx-4"></div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-10 h-10 rounded-full border-2 border-[#efeeeb] dark:border-gray-700 flex items-center justify-center text-[#817765]">
+<span class="material-symbols-outlined text-sm">person</span>
+</div>
+<span class="text-xs font-medium tracking-widest uppercase text-[#817765]">Details</span>
+</div>
+<div class="flex-1 h-[2px] bg-[#efeeeb] dark:bg-gray-800 mb-6 mx-4"></div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-10 h-10 rounded-full border-2 border-[#efeeeb] dark:border-gray-700 flex items-center justify-center text-[#817765]">
+<span class="material-symbols-outlined text-sm">local_shipping</span>
+</div>
+<span class="text-xs font-medium tracking-widest uppercase text-[#817765]">Shipping</span>
+</div>
+<div class="flex-1 h-[2px] bg-[#efeeeb] dark:bg-gray-800 mb-6 mx-4"></div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-10 h-10 rounded-full border-2 border-[#efeeeb] dark:border-gray-700 flex items-center justify-center text-[#817765]">
+<span class="material-symbols-outlined text-sm">payments</span>
+</div>
+<span class="text-xs font-medium tracking-widest uppercase text-[#817765]">Payment</span>
+</div>
+</div>
+</div>
+<!-- Page Heading -->
+<div class="mb-10">
+<h1 class="serif-text text-5xl font-black mb-2 tracking-tight">Your Shopping Bag</h1>
+<p class="text-[#817765] dark:text-gray-400 text-lg">Indulge in your curated selection of vegan beauty.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Items List -->
+<div class="lg:col-span-8 space-y-6">
+<!-- Item 1 -->
+<div class="bg-white dark:bg-[#25221d] p-6 rounded-xl shadow-sm border border-[#efeeeb] dark:border-gray-800 flex flex-col sm:flex-row gap-6 items-center">
+<div class="w-32 h-32 bg-center bg-cover rounded-lg shrink-0 border border-primary/10" data-alt="Close up of a pink vegan lip tint bottle with floral petals" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAxqvqU8OI197R3SRwVKiIoSYEANOj15IlzbiThZrgvtXa3wnOWhp34S49nMVBLExQ1d21Amcr9i2yorG7xVeAPl-d16F6FYvuf6ZUWUlAQheKNrDE2UJjzGgXq4dBkgAllE9_S9YdRC7U4SLxSlafw1Kn9WS6Ybj4ZYjqojgdFB56UO_1qdm-g0ORk4v9Tcfeq9UJTEGpO4L4-sdsWoQGZW7Bk8q5wnhtGnKwzcgtjllu6RefKUnTgTkO9bOc6v8H4hqbaLq7GMzk");'></div>
+<div class="flex flex-1 flex-col">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h3 class="serif-text text-xl font-bold">Silk Petal Vegan Lip Tint</h3>
+<p class="text-[#817765] dark:text-gray-400 text-sm">Shade: Rose Quartz</p>
+</div>
+<span class="serif-text text-lg font-bold">$24.00</span>
+</div>
+<div class="flex justify-between items-center mt-auto pt-4 border-t border-[#efeeeb] dark:border-gray-800">
+<div class="flex items-center gap-4 bg-[#fbfaf9] dark:bg-gray-800 rounded-full px-4 py-1 border border-primary/20">
+<button class="w-6 h-6 flex items-center justify-center hover:text-primary transition-colors">-</button>
+<span class="w-4 text-center font-medium">1</span>
+<button class="w-6 h-6 flex items-center justify-center hover:text-primary transition-colors">+</button>
+</div>
+<button class="text-[#817765] hover:text-red-400 transition-colors text-xs font-bold uppercase tracking-widest flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">delete</span> Remove
+                            </button>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-white dark:bg-[#25221d] p-6 rounded-xl shadow-sm border border-[#efeeeb] dark:border-gray-800 flex flex-col sm:flex-row gap-6 items-center">
+<div class="w-32 h-32 bg-center bg-cover rounded-lg shrink-0 border border-primary/10" data-alt="Golden serum bottle on a light beige background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAZDHQMcdw-acfCueBAHX2tD_sb6tl8uHT7xlyiweHqtvM2gqUZPPnst4TDcZzxqU7Z02pM4-VXuIKIxOIr-XUFT4a781lQ3ho9N1cfxYCCqhb_Pi00YaDnDLguYfZPXepmxK7D33G8qAl5Z4kGaSpjTygn532pSRrG5JeHzDBpP6qfV-mb1Fu7_0ma0zQEF19JIqYiyyEm5PbsEnjzMWTmsd0wqtPYQkrtjpHXBOO4ieDKjLRT6hX5CipCt_b7PKuEp_VrJR4fIgo");'></div>
+<div class="flex flex-1 flex-col">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h3 class="serif-text text-xl font-bold">Glow Nectar Serum</h3>
+<p class="text-[#817765] dark:text-gray-400 text-sm">Size: 30ml</p>
+</div>
+<span class="serif-text text-lg font-bold">$48.00</span>
+</div>
+<div class="flex justify-between items-center mt-auto pt-4 border-t border-[#efeeeb] dark:border-gray-800">
+<div class="flex items-center gap-4 bg-[#fbfaf9] dark:bg-gray-800 rounded-full px-4 py-1 border border-primary/20">
+<button class="w-6 h-6 flex items-center justify-center hover:text-primary transition-colors">-</button>
+<span class="w-4 text-center font-medium">1</span>
+<button class="w-6 h-6 flex items-center justify-center hover:text-primary transition-colors">+</button>
+</div>
+<button class="text-[#817765] hover:text-red-400 transition-colors text-xs font-bold uppercase tracking-widest flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">delete</span> Remove
+                            </button>
+</div>
+</div>
+</div>
+<!-- Trust Badges -->
+<div class="pt-10 flex gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-3xl">eco</span>
+<span class="text-[10px] uppercase tracking-tighter font-bold">Vegan</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-3xl">cruelty_free</span>
+<span class="text-[10px] uppercase tracking-tighter font-bold">Cruelty Free</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-3xl">recycling</span>
+<span class="text-[10px] uppercase tracking-tighter font-bold">Eco-Pack</span>
+</div>
+</div>
+</div>
+<!-- Order Summary Sidebar -->
+<div class="lg:col-span-4 sticky top-32">
+<div class="bg-[#f2efe9] dark:bg-[#2c2822] p-8 rounded-xl border border-primary/20">
+<h2 class="serif-text text-2xl font-bold mb-6">Order Summary</h2>
+<div class="space-y-4 mb-8">
+<div class="flex justify-between text-sm">
+<span class="text-[#817765] dark:text-gray-400">Subtotal</span>
+<span class="font-bold">$72.00</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-[#817765] dark:text-gray-400">Estimated Shipping</span>
+<span class="text-green-600 font-medium">Complimentary</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-[#817765] dark:text-gray-400">Sales Tax</span>
+<span class="font-bold">$0.00</span>
+</div>
+<div class="pt-4 border-t border-primary/30 flex justify-between items-end">
+<span class="serif-text text-lg">Total</span>
+<span class="serif-text text-3xl font-black text-background-dark dark:text-white">$72.00</span>
+</div>
+</div>
+<!-- Promo Code -->
+<div class="mb-8">
+<p class="text-[10px] uppercase tracking-widest font-bold mb-2 text-primary">Apply Grace</p>
+<div class="flex gap-2">
+<input class="flex-1 bg-white dark:bg-gray-800 border-none rounded-lg text-sm focus:ring-1 focus:ring-primary px-4" placeholder="Enter promo code" type="text"/>
+<button class="bg-background-dark dark:bg-background-light dark:text-background-dark text-white px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-widest hover:bg-primary transition-colors">Apply</button>
+</div>
+</div>
+<button class="w-full bg-primary py-4 rounded-xl text-background-dark font-bold text-sm uppercase tracking-widest shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all">
+                        Proceed to Checkout
+                    </button>
+<div class="mt-6 flex items-center justify-center gap-4 opacity-50">
+<span class="material-symbols-outlined text-xl">lock</span>
+<p class="text-[10px] uppercase tracking-widest font-bold">Secure Checkout</p>
+</div>
+</div>
+<div class="mt-8 p-4 bg-white/50 dark:bg-white/5 rounded-xl border border-dashed border-primary/40">
+<p class="text-xs text-[#817765] dark:text-gray-400 italic text-center leading-relaxed">
+                        "Like a butterfly's touch, our products are gentle, natural, and leave a trace of beauty wherever they go."
+                    </p>
+</div>
+</div>
+</div>
+</main>
+<footer class="mt-20 py-12 border-t border-[#efeeeb] dark:border-gray-800 bg-white/30 dark:bg-gray-900/30">
+<div class="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-3 opacity-50">
+<span class="material-symbols-outlined text-primary text-xl">flutter_dash</span>
+<span class="serif-text font-bold">Noura's Butterflies</span>
+</div>
+<div class="flex gap-8 text-xs font-bold uppercase tracking-widest text-[#817765]">
+<a class="hover:text-primary" href="#">Returns</a>
+<a class="hover:text-primary" href="#">Contact</a>
+<a class="hover:text-primary" href="#">Privacy</a>
+<a class="hover:text-primary" href="#">Terms</a>
+</div>
+<p class="text-xs text-[#817765]">© 2024 Crafted with Love &amp; Petals.</p>
+</div>
+</footer>
+</body></html>

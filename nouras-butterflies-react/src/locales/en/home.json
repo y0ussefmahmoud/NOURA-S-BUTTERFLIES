@@ -1,0 +1,46 @@
+{
+  "hero": {
+    "badge": "Premium Beauty Collection",
+    "headline": "Discover Your",
+    "headlineAccent": "Natural Glow",
+    "subtitle": "Transform your beauty routine with our 100% vegan, cruelty-free cosmetics. Experience the perfect blend of nature and luxury.",
+    "cta": {
+      "shop": "Shop Now",
+      "learn": "Learn More"
+    },
+    "imageAlt": "Noura's Butterflies Premium Beauty Products",
+    "veganBadge": "100% Vegan"
+  },
+  "trustBar": {
+    "freeShipping": "Free Shipping",
+    "freeShippingDesc": "On orders over $50",
+    "organic": "100% Organic",
+    "organicDesc": "Natural ingredients",
+    "securePayment": "Secure Payment",
+    "securePaymentDesc": "Safe & encrypted"
+  },
+  "bestSellers": {
+    "badge": "Customer Favorites",
+    "title": "Best Sellers",
+    "subtitle": "Discover our most-loved products that have captured the hearts of beauty enthusiasts worldwide.",
+    "viewAll": "View All Products"
+  },
+  "philosophy": {
+    "title": "Our Philosophy",
+    "subtitle": "Beauty that respects nature",
+    "features": {
+      "vegan": "100% Vegan",
+      "crueltyFree": "Cruelty-Free",
+      "sustainable": "Sustainable",
+      "handcrafted": "Handcrafted"
+    }
+  },
+  "newsletter": {
+    "title": "Stay in the Glow",
+    "subtitle": "Subscribe to our newsletter for exclusive offers, beauty tips, and new product launches.",
+    "placeholder": "Enter your email",
+    "button": "Subscribe",
+    "success": "Thank you for subscribing! Check your email for confirmation.",
+    "error": "Please enter a valid email address"
+  }
+}

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Noura's Butterflies Homepage</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ffb8c4",
+                        "gold": "#D4AF37",
+                        "background-light": "#faebe0",
+                        "background-dark": "#211b18",
+                        "accent-pink": "#f4e6e8",
+                        "soft-text": "#5D4037"
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        h1, h2, h3, .font-display {
+            font-family: 'Noto Serif', serif;
+        }
+        .butterfly-glow {
+            box-shadow: 0 10px 40px -10px rgba(255, 184, 196, 0.3);
+        }
+        .soft-card-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#1d0c0f] min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-[#eacdd2] dark:border-[#3d322c]">
+<div class="max-w-[1280px] mx-auto px-6 h-20 flex items-center justify-between gap-4">
+<!-- Logo Area -->
+<div class="flex items-center gap-2">
+<div class="text-primary size-8 flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">flutter_dash</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight text-[#1d0c0f] dark:text-[#faebe0]">Noura's Butterflies</h2>
+</div>
+<!-- Navigation Links -->
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Shop All</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">New Arrivals</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Vegan Collections</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Our Story</a>
+</nav>
+<!-- Actions Area -->
+<div class="flex items-center gap-4 flex-1 justify-end">
+<div class="relative max-w-xs w-full hidden md:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary">search</span>
+<input class="w-full bg-[#f4e6e8] dark:bg-[#2d2521] border-none rounded-full pl-10 pr-4 py-2 text-sm focus:ring-2 focus:ring-primary transition-all" placeholder="Search beauty..." type="text"/>
+</div>
+<div class="flex items-center gap-2">
+<button class="bg-[#f4e6e8] dark:bg-[#2d2521] text-xs font-bold px-3 py-2 rounded-full hover:bg-primary/20 transition-all">EN</button>
+<button class="text-[#1d0c0f] dark:text-[#faebe0] p-2 rounded-full hover:bg-primary/20 transition-all">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<button class="relative bg-primary text-[#1d0c0f] p-2 rounded-full butterfly-glow">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-gold text-white text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full border-2 border-white">2</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-[1280px] mx-auto px-6">
+<!-- Hero Section -->
+<section class="py-12 md:py-20">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="flex flex-col gap-8 order-2 lg:order-1">
+<div class="space-y-4">
+<span class="text-gold font-semibold tracking-[0.2em] uppercase text-xs">Botanical Beauty from the Gulf</span>
+<h1 class="text-5xl md:text-7xl font-bold leading-[1.1] dark:text-white">Nature's Grace, <br/><span class="text-primary italic">Your Beauty.</span></h1>
+<p class="text-lg text-soft-text dark:text-[#faebe0]/70 max-w-md">
+                            Discover our premium collection of natural and vegan cosmetics, ethically crafted for the radiant, modern woman.
+                        </p>
+</div>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-[#1d0c0f] px-10 py-4 rounded-xl font-bold text-lg butterfly-glow hover:scale-[1.02] active:scale-[0.98] transition-all">
+                            Shop The Collection
+                        </button>
+<button class="border-2 border-primary text-[#1d0c0f] dark:text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-primary/10 transition-all">
+                            Explore Vegan
+                        </button>
+</div>
+</div>
+<div class="relative order-1 lg:order-2">
+<div class="w-full aspect-square bg-cover bg-center rounded-[2.5rem] relative z-10 butterfly-glow overflow-hidden" data-alt="Luxury face serum bottle with soft pink butterfly wings background" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCHF_dm3j28Sn4LAxWVyJTOu95tMUdmGrSaMwwHNATc2eQGJKqYps-qe9BkVS92rLZL3Xc1T6_XlvF24JUOuKmPei8-Pfn6tdHwfVQ-BTyv2Hb5TCqeQAFD-SD6UAzHfFCNN7FxZrC6CTCzlmCXYlK8X2oSjStqfk_8puHnI70hI8J44-XwEKEUSHweXxdylflwpsAiveIsfZx4yxEjKxmpvtphWqQ4y_0c9euAXLi4-Ox6l1b33FBNvuj96OIsKsYMUXbDJjQ9unQ')">
+</div>
+<!-- Decorative Elements -->
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-10 -left-10 w-40 h-40 bg-gold/10 rounded-full blur-3xl"></div>
+<div class="absolute top-1/2 -left-8 -translate-y-1/2 bg-white/90 dark:bg-background-dark/90 p-4 rounded-2xl soft-card-shadow flex items-center gap-3 z-20 border border-[#eacdd2]/50">
+<div class="bg-primary/20 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary">eco</span>
+</div>
+<div>
+<p class="text-sm font-bold">100% Vegan</p>
+<p class="text-[10px] opacity-70">Ethically Sourced</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Bar -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 py-10 border-y border-[#eacdd2] dark:border-[#3d322c]">
+<div class="flex items-center gap-4 px-6 justify-center md:justify-start">
+<div class="text-primary"><span class="material-symbols-outlined text-4xl">local_shipping</span></div>
+<div>
+<h3 class="font-bold text-base">Free Global Shipping</h3>
+<p class="text-xs text-soft-text dark:text-[#faebe0]/60">On all orders above $75</p>
+</div>
+</div>
+<div class="flex items-center gap-4 px-6 justify-center md:border-x border-[#eacdd2] dark:border-[#3d322c]">
+<div class="text-primary"><span class="material-symbols-outlined text-4xl">verified_user</span></div>
+<div>
+<h3 class="font-bold text-base">Pure &amp; Organic</h3>
+<p class="text-xs text-soft-text dark:text-[#faebe0]/60">Dermatologically Tested</p>
+</div>
+</div>
+<div class="flex items-center gap-4 px-6 justify-center md:justify-end">
+<div class="text-primary"><span class="material-symbols-outlined text-4xl">lock_open</span></div>
+<div>
+<h3 class="font-bold text-base">Secure Payments</h3>
+<p class="text-xs text-soft-text dark:text-[#faebe0]/60">Encrypted Transactions</p>
+</div>
+</div>
+</div>
+<!-- Best Sellers -->
+<section class="py-20">
+<div class="flex items-end justify-between mb-12 px-4">
+<div class="space-y-2">
+<span class="text-primary font-bold uppercase tracking-widest text-sm">Curated For You</span>
+<h2 class="text-4xl font-bold dark:text-white">Our Best Sellers</h2>
+</div>
+<a class="text-primary font-bold flex items-center gap-2 group" href="#">
+                    View All <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
+<!-- Product 1 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[3/4] rounded-2xl overflow-hidden mb-4 soft-card-shadow transition-transform group-hover:-translate-y-2">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Soft pink lip glow stick on minimalist background" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBAwK_Apm9-W0ywaM_UxvjPX_IDVvPnPBXpnuVyBqwRGumI7PgoYwGRAkC1YU1jC2suWjNLrcGkmfEVayHJCEBDB-gi9S4dvzNXNi2zCB5YcLv_pcHXc7qKa2jpKb8PnfgAmVMOkura49F3twwAm-rss-ff-JzkdB4rFWqkjqmNuud02M2OoFfoy8ky79Fek8ea9Q6gmyV3-KRURyc07YgVJD4FpKks_X2cb4N0DZ0aDJ8Flp8eQ3InKcGHHWhdE50qmSe4Sh5qfbY')"></div>
+<div class="absolute top-4 left-4 bg-gold text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter">Best Seller</div>
+<button class="absolute bottom-4 right-4 bg-white/90 backdrop-blur p-3 rounded-xl soft-card-shadow opacity-0 group-hover:opacity-100 transition-opacity translate-y-4 group-hover:translate-y-0 duration-300">
+<span class="material-symbols-outlined text-[#1d0c0f]">add_shopping_cart</span>
+</button>
+</div>
+<div class="space-y-1">
+<h3 class="text-lg font-bold">Hydrating Lip Glow</h3>
+<p class="text-primary font-bold">$24.00</p>
+<div class="flex items-center gap-2 text-gold">
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="text-xs text-soft-text dark:text-[#faebe0]/60">4.9 (120 reviews)</span>
+</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[3/4] rounded-2xl overflow-hidden mb-4 soft-card-shadow transition-transform group-hover:-translate-y-2">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Radiant cheek tint in aesthetic pot" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBxHD1agpHaqfyT4ibpFa6CIYXYv1n1WFXOEtairt0vIKDL_zgL6V8-DIiWfgvuW17tKDsDGsxk8z29xUokzx6EEzU61oYppa_7S2W4xMjK1LnprjW4fm8x5iUM8msJBQTKPPm0LiMtTxdXeJxNaBOBrznqcs1sYA9oDdD1lbLbnwIf7D-MODWRZG39Yz52SPdaCQwcJ0jVRr33Oo98nvALa105Naytw2UnrZswWk3Jk8-0qloyHSlfhSKCPpEbLMjt59HEao3dQqs')"></div>
+<button class="absolute bottom-4 right-4 bg-white/90 backdrop-blur p-3 rounded-xl soft-card-shadow opacity-0 group-hover:opacity-100 transition-opacity translate-y-4 group-hover:translate-y-0 duration-300">
+<span class="material-symbols-outlined text-[#1d0c0f]">add_shopping_cart</span>
+</button>
+</div>
+<div class="space-y-1">
+<h3 class="text-lg font-bold">Radiant Cheek Tint</h3>
+<p class="text-primary font-bold">$18.00</p>
+<div class="flex items-center gap-2 text-gold">
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="text-xs text-soft-text dark:text-[#faebe0]/60">4.8 (85 reviews)</span>
+</div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[3/4] rounded-2xl overflow-hidden mb-4 soft-card-shadow transition-transform group-hover:-translate-y-2">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Silk finish face powder with soft application puff" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuATa-tK7F6aY5QuldDk_TLc0GVvCHtKxBebDiR0fGQHaO7K2sqDs2fMQO0udUt9PRifsOliw1a_95UpIjHxUXdV1fxcn0QFfRbdO09iuXLVRpcHY78fn1op8hqJR0TxrhfyJfy4ZbtphR1Xn_VlwRxFITFecH6zgy0FO3FwFJF8UArsAQjVVM50frizZb_8F7niTl5ebof9mCRA8vFytwHD0VVpm8DqGjkfuodLsJkJWfApu4BWvt__H-yT098jbUuUfvCaACp_0F8')"></div>
+<button class="absolute bottom-4 right-4 bg-white/90 backdrop-blur p-3 rounded-xl soft-card-shadow opacity-0 group-hover:opacity-100 transition-opacity translate-y-4 group-hover:translate-y-0 duration-300">
+<span class="material-symbols-outlined text-[#1d0c0f]">add_shopping_cart</span>
+</button>
+</div>
+<div class="space-y-1">
+<h3 class="text-lg font-bold">Silk Finish Powder</h3>
+<p class="text-primary font-bold">$32.00</p>
+<div class="flex items-center gap-2 text-gold">
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="text-xs text-soft-text dark:text-[#faebe0]/60">5.0 (40 reviews)</span>
+</div>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[3/4] rounded-2xl overflow-hidden mb-4 soft-card-shadow transition-transform group-hover:-translate-y-2">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Botanical face oil bottle with leaf shadows" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAJFCqur_jjctPnveIX_t9a_pxdgZZuLu3TIV_nzO8fnOkyKmHOD_e2JIX24fKqsvxZQrl09a9CpcJmmwSx6p3WxmdLkYGeSWuzs4vJeg9rYKb7ZA2u2ih2SGeYfTFy76efSo-7dmb3aVri8PqJPQY2v8L3kEW_Wcc-zgM62ckNoCuyPi61TZ84wxsVh8aM1sk64tUbQMLtlfPubjjF2D0SmJT9w2AuL-0iepAy5X1aDEjQSrIfNsvs5ebo1Mpq70RJOaTDWf38Egs')"></div>
+<button class="absolute bottom-4 right-4 bg-white/90 backdrop-blur p-3 rounded-xl soft-card-shadow opacity-0 group-hover:opacity-100 transition-opacity translate-y-4 group-hover:translate-y-0 duration-300">
+<span class="material-symbols-outlined text-[#1d0c0f]">add_shopping_cart</span>
+</button>
+</div>
+<div class="space-y-1">
+<h3 class="text-lg font-bold">Nourishing Face Oil</h3>
+<p class="text-primary font-bold">$45.00</p>
+<div class="flex items-center gap-2 text-gold">
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="text-xs text-soft-text dark:text-[#faebe0]/60">4.7 (62 reviews)</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us / Brand Philosophy Section -->
+<section class="py-20 mb-20">
+<div class="bg-primary/10 dark:bg-[#2d2521] rounded-[3rem] p-8 md:p-16 relative overflow-hidden">
+<!-- Organic Shape Decorations -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-[100px]"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-gold/10 rounded-full blur-[100px]"></div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-4">
+<div class="w-full aspect-square rounded-2xl overflow-hidden soft-card-shadow border-4 border-white dark:border-background-dark">
+<img class="w-full h-full object-cover" data-alt="Crushed rose petals in water" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhu7gF0FYxQVHwr19iB6fzVMKxbPEDw-bwuWY3m-ndVL2TJ8ijnD2r--ep7pJsneSdZWVFNnbtQX5FsNpkcySYqXjtUUxLJF3AT9AhUCCVFEkpY359NFxjZr7w9qVKGVLM_2DExfBZF7Nupiye5QtBPIsSqC655dWXHhrKfc2HuVSZocIZSYHcs2uvYwH96A8LZqgmAxs1Q0R-7oRz2da_Ac-6ryzdR2kCrlJrkku0I_xUShFbL4rV4xztjepm6aLQ1JXfA4DVYCQ"/>
+</div>
+<div class="w-full aspect-[4/5] rounded-2xl overflow-hidden soft-card-shadow border-4 border-white dark:border-background-dark">
+<img class="w-full h-full object-cover" data-alt="Natural vegan ingredients flatlay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCev4UiBqYbO5CnvyA-I8trY3gN7sz5lyv30BDY2C-QG0lLVG2eJCs1NKUMzAkC38aQ8hLRm95DXt6gjsBUq_zALmvirlFJKXsMWmutwe-klSx5sclh5VTXQEqDqA6e3Emu-TVrGHazkdUsga78CT5Sxw6WTqyrsVbeEq0lvEOyQzz3EbQKrIjiHFAVIbeO7DoeowxvVzJKhP6DCcmg_AbTn3naKUe0_yml7ae-VTRbG_3-Nas7cQZpU4qTWv2HqBhA0DHApgh1Ys4"/>
+</div>
+</div>
+<div class="pt-12 space-y-4">
+<div class="w-full aspect-[4/5] rounded-2xl overflow-hidden soft-card-shadow border-4 border-white dark:border-background-dark">
+<img class="w-full h-full object-cover" data-alt="Woman applying skincare with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAu77ivmWa8bXoQWJUDxTCOuClMWqJdJ6fcIKW6a-y030joQ7KKZ0joyYEk2BPd42kaqCNewt235spXTMX7fCJcUSnQsthSu2yArmVjbZu7Wp9t8VQ5c1HlwKZxrArQ0JLKKA50A5HA6DCJ8ultLyCuZHfUp2c8zzICasYJ4r_YZ6S54LVBT3-RQfneK8YvatFqxzsfntBLynsmfbp0fb-O22gJFN-ZUSjXSgZago2ndhZd6kgTfbu174aIflwyUl4y6yeYp0_k_vs"/>
+</div>
+<div class="w-full aspect-square rounded-2xl overflow-hidden soft-card-shadow border-4 border-white dark:border-background-dark">
+<img class="w-full h-full object-cover" data-alt="Botanical butterfly illustration style artwork" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR-lMYeWEb9JEjhmMnF9tfkM55_aS4Y7sZpuLJMoYQZLZYKx3MhQ-ODKbDSfILrOGUworlTumNFCet6lwXLuPLAxaXPKqH4SVKUqsXEx7KodzHc7mdvpmZCP8O5Psrr0mka6wQftTvAqy3USz_mmZVpHfzB9aCeu7aPCqWcLliJsPwIXz-5sra4S17i7XDj_CiGlKw0WjuIxy0qRAlH-EdGYCJY0lswt0pMZv7dlCStATb2rwhBd5zPh0m3jfBHWtl1SD9bXWDb6g"/>
+</div>
+</div>
+</div>
+<div class="space-y-8">
+<div class="space-y-4">
+<span class="text-gold font-bold uppercase tracking-widest text-sm">Our Essence</span>
+<h2 class="text-5xl font-bold dark:text-white leading-tight">The Noura Secret: <br/>Beauty without Compromise</h2>
+<p class="text-soft-text dark:text-[#faebe0]/70 text-lg">
+                                We believe in a butterfly effect of beauty—that the small, conscious choices you make for your skin can transform your inner confidence. 
+                            </p>
+</div>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="bg-primary p-2 rounded-xl text-[#1d0c0f]">
+<span class="material-symbols-outlined">wash</span>
+</div>
+<div>
+<h4 class="font-bold text-lg">Vegan &amp; Cruelty Free</h4>
+<p class="text-sm text-soft-text dark:text-[#faebe0]/60">We never test on animals and only use plant-derived goodness.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-primary p-2 rounded-xl text-[#1d0c0f]">
+<span class="material-symbols-outlined">psychology_alt</span>
+</div>
+<div>
+<h4 class="font-bold text-lg">Middle-Eastern Wisdom</h4>
+<p class="text-sm text-soft-text dark:text-[#faebe0]/60">Crafted specifically for the climate and needs of our region.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-primary p-2 rounded-xl text-[#1d0c0f]">
+<span class="material-symbols-outlined">sanitizer</span>
+</div>
+<div>
+<h4 class="font-bold text-lg">Toxin-Free Formula</h4>
+<p class="text-sm text-soft-text dark:text-[#faebe0]/60">No parabens, sulfates, or synthetic phthalates. Just pure care.</p>
+</div>
+</div>
+</div>
+<button class="bg-[#1d0c0f] text-white px-10 py-4 rounded-xl font-bold hover:bg-[#1d0c0f]/80 transition-all">Learn More About Our Journey</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f4e6e8] dark:bg-background-dark py-20">
+<div class="max-w-[1280px] mx-auto px-6">
+<div class="flex flex-col items-center text-center mb-16 space-y-6">
+<h2 class="text-4xl font-bold">Join the Flutter</h2>
+<p class="text-soft-text dark:text-[#faebe0]/60 max-w-md">Subscribe to get exclusive early access to our newest vegan releases and beauty secrets.</p>
+<form class="flex w-full max-w-lg gap-2">
+<input class="flex-1 bg-white dark:bg-[#2d2521] border-none rounded-xl px-6 py-4 focus:ring-2 focus:ring-primary" placeholder="Enter your email" type="email"/>
+<button class="bg-primary text-[#1d0c0f] px-8 py-4 rounded-xl font-bold butterfly-glow">Join Now</button>
+</form>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 pt-16 border-t border-[#eacdd2] dark:border-[#3d322c]">
+<div class="col-span-2 space-y-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-3xl text-primary">flutter_dash</span>
+<h2 class="text-xl font-bold tracking-tight">Noura's Butterflies</h2>
+</div>
+<p class="text-soft-text dark:text-[#faebe0]/60 max-w-xs">Ethically crafted natural and vegan cosmetics for the modern woman of Egypt and the Gulf.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 bg-white dark:bg-[#2d2521] flex items-center justify-center rounded-full hover:bg-primary transition-all" href="#"><span class="material-symbols-outlined text-sm">public</span></a>
+<a class="w-10 h-10 bg-white dark:bg-[#2d2521] flex items-center justify-center rounded-full hover:bg-primary transition-all" href="#"><span class="material-symbols-outlined text-sm">photo_camera</span></a>
+<a class="w-10 h-10 bg-white dark:bg-[#2d2521] flex items-center justify-center rounded-full hover:bg-primary transition-all" href="#"><span class="material-symbols-outlined text-sm">alternate_email</span></a>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold">Shop</h4>
+<ul class="space-y-2 text-sm text-soft-text dark:text-[#faebe0]/60">
+<li><a class="hover:text-primary" href="#">Best Sellers</a></li>
+<li><a class="hover:text-primary" href="#">New Arrivals</a></li>
+<li><a class="hover:text-primary" href="#">Lip Care</a></li>
+<li><a class="hover:text-primary" href="#">Face Oils</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold">Company</h4>
+<ul class="space-y-2 text-sm text-soft-text dark:text-[#faebe0]/60">
+<li><a class="hover:text-primary" href="#">Our Story</a></li>
+<li><a class="hover:text-primary" href="#">Careers</a></li>
+<li><a class="hover:text-primary" href="#">Sustainability</a></li>
+<li><a class="hover:text-primary" href="#">Affiliates</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold">Support</h4>
+<ul class="space-y-2 text-sm text-soft-text dark:text-[#faebe0]/60">
+<li><a class="hover:text-primary" href="#">Contact Us</a></li>
+<li><a class="hover:text-primary" href="#">Shipping Info</a></li>
+<li><a class="hover:text-primary" href="#">Returns</a></li>
+<li><a class="hover:text-primary" href="#">FAQs</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-20 pt-8 border-t border-[#eacdd2] dark:border-[#3d322c] flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-soft-text dark:text-[#faebe0]/40">
+<p>© 2024 Noura's Butterflies. All rights reserved.</p>
+<div class="flex gap-8">
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<a class="hover:text-primary" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

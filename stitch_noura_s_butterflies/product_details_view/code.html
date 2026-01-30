@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Product Details - Noura's Butterflies</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ffb8c4",
+                        "background-light": "#faebe0",
+                        "background-dark": "#211b18",
+                        "accent-gold": "#D4AF37",
+                        "soft-charcoal": "#333333"
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .organic-curve {
+            border-radius: 60% 40% 70% 30% / 40% 50% 60% 40%;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-soft-charcoal dark:text-white antialiased">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/20 px-6 lg:px-20 py-4">
+<div class="max-w-[1440px] mx-auto flex items-center justify-between">
+<div class="flex items-center gap-12">
+<div class="flex items-center gap-3">
+<div class="text-primary">
+<span class="material-symbols-outlined text-4xl">flutter_dash</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight">Noura's Butterflies</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Face</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Lips</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Eyes</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Skincare</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative hidden sm:block">
+<input class="bg-white/50 dark:bg-white/10 border-none rounded-full px-5 py-2 text-sm w-64 focus:ring-2 focus:ring-primary/50" placeholder="Search collection..." type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-2 text-primary">search</span>
+</div>
+<button class="p-2 rounded-full hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<button class="p-2 rounded-full hover:bg-primary/20 transition-colors relative">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute top-1 right-1 bg-primary text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">2</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-[1440px] mx-auto px-6 lg:px-20 py-8">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-2 text-sm mb-10 opacity-70">
+<a class="hover:text-primary" href="#">Home</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<a class="hover:text-primary" href="#">Lips</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="font-bold">Butterfly Balm</span>
+</nav>
+<!-- Product Hero Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-24">
+<!-- Gallery (Left) -->
+<div class="lg:col-span-7 flex flex-row gap-4">
+<div class="flex flex-col gap-4 w-20">
+<div class="aspect-square rounded-lg bg-cover bg-center border-2 border-primary" data-alt="Lip balm product closeup view" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBNwoorhcW2BwN7ZT2jTb0Nw-CDXDsZujJi15R4bQ6cy3Ixu7yrcMwzR9Ns9XIeUBVZvj8n9DonfLtuv_w4ZeQglTMU40YQP3opO0a1_ao8mkB_7U3klpbJQD80CNe6XwH7R2i49luJI2VZ_tHd8yryIvhBMk0RyYLY42YP96VT0rTwWZeyBoIKwpwWC5RpHQ9TriSDUsUHKnefK8vCy9CYqOVoVJoUOsnDCZyrV-m_Gl-ekFg71ca2UapPkWHwLVC4FiSnbvnFTTc')"></div>
+<div class="aspect-square rounded-lg bg-cover bg-center hover:opacity-80 cursor-pointer transition-opacity" data-alt="Lip balm texture swatch" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBX7ShB9TEnezB8B42jpjaKAqSdKl8rGKzO-6jJYf00kGDhPixmnj812l-yc1jYjY9-ceBm1TuQs0uOYV4MqO81hss38N-NGQvUGux5K230cvSwT2oIcv4Id-EjO2ea6TkehvBKvxFB7euUJNusY-g69UQEdTpwe11RsEZEhRqw1XtSLpIKtLkbuRf7QlCAkAjQMSUGkC0YfsJMRQkXZWQAHjN5pdtb47vKvBskqu349WXG_nIpKePjEx4NS39PFbOgGrPm7y4vynk')"></div>
+<div class="aspect-square rounded-lg bg-cover bg-center hover:opacity-80 cursor-pointer transition-opacity" data-alt="Model wearing organic lip glow" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB0jRtg8ZR63AiyWq54m7GiPy9oOMW_dX_4D8-VhaWOKclidcJgYb0pXNXfDgXfyz6Chlp5ex3YbWP3d9n6v5QYa-jDUs9-5kWwQiz0sU03yi09Au5m1Hcjx6YRSDWQ9T0Elbyww9AYkScgXy6sJAGKACEyYJjMNqwLoL_QL13LqMoy9B8WgZCHJKYMLJCAj2F22YCdfphH6jc8NCYehqX0pBGX0gGtm4vSY3ru2dRP1Sl1gjRo45716Hs3VBVm_P1rxmMZr-X2YkY')"></div>
+<div class="aspect-square rounded-lg bg-cover bg-center hover:opacity-80 cursor-pointer transition-opacity" data-alt="Butterfly balm packaging" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBP0GlvUQ2M5c6_uXu_a5FUgHXXk5rD3WM0hIMPsUVqTB8uH8pbrabV6rnc7qdUi8XyH0jNGEVNKIyAwuJ3XY94oltpBJIm9NeN_ES2Fso8szi9BdHpK8mZG9ifwQi6uO8qLpYY4mc5VPJpjb7p1vWEetiL7eNVBgocwF1OvQRYM0vjTgXAqMknYfLVKCQHnBm0LdSFkGGNIZc-IJvqvvHrUC1R2AcL0O_Y3xpFTE8Km7pLB__rNakfNIxxZLdtmd5l8j9ZEFip1IE')"></div>
+</div>
+<div class="flex-1 relative group overflow-hidden rounded-xl bg-white dark:bg-white/5 shadow-sm">
+<div class="w-full aspect-[4/5] bg-cover bg-center transition-transform duration-500 hover:scale-110 cursor-zoom-in" data-alt="Detailed view of Butterfly Balm organic lip glow" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC9ydL-7H8FIMsAOkySRyImK6a-e2wjufsr__OqFHWqvzHgx7LwP32jKjZkKcOKnnWOKDYAA19YrXjl8_WprPqxS-tFYtvJ10uFqmG46C4yhB9WVDpBYUDVgGvyJqpEdFthSzPdRScHvbLKXvChaUxzHL9IbvlMiZfyjyoqUiMdP3tJeG0g65R-Ce7IHDrGNn4WINt3p0oZjEvM1LWtjnxcroJ8Le6mR1HM5D02e0oqZbBuhVY37U_yg0OziS2D7WSEg_IsY6OqV8g')"></div>
+<div class="absolute top-4 left-4 flex flex-col gap-2">
+<span class="bg-primary/90 text-white text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full">Bestseller</span>
+</div>
+</div>
+</div>
+<!-- Product Info (Right) -->
+<div class="lg:col-span-5 flex flex-col justify-center">
+<div class="mb-2">
+<span class="text-accent-gold flex items-center gap-1 font-bold text-sm">
+<span class="material-symbols-outlined text-sm">star</span> 4.9 (124 Reviews)
+                    </span>
+</div>
+<h1 class="text-4xl lg:text-5xl font-bold mb-4 leading-tight">Butterfly Balm</h1>
+<p class="text-lg text-soft-charcoal/70 dark:text-white/70 mb-6 font-sans">Organic Lip Glow with Rosehip Oil &amp; Desert Honey</p>
+<div class="flex items-baseline gap-4 mb-8">
+<span class="text-3xl font-bold text-soft-charcoal dark:text-white tracking-tight">EGP 450</span>
+<span class="text-xl text-soft-charcoal/40 dark:text-white/40 line-through">EGP 600</span>
+</div>
+<div class="space-y-8 mb-10">
+<div>
+<p class="text-sm font-bold uppercase tracking-widest mb-4">Shade: <span class="text-primary">Desert Rose</span></p>
+<div class="flex gap-3">
+<button class="w-10 h-10 rounded-full border-2 border-primary ring-2 ring-offset-2 ring-primary bg-[#E57373]" title="Desert Rose"></button>
+<button class="w-10 h-10 rounded-full border-2 border-transparent hover:border-primary/50 transition-all bg-[#F06292]" title="Morning Dew"></button>
+<button class="w-10 h-10 rounded-full border-2 border-transparent hover:border-primary/50 transition-all bg-[#BA68C8]" title="Lavender Mist"></button>
+<button class="w-10 h-10 rounded-full border-2 border-transparent hover:border-primary/50 transition-all bg-[#FF8A65]" title="Sunset Glow"></button>
+</div>
+</div>
+<div>
+<p class="text-sm font-bold uppercase tracking-widest mb-4">Quantity</p>
+<div class="flex items-center w-32 bg-white dark:bg-white/5 rounded-full border border-primary/20 p-1">
+<button class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-sm">remove</span>
+</button>
+<span class="flex-1 text-center font-bold">1</span>
+<button class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-lg shadow-lg shadow-primary/30 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">shopping_cart</span>
+                        Add to Cart
+                    </button>
+<button class="w-full bg-background-dark dark:bg-white text-white dark:text-background-dark font-bold py-4 rounded-lg hover:opacity-90 transition-all">
+                        Buy Now
+                    </button>
+</div>
+<div class="mt-8 flex items-center gap-8 border-t border-primary/10 pt-8">
+<div class="flex flex-col items-center gap-2 opacity-60">
+<span class="material-symbols-outlined">eco</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Vegan</span>
+</div>
+<div class="flex flex-col items-center gap-2 opacity-60">
+<span class="material-symbols-outlined">cruelty_free</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Cruelty Free</span>
+</div>
+<div class="flex flex-col items-center gap-2 opacity-60">
+<span class="material-symbols-outlined">water_drop</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Paraben Free</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bento Sections Below the Fold -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-24">
+<!-- Ingredients Card -->
+<div class="bg-white dark:bg-white/5 p-10 rounded-xl shadow-sm border border-primary/5 flex flex-col items-start lg:col-span-2">
+<div class="bg-primary/20 p-3 rounded-full mb-6">
+<span class="material-symbols-outlined text-primary">biotech</span>
+</div>
+<h3 class="text-2xl font-bold mb-4">Key Ingredients</h3>
+<p class="text-soft-charcoal/70 dark:text-white/70 leading-relaxed mb-8">
+                    Crafted with nature's most potent botanical extracts to nourish and protect. Our signature blend ensures 24-hour hydration without any synthetic waxes.
+                </p>
+<div class="grid grid-cols-2 gap-6 w-full">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 organic-curve bg-primary/10 flex items-center justify-center font-bold text-primary">01</div>
+<div>
+<p class="font-bold text-sm">Rosehip Oil</p>
+<p class="text-xs opacity-60">Deep hydration</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 organic-curve bg-primary/10 flex items-center justify-center font-bold text-primary">02</div>
+<div>
+<p class="font-bold text-sm">Desert Honey</p>
+<p class="text-xs opacity-60">Protective barrier</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 organic-curve bg-primary/10 flex items-center justify-center font-bold text-primary">03</div>
+<div>
+<p class="font-bold text-sm">Shea Butter</p>
+<p class="text-xs opacity-60">Smooth texture</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 organic-curve bg-primary/10 flex items-center justify-center font-bold text-primary">04</div>
+<div>
+<p class="font-bold text-sm">Vitamin E</p>
+<p class="text-xs opacity-60">Antioxidant boost</p>
+</div>
+</div>
+</div>
+</div>
+<!-- How to Use Card -->
+<div class="bg-primary/10 p-10 rounded-xl border border-primary/20 flex flex-col justify-center">
+<h3 class="text-2xl font-bold mb-6">How to Use</h3>
+<ul class="space-y-6">
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<p class="text-sm font-medium">Apply a thin layer to clean, dry lips as a base.</p>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<p class="text-sm font-medium">Add a second layer for a more intense color payoff.</p>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<p class="text-sm font-medium">Use nightly as a repair mask for softer morning lips.</p>
+</li>
+</ul>
+<div class="mt-10 aspect-video rounded-lg bg-cover bg-center overflow-hidden" data-alt="Usage demonstration video preview" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC4ezVvxQxKElpGyyqFBX4t__MdY6V-zY_bgjbYzeEbZ8ywr_8SvHyNIpuEX05PNxTM5i-uod7QaS8o4MLMxczf2W29I8mABMd9bZHD3d0DwdCGnqbW7wVYkF7hPcCSPjklqEie3mXtnXSsp6KzEJjfEP-8j2vy6eOakKwbWhdKVJWBI-V_iMcb4nX4UYxq0JoZCw_SooXcnNgtMQ7L-XcFNawxkyOSCoJaYT4iSk0WbC29Haub7GS5nRcr2YybaXclcgAaGJHHL_A')">
+<div class="w-full h-full bg-black/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl">play_circle</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Reviews Section -->
+<section class="mb-24">
+<div class="flex items-end justify-between mb-12">
+<div>
+<h3 class="text-3xl font-bold mb-2">Customer Stories</h3>
+<p class="opacity-60">See how our community flutters.</p>
+</div>
+<button class="text-primary font-bold flex items-center gap-2 hover:underline">
+                    Write a Review <span class="material-symbols-outlined">edit</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Review Card 1 -->
+<div class="bg-white dark:bg-white/5 p-6 rounded-xl shadow-sm border border-primary/5">
+<div class="flex text-accent-gold mb-4">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+<p class="text-sm italic leading-relaxed mb-6">"This is the first organic balm that actually stays on! My lips feel so soft even in the desert heat."</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-cover bg-center" data-alt="Customer avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC5qYmb9Mc8RL1YFn8pi8yOVuyGYRhWThfhL21EgKtcoGH4NA3MspI0yOzPFFQZwJHH7629pKXjaD-nH6MV_38JaKbxBjzGvfgI0RWMEoARYXiQJYYp6AfYDBEF-M--nYTiE6u015fUF7t58iSE25PHkJELqnlEqsFcfCijsv4Xobav36BOufrF68xxTb8tyBbGMnw4Jo0RYw4H_jbQlftoB1Ms9-mRM_5LxALlKf3UZv1jM8Kj6vq-eZekL_-dDPruGWDH8V3La2A')"></div>
+<div>
+<p class="text-xs font-bold">Laila M.</p>
+<p class="text-[10px] opacity-50">Verified Purchase</p>
+</div>
+</div>
+</div>
+<!-- Review Card 2 -->
+<div class="bg-white dark:bg-white/5 p-6 rounded-xl shadow-sm border border-primary/5">
+<div class="flex text-accent-gold mb-4">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+<p class="text-sm italic leading-relaxed mb-6">"The 'Desert Rose' shade is the perfect natural flush. I use it every single day for work."</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-cover bg-center" data-alt="Customer avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD0q7-WhXF3pb00KMsOmAVqaUw_V6PYxP0BZMARJPVsUOnVUcncjYdNOsl8pfrkVn-l2O3USQNdkBt8mtVkw9DvoRtvZqJ9QUpFr5SM2-xxP_1Q7LbmH1LVneUiM-sQaSFaBOa0I-ckGFtJzviFpiNtuwVPMA4NRIbSp13HP4yFjEtK4-BFNDVKxALYvMG-Gh9YvCTzunyyjYDTj8mOf0letl5pTi9SMwNmy_WetRKVS9bRfsWnMCkRbTGTsy_pqxE4K5pWGarwGf4')"></div>
+<div>
+<p class="text-xs font-bold">Fatima K.</p>
+<p class="text-[10px] opacity-50">Verified Purchase</p>
+</div>
+</div>
+</div>
+<!-- Review Card 3 -->
+<div class="bg-white dark:bg-white/5 p-6 rounded-xl shadow-sm border border-primary/5">
+<div class="flex text-accent-gold mb-4">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+<p class="text-sm italic leading-relaxed mb-6">"Packaging is gorgeous and the formula is buttery smooth. Highly recommend Noura's products!"</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-cover bg-center" data-alt="Customer avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDKkh76Rk9ixx5O6q0VMUsK9rfEj72KizOzzsG1LIP_s-tow61oib8yFmXNeTHmLY1FGBat_ZXSfxPJZwNu6kZRbuL_6o1mMi5vsC_0gT_2afhqNhySglk332o3CQTuiVAIF2FRObVPd81F3p-PGTdf6oDytHrarOzUXhy_hA6gvil-AJcPnRi0DtJH9TOPWbsylvg2oVeoWixrrEyRZdsVccAYrivV7ql5LPCq9AB28yq1ekrHjW4WyXbnVzShdlx0ODjm_SaNkhs')"></div>
+<div>
+<p class="text-xs font-bold">Amira R.</p>
+<p class="text-[10px] opacity-50">Verified Purchase</p>
+</div>
+</div>
+</div>
+<!-- Community Image -->
+<div class="relative group rounded-xl overflow-hidden aspect-square">
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<p class="text-white text-xs font-bold uppercase tracking-widest">Shop the look</p>
+</div>
+<div class="w-full h-full bg-cover bg-center" data-alt="User shared product photo" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCGCDl45x--CBcEyHTc63fLkGUhBeMd1K9v2SR741l4o8yl3N05BNm9z1mX7wgWytm6DvH2GllpX-gBUkFQ7x3WmmgDgAAyI6SiayrDEDrspCjL2pwvO8yPBLhw3FQhtIH2HEp__PDZg8Mv8dEUECPja-LGFQP4F7zI4HzJXOl66NRy-Vp5ycF7JzNcP7FxZxOvKgMzvpmx65vFK9XLV_r7VwGevfZOqaqYGFKXw7hQsX-qVtbL9oFElUyDUaV1oYzUIEJgb90S8MY')"></div>
+</div>
+</div>
+</section>
+<!-- Suggested Products -->
+<section class="pb-20">
+<h3 class="text-3xl font-bold mb-10 text-center">Flutter With These</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Suggested Item 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] rounded-xl bg-white dark:bg-white/5 overflow-hidden mb-4 relative shadow-sm border border-primary/5">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Nourishing Face Oil" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC3A5aIv-bFJPnd8krnn4tdfZT9TciDf9Q0U3EiASxzJP-Bg2aJDpnD4QBv7efoQVYzgXhGRSatWPeuI3ei9ZSF2ayDXQUUTiu2AmGXuiHFlLHWKKWiTTHI0npZKPmQoxrPH7m3xK0y4eVSL2zFCokBnuAdBOdRzK5kLksoLz_TH-6cdKl2gZa1xlWx1B0UfQ3qMDBz6I4mwmL_yV5EWGK7JqLIA49CvuzhJ1_5pq951N3_lMNp4x4upKs96NyAcoR1EhTLOes8qDY')"></div>
+<button class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-md px-6 py-2 rounded-full text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity">Quick View</button>
+</div>
+<h4 class="font-bold mb-1">Butterfly Glow Oil</h4>
+<p class="text-accent-gold text-sm font-bold">EGP 850</p>
+</div>
+<!-- Suggested Item 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] rounded-xl bg-white dark:bg-white/5 overflow-hidden mb-4 relative shadow-sm border border-primary/5">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Mineral Eye Palette" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAtT9OjjD9n_xC7SVHQSHhk9Kfl9PIR-0U1BizYPh-X9AeY8uAFa83QP9KIEm6BORYjQU_uZqProfKhXzarrSR7Pt4XRSk7sQZxgQTRW61q85ru7oKPdTCbPFi3s8jswCQY29iJZtqUMb5vwKgbL3hKP4U8BQHaTJlZWBUNOqrbem0vBBiCRY-vgUac8n1AboshR4bAdWcS0pOR-ozo5QrCEEFFOYZ8J4Bx25zpmz7GhDi98rtqSaR8O6Bdmh8beLHFXds00YmDo48')"></div>
+<button class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-md px-6 py-2 rounded-full text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity">Quick View</button>
+</div>
+<h4 class="font-bold mb-1">Earth Essence Palette</h4>
+<p class="text-accent-gold text-sm font-bold">EGP 1,200</p>
+</div>
+<!-- Suggested Item 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] rounded-xl bg-white dark:bg-white/5 overflow-hidden mb-4 relative shadow-sm border border-primary/5">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Rose Water Toner" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAja0f00Wjw0dcCedQc1nnbOEbVYSsFpuoFuOQskAEGFFp-PjPDsq49seV1Px0Qni81TYzln8SHIWpP0Ygh-njTPIH0EWsoZ6VUDTmHfzTdveOUCdkgi-3zVkKhUB2XssHQummFbvqy6eFCudkl8CZZE0FJpb8grGajRp_AYvdBe5VH8XaBl0niD_euTbFtr5JQ5YDVq5adhu0fU4WLn2ZetGrw1Hy-1ECfkF7t1T2u4hVuWUUzKCNvMS9dFCdASoQqnBEv-pBwbvg')"></div>
+<button class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-md px-6 py-2 rounded-full text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity">Quick View</button>
+</div>
+<h4 class="font-bold mb-1">Damask Rose Mist</h4>
+<p class="text-accent-gold text-sm font-bold">EGP 320</p>
+</div>
+<!-- Suggested Item 4 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] rounded-xl bg-white dark:bg-white/5 overflow-hidden mb-4 relative shadow-sm border border-primary/5">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Silk Sleep Mask" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBc6tiRkfOZ83RMboIC1BdkCNuiaDWivOWwhDxGnRi9cKmZSzBwfXAK5oTDDenlmJO-H_cfvfi4YcAt7VWrI870PCAtVSuEWe1EhzyQrVaZhAQfOsL0t-CEuB5p0nMGGn5KqkOURAuIQK9n7Of_7h-QgsvbStApn70SgdVDxyAh-0BTxOqJbznVjmlSskQ0oqNxG8GB-4rkjm6XW4l2FGEJ1DgYgOjI9wAc7mdAIwJeW4Qav_M7mM-hc8XiKpbBPo4ae9s-ggJB9hQ')"></div>
+<button class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-md px-6 py-2 rounded-full text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity">Quick View</button>
+</div>
+<h4 class="font-bold mb-1">Silk Dream Mask</h4>
+<p class="text-accent-gold text-sm font-bold">EGP 550</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-background-dark border-t border-primary/10 py-16 px-6 lg:px-20">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary text-2xl">flutter_dash</span>
+<h2 class="text-lg font-bold">Noura's Butterflies</h2>
+</div>
+<p class="text-sm opacity-60 leading-relaxed">Embracing natural beauty through organic, vegan, and ethically sourced cosmetics inspired by the spirit of the Egyptian desert.</p>
+</div>
+<div>
+<h5 class="font-bold mb-6">Shop</h5>
+<ul class="space-y-4 text-sm opacity-60">
+<li><a class="hover:text-primary transition-colors" href="#">Best Sellers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Gift Sets</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">New Arrivals</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Sale</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6">Support</h5>
+<ul class="space-y-4 text-sm opacity-60">
+<li><a class="hover:text-primary transition-colors" href="#">Shipping Info</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Returns &amp; Refunds</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">FAQ</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Store Locator</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6">Stay Connected</h5>
+<p class="text-sm opacity-60 mb-4">Join our community for exclusive offers and beauty tips.</p>
+<div class="flex gap-2">
+<input class="bg-background-light dark:bg-white/5 border-none rounded-lg text-sm flex-1 focus:ring-primary" placeholder="Email address" type="email"/>
+<button class="bg-primary p-2 rounded-lg text-white">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto mt-16 pt-8 border-t border-primary/5 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] font-bold uppercase tracking-widest opacity-40">
+<p>© 2024 Noura's Butterflies. All rights reserved.</p>
+<div class="flex gap-6">
+<a href="#">Privacy Policy</a>
+<a href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</body></html>

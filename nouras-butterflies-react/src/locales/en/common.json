@@ -1,0 +1,49 @@
+{
+  "buttons": {
+    "shopNow": "Shop Now",
+    "learnMore": "Learn More",
+    "addToCart": "Add to Cart",
+    "buyNow": "Buy Now",
+    "viewDetails": "View Details",
+    "apply": "Apply",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "submit": "Submit",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "confirm": "Confirm"
+  },
+  "labels": {
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "language": "Language",
+    "currency": "Currency",
+    "quantity": "Quantity",
+    "price": "Price",
+    "total": "Total",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "tax": "Tax"
+  },
+  "status": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "pending": "Pending",
+    "processing": "Processing",
+    "completed": "Completed",
+    "cancelled": "Cancelled"
+  },
+  "badges": {
+    "new": "New",
+    "sale": "Sale",
+    "bestseller": "Bestseller",
+    "vegan": "Vegan",
+    "crueltyFree": "Cruelty-Free",
+    "organic": "Organic"
+  }
+}

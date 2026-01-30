@@ -1,0 +1,62 @@
+{
+  "home": {
+    "title": "Noura's Butterflies - Natural & Organic Beauty Products",
+    "description": "Discover premium natural and organic beauty products. Cruelty-free, vegan-friendly cosmetics for radiant skin.",
+    "keywords": "natural beauty, organic cosmetics, vegan beauty, cruelty-free, skincare, makeup"
+  },
+  "products": {
+    "title": "Shop Natural Beauty Products - Noura's Butterflies",
+    "description": "Browse our collection of 100% vegan, cruelty-free beauty products. From skincare to makeup, find your perfect natural beauty routine.",
+    "keywords": "natural beauty products, organic skincare, vegan makeup, cruelty-free cosmetics"
+  },
+  "product": {
+    "title": "{{productName}} - Noura's Butterflies",
+    "description": "Discover {{productName}}. 100% vegan, cruelty-free {{category}} for natural beauty and radiant skin.",
+    "keywords": "{{productName}}, {{category}}, vegan {{category}}, cruelty-free beauty"
+  },
+  "about": {
+    "title": "Our Story - Noura's Butterflies Natural Beauty",
+    "description": "Learn about Noura's Butterflies' mission to create exceptional vegan, cruelty-free beauty products that respect nature and your skin.",
+    "keywords": "about noura's butterflies, natural beauty story, vegan cosmetics mission, cruelty-free beauty"
+  },
+  "blog": {
+    "title": "Beauty Blog - Tips, Trends & Inspiration | Noura's Butterflies",
+    "description": "Explore our beauty blog for the latest tips, trends, and inspiration in natural skincare, vegan makeup, and sustainable beauty.",
+    "keywords": "beauty blog, skincare tips, vegan makeup trends, natural beauty advice"
+  },
+  "contact": {
+    "title": "Contact Us - Noura's Butterflies",
+    "description": "Get in touch with Noura's Butterflies. We're here to help with any questions about our natural beauty products and services.",
+    "keywords": "contact noura's butterflies, customer support, beauty products help"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions - Noura's Butterflies",
+    "description": "Find answers to common questions about our natural beauty products, shipping, returns, and more at Noura's Butterflies.",
+    "keywords": "FAQ, beauty questions, natural beauty help, shipping information"
+  },
+  "account": {
+    "title": "My Account - Noura's Butterflies",
+    "description": "Manage your Noura's Butterflies account. View orders, track shipments, and update your personal information.",
+    "keywords": "my account, manage orders, track shipment, beauty account"
+  },
+  "cart": {
+    "title": "Shopping Cart - Noura's Butterflies",
+    "description": "Review your shopping cart and complete your purchase of natural beauty products at Noura's Butterflies.",
+    "keywords": "shopping cart, buy natural beauty, checkout, vegan cosmetics"
+  },
+  "checkout": {
+    "title": "Checkout - Noura's Butterflies",
+    "description": "Complete your purchase of natural beauty products. Secure checkout for vegan, cruelty-free cosmetics.",
+    "keywords": "checkout, buy natural beauty, secure payment, vegan cosmetics"
+  },
+  "login": {
+    "title": "Login - Noura's Butterflies",
+    "description": "Login to your Noura's Butterflies account to manage orders, save favorites, and enjoy a personalized shopping experience.",
+    "keywords": "login, sign in, beauty account, natural beauty login"
+  },
+  "register": {
+    "title": "Create Account - Noura's Butterflies",
+    "description": "Join Noura's Butterflies and create your account to enjoy exclusive offers, faster checkout, and personalized recommendations.",
+    "keywords": "create account, register, join noura's butterflies, beauty membership"
+  }
+}

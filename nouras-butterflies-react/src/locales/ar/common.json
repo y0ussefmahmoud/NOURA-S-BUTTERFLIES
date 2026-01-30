@@ -1,0 +1,49 @@
+{
+  "buttons": {
+    "shopNow": "تسوق الآن",
+    "learnMore": "اعرف المزيد",
+    "addToCart": "أضف إلى السلة",
+    "buyNow": "اشتر الآن",
+    "viewDetails": "عرض التفاصيل",
+    "apply": "تطبيق",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "submit": "إرسال",
+    "close": "إغلاق",
+    "back": "رجوع",
+    "next": "التالي",
+    "confirm": "تأكيد"
+  },
+  "labels": {
+    "search": "بحث",
+    "filter": "تصفية",
+    "sort": "ترتيب",
+    "language": "اللغة",
+    "currency": "العملة",
+    "quantity": "الكمية",
+    "price": "السعر",
+    "total": "الإجمالي",
+    "subtotal": "المجموع الفرعي",
+    "shipping": "الشحن",
+    "tax": "الضريبة"
+  },
+  "status": {
+    "loading": "جاري التحميل...",
+    "error": "خطأ",
+    "success": "نجح",
+    "pending": "قيد الانتظار",
+    "processing": "قيد المعالجة",
+    "completed": "مكتمل",
+    "cancelled": "ملغى"
+  },
+  "badges": {
+    "new": "جديد",
+    "sale": "تخفيض",
+    "bestseller": "الأكثر مبيعاً",
+    "vegan": "نباتي",
+    "crueltyFree": "خالٍ من القسوة",
+    "organic": "عضوي"
+  }
+}

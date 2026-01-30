@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Product Review - Noura's Butterflies</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Noto+Serif:ital,wght@0,100..900;1,100..900&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d6a9b8",
+                        "gold-muted": "#C8A962",
+                        "background-light": "#f7f6f7",
+                        "background-dark": "#1d1518",
+                        "input-beige": "#FDF8F3",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .butterfly-rating:hover .material-symbols-outlined {
+            color: #C8A962;
+        }
+        .btn-submit:hover {
+            background-color: #C8A962 !important;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen flex flex-col">
+<!-- Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 bg-white/80 backdrop-blur-md px-10 py-3 sticky top-0 z-50 dark:bg-background-dark/80 dark:border-white/5">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-background-dark dark:text-white">
+<div class="size-6 text-primary">
+<span class="material-symbols-outlined text-3xl">flutter_dash</span>
+</div>
+<h2 class="text-background-dark dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] font-serif uppercase tracking-widest">Noura's Butterflies</h2>
+</div>
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-background-dark/70 dark:text-white/70 hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Shop</a>
+<a class="text-background-dark/70 dark:text-white/70 hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">About</a>
+<a class="text-background-dark/70 dark:text-white/70 hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Sustainability</a>
+<a class="text-background-dark/70 dark:text-white/70 hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Contact</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end gap-4">
+<label class="flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-full h-full">
+<div class="text-background-dark/40 dark:text-white/40 flex border-none bg-primary/5 dark:bg-white/5 items-center justify-center pl-4 rounded-l-full">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-full text-background-dark dark:text-white focus:outline-0 focus:ring-0 border-none bg-primary/5 dark:bg-white/5 h-full placeholder:text-background-dark/40 dark:placeholder:text-white/40 px-4 pl-2 text-sm font-normal" placeholder="Search collection..."/>
+</div>
+</label>
+<div class="flex gap-2">
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-primary/5 dark:bg-white/5 text-background-dark dark:text-white hover:bg-primary/20 transition-all">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-primary/5 dark:bg-white/5 text-background-dark dark:text-white hover:bg-primary/20 transition-all">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content / Modal Backdrop -->
+<main class="flex-grow flex items-center justify-center p-6 md:p-12 bg-background-light dark:bg-background-dark">
+<div class="max-w-[1100px] w-full bg-white dark:bg-background-dark/50 rounded-xl overflow-hidden shadow-2xl flex flex-col md:flex-row relative group ring-1 ring-black/5">
+<!-- Close Button -->
+<button class="absolute top-4 right-4 z-10 p-2 text-background-dark/30 hover:text-background-dark dark:text-white/30 dark:hover:text-white transition-all">
+<span class="material-symbols-outlined">close</span>
+</button>
+<!-- Left Visual Panel -->
+<div class="w-full md:w-[45%] relative min-h-[400px]">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Sun-drenched aesthetic shot of a cosmetic glow serum bottle in a floral setting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB___yulUZ8Gxq3tFj3nizApBjjNSr4c3gXWLtAW1JCDpDDtvu6aFa43bg-elQe2bWYOqCdvkgTmGwdXHPSIyfxTLYBKSCk6dY-P8e4_Cjl3xLC9_bKE6GLtQ03c_degJuA8JLmMGOqB7kkay41HHX3NvvHQFicwmhqDI-ONuj0Q1y1eZJ96u6ZxMSz85ZAjE6GPILy-nCGI-B4Gfa3-30mFdEwtjMTAhTpggoDlQElNyCRre3iO-oUeuKtIxVfrc5PELKkMIy3fGo");'></div>
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+<div class="absolute bottom-10 left-10 right-10 text-white drop-shadow-md">
+<p class="text-xs uppercase tracking-widest font-bold mb-2 opacity-80">Recently Purchased</p>
+<h3 class="text-3xl font-serif">Noura's Glow Serum</h3>
+<p class="text-sm opacity-90 italic">Infused with botanical butterfly pea flower</p>
+</div>
+</div>
+<!-- Right Input Panel -->
+<div class="w-full md:w-[55%] p-10 md:p-14 bg-white dark:bg-[#251b1f]">
+<div class="mb-8">
+<nav class="flex items-center gap-2 mb-4 text-[10px] uppercase tracking-[0.2em] text-background-dark/40 dark:text-white/40">
+<a class="hover:text-primary" href="#">Shop</a>
+<span>/</span>
+<a class="hover:text-primary" href="#">Orders</a>
+<span>/</span>
+<span class="text-primary font-bold">Review</span>
+</nav>
+<h1 class="text-[#161314] dark:text-white font-serif text-4xl leading-tight mb-2">Tell us your glow story</h1>
+<p class="text-background-dark/60 dark:text-white/60 text-sm">How was your experience with the serum?</p>
+</div>
+<form class="space-y-8">
+<!-- Rating -->
+<div>
+<label class="block text-sm font-bold text-background-dark dark:text-white uppercase tracking-widest mb-4">Rate your experience</label>
+<div class="flex gap-4">
+<!-- Using custom Material Icons as Butterfly Star equivalents -->
+<button class="butterfly-rating text-gold-muted/30 transition-all hover:scale-110" type="button">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1">flutter_dash</span>
+</button>
+<button class="butterfly-rating text-gold-muted/30 transition-all hover:scale-110" type="button">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1">flutter_dash</span>
+</button>
+<button class="butterfly-rating text-gold-muted/30 transition-all hover:scale-110" type="button">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1">flutter_dash</span>
+</button>
+<button class="butterfly-rating text-gold-muted/30 transition-all hover:scale-110" type="button">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1">flutter_dash</span>
+</button>
+<button class="butterfly-rating text-gold-muted/30 transition-all hover:scale-110" type="button">
+<span class="material-symbols-outlined text-4xl">flutter_dash</span>
+</button>
+</div>
+</div>
+<!-- Text Area -->
+<div>
+<label class="block text-sm font-bold text-background-dark dark:text-white uppercase tracking-widest mb-4">Share your thoughts</label>
+<textarea class="w-full bg-input-beige dark:bg-white/5 border-none rounded-lg focus:ring-2 focus:ring-primary/50 text-background-dark dark:text-white p-4 placeholder:text-background-dark/30 dark:placeholder:text-white/30 resize-none font-display" placeholder="Describe how the product made you feel..." rows="4"></textarea>
+</div>
+<!-- Photo Upload -->
+<div>
+<label class="block text-sm font-bold text-background-dark dark:text-white uppercase tracking-widest mb-4">Add a photo of your glow</label>
+<div class="flex items-center justify-center w-full">
+<label class="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-primary/20 rounded-xl cursor-pointer bg-primary/5 hover:bg-primary/10 transition-all dark:bg-white/5 dark:border-white/10 dark:hover:bg-white/10">
+<div class="flex flex-col items-center justify-center pt-5 pb-6">
+<span class="material-symbols-outlined text-primary mb-2">add_a_photo</span>
+<p class="text-xs text-background-dark/60 dark:text-white/60">Upload photo (JPG, PNG)</p>
+</div>
+<input class="hidden" type="file"/>
+</label>
+</div>
+</div>
+<!-- Submit Button -->
+<div class="pt-4">
+<button class="btn-submit w-full bg-primary text-white py-4 rounded-xl font-bold uppercase tracking-[0.2em] shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl" type="button">
+                            Submit Review
+                        </button>
+<p class="text-center text-[10px] text-background-dark/40 dark:text-white/40 mt-4 px-8">
+                            By submitting, you agree to our Terms of Service and Privacy Policy. Your story helps others glow.
+                        </p>
+</div>
+</form>
+</div>
+</div>
+</main>
+<!-- Simple Footer -->
+<footer class="p-8 text-center text-background-dark/40 dark:text-white/40 text-xs tracking-widest uppercase border-t border-primary/10">
+        © 2024 Noura's Butterflies - Natural &amp; Vegan Beauty
+    </footer>
+</body></html>

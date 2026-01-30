@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Add or Edit Product - Noura's Butterflies Admin</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#95506d",
+                        "accent-gold": "#AA8C4B",
+                        "soft-pink": "#F7BDD1",
+                        "background-light": "#f5f2f0",
+                        "background-dark": "#2a2622",
+                        "surface-light": "#FCFAF8",
+                        "surface-dark": "#36312d",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Noto Sans", sans-serif;
+        }
+        .font-display {
+            font-family: "Noto Serif", serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#161314] dark:text-[#f3f1f2] min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full border-b border-[#e5e1de] dark:border-[#3d3834] bg-surface-light/80 dark:bg-surface-dark/80 backdrop-blur-md px-4 md:px-10 py-3">
+<div class="max-w-[1400px] mx-auto flex items-center justify-between gap-8">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="text-primary size-8">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold font-display tracking-tight">Noura's Butterflies</h2>
+</div>
+<nav class="hidden lg:flex items-center gap-6">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Dashboard</a>
+<a class="text-sm font-bold text-primary border-b-2 border-primary" href="#">Products</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Orders</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Customers</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Analytics</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end gap-4">
+<div class="hidden md:flex relative max-w-64 w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[#7c6e74] scale-90">search</span>
+<input class="w-full h-10 pl-10 pr-4 rounded-xl border-none bg-[#f3f1f2] dark:bg-background-dark focus:ring-1 focus:ring-primary text-sm" placeholder="Search catalogs..."/>
+</div>
+<button class="flex items-center justify-center rounded-xl h-10 w-10 bg-[#f3f1f2] dark:bg-background-dark hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined scale-90">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat bg-cover rounded-full h-10 w-10 border-2 border-primary/20" data-alt="Admin user profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBAM9kmMK45Mmb3iy8eSLrg0lL6vHjlko4b2Ap01x1lXIguxGBJJrtjkkoyYLL0pqOBl1WHMjsEuMoBIonTiTL_6mGHduPgiZfncMl4QlQETvRqUjR9FGLJ1LyT3ki3PFxXxzHVwZwPFPnS8tHneBtT_jW16uu78CtQ9cWxf_YWwMUR_kvK97eBJi_yDj5Ac2f0fSuvIphXOHzOvGRspJYYpL22stTB_wXS0qjZzIy_f0mCB8w2c73NG2paKj52Y48aZy7DoHsL6bE");'></div>
+</div>
+</div>
+</header>
+<main class="max-w-[1400px] mx-auto px-4 md:px-10 py-8">
+<!-- Breadcrumbs -->
+<div class="flex items-center gap-2 mb-6 text-sm font-medium text-[#7c6e74]">
+<a class="hover:text-primary" href="#">Admin</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<a class="hover:text-primary" href="#">Product Management</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-[#161314] dark:text-[#f3f1f2]">Add New Product</span>
+</div>
+<!-- Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+<div class="space-y-2">
+<h1 class="text-4xl md:text-5xl font-black font-display tracking-tight">Add New Product</h1>
+<p class="text-[#7c6e74] text-lg">Curate your next masterpiece for the collection.</p>
+</div>
+<div class="flex items-center gap-3">
+<button class="px-6 h-12 rounded-xl border-2 border-accent-gold text-accent-gold font-bold hover:bg-accent-gold hover:text-white transition-all flex items-center gap-2">
+<span class="material-symbols-outlined">visibility</span>
+                    Preview Store
+                </button>
+<button class="px-8 h-12 rounded-xl bg-soft-pink text-primary font-bold shadow-lg shadow-soft-pink/20 hover:scale-[1.02] active:scale-95 transition-all">
+                    Save Draft
+                </button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Left Column: Media -->
+<div class="lg:col-span-5 space-y-6">
+<div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl shadow-sm border border-[#e5e1de] dark:border-[#3d3834]">
+<h3 class="font-display font-bold text-xl mb-4">Product Gallery</h3>
+<div class="aspect-square w-full bg-background-light dark:bg-background-dark rounded-xl border-2 border-dashed border-[#d1ccc8] dark:border-[#4d4742] flex flex-col items-center justify-center group cursor-pointer hover:border-primary transition-colors overflow-hidden relative">
+<!-- Main Placeholder/Image -->
+<div class="absolute inset-0 bg-center bg-cover opacity-10 group-hover:opacity-20 transition-opacity" data-alt="Primary cosmetic product placeholder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDhwGouoF-jkcSex6lm9JJOO27yeB3Kaw67EheKYedHWWgau2NmdRFNoMeXGS14en5sJPkyx21G_mqJf5nn964ycwiCctmKPpKJVf1TFlewPIcOUmUfMWOw7Ox39_dIr5fTT__ecroxOA3m6B2yHaVduRmAikuReN2Royc9AAhtS0MshZmOg3zD7hBlbJr1jOhAB3vcfdRWzye4PY-K_cNlCKjm5nUMqFVvsk9y5FjLvoZ7MOn8oNaGZpkYnwduJZShi6YcA_om4es");'></div>
+<div class="z-10 text-center p-8">
+<span class="material-symbols-outlined text-5xl text-primary mb-4">cloud_upload</span>
+<p class="text-lg font-bold font-display">Drop primary image here</p>
+<p class="text-sm text-[#7c6e74] mt-2">Recommended: 1200 x 1200px (PNG/JPG)</p>
+</div>
+</div>
+<div class="grid grid-cols-4 gap-3 mt-4">
+<div class="aspect-square bg-background-light dark:bg-background-dark rounded-lg border border-[#e5e1de] dark:border-[#3d3834] flex items-center justify-center cursor-pointer hover:border-primary">
+<span class="material-symbols-outlined text-primary/40">add_photo_alternate</span>
+</div>
+<div class="aspect-square bg-center bg-cover rounded-lg border border-[#e5e1de] dark:border-[#3d3834]" data-alt="Cosmetic product side view" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDP6LRIVg14lYXNqjwAbGEMRdLGBQPjhwUmgNgm7YBzpio2Mpqf6oAb5fQ5S-h5ZiQPxNdQ6g7Ai92wM1JLB36c9-XBxpzuTGxTQkMtVRVUzfUBfwTqj800PGBFHTSp9VF9GFY834N0OTTUsXNw34ngR5F7_N9nFbKfkZqog6RBAOCy7y9icrbC7kTebwo-WAcqgyxBGRkT_LjiGtE9c3NPfYems7NN5gpaKNJ8K7lBTnb9BhifOxxVV1jgPuVER8fwL96nqGsQLH8");'></div>
+<div class="aspect-square bg-center bg-cover rounded-lg border border-[#e5e1de] dark:border-[#3d3834]" data-alt="Cosmetic product packaging view" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBRiFvnwyHikDBZNrAdQa2sHbok_BzYudPWqPxZ_-gU5PImtjZwPi6SBZPb3sUn1w_UVJQ2V2mYuj_K44eDSamlqNYlenvQqa9xeR3XU04OWaK01iYRC_SO4sASJUEYQqKvvvAezp0KR8Z2mDkNbWODmrSju_Im1dzn0EEGiO-ZdZkT2rXcU_oK0yQzEkTyfmAHHVJuxFkqLy9otJXy2IH2MQr0OYx6D1gWhy2Znga8beMrFvs_49io8b6ZvgMFZvUryYdm625NwXk");'></div>
+<div class="aspect-square bg-center bg-cover rounded-lg border border-[#e5e1de] dark:border-[#3d3834]" data-alt="Cosmetic product swatch view" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC1w5K1MabS5TXFB0IH-QOY9nSIcQaYV3eZ8Ypi_ZTLPuIDUf5nhv1M8xnlnuP_d7Iult9kIFn7wi3hlvbo2J7D8Ev6kPl14_plEGb4jG9Bo5VBBEaA5QnR2mwpmvH7b-AJboIjb1-Nq-nyX3NW7g4gBpJvkOd0U4bHHL2L1r5TXMBqa68bHcjx1KxTOzqvLd6EYSymjBF9i6J1O6hSoZjKDNdme7w53XWATjHWh9ZzOX6ZQCDH7GSqXQ_HB_azsHcuZuzZ7k7YWoY");'></div>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl shadow-sm border border-[#e5e1de] dark:border-[#3d3834]">
+<h3 class="font-display font-bold text-xl mb-4">Product Attributes</h3>
+<div class="space-y-4">
+<div class="flex items-center justify-between p-3 rounded-lg bg-background-light/50 dark:bg-background-dark/50">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">eco</span>
+<span class="font-medium">Is Vegan</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-[#d1ccc8] peer-focus:outline-none rounded-full peer dark:bg-[#4d4742] peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg bg-background-light/50 dark:bg-background-dark/50">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">psychology_alt</span>
+<span class="font-medium">Is Natural</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-[#d1ccc8] peer-focus:outline-none rounded-full peer dark:bg-[#4d4742] peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg bg-background-light/50 dark:bg-background-dark/50">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">home</span>
+<span class="font-medium">Show on Homepage</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-[#d1ccc8] peer-focus:outline-none rounded-full peer dark:bg-[#4d4742] peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Form -->
+<div class="lg:col-span-7 space-y-6">
+<div class="bg-surface-light dark:bg-surface-dark p-8 rounded-xl shadow-sm border border-[#e5e1de] dark:border-[#3d3834]">
+<h3 class="font-display font-bold text-xl mb-6">General Information</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="md:col-span-2 space-y-2">
+<label class="text-sm font-bold uppercase tracking-wider text-[#7c6e74]">Product Name</label>
+<input class="w-full h-12 px-4 rounded-xl border-[#e5e1de] dark:border-[#4d4742] bg-white dark:bg-background-dark focus:border-primary focus:ring-primary transition-all" placeholder="e.g. Velvet Petal Lip Gloss" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold uppercase tracking-wider text-[#7c6e74]">Category</label>
+<select class="w-full h-12 px-4 rounded-xl border-[#e5e1de] dark:border-[#4d4742] bg-white dark:bg-background-dark focus:border-primary focus:ring-primary transition-all">
+<option>Lipstick &amp; Gloss</option>
+<option>Eye Shadow</option>
+<option>Skincare</option>
+<option>Fragrance</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold uppercase tracking-wider text-[#7c6e74]">SKU</label>
+<input class="w-full h-12 px-4 rounded-xl border-[#e5e1de] dark:border-[#4d4742] bg-white dark:bg-background-dark focus:border-primary focus:ring-primary transition-all" placeholder="NB-VPL-001" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold uppercase tracking-wider text-[#7c6e74]">Base Price ($)</label>
+<input class="w-full h-12 px-4 rounded-xl border-[#e5e1de] dark:border-[#4d4742] bg-white dark:bg-background-dark focus:border-primary focus:ring-primary transition-all" placeholder="24.00" type="number"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold uppercase tracking-wider text-[#7c6e74]">Discount (%)</label>
+<input class="w-full h-12 px-4 rounded-xl border-[#e5e1de] dark:border-[#4d4742] bg-white dark:bg-background-dark focus:border-primary focus:ring-primary transition-all" placeholder="10" type="number"/>
+</div>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark p-8 rounded-xl shadow-sm border border-[#e5e1de] dark:border-[#3d3834] space-y-6">
+<div class="space-y-4">
+<label class="text-sm font-bold uppercase tracking-wider text-[#7c6e74]">Description</label>
+<div class="rounded-xl border border-[#e5e1de] dark:border-[#4d4742] overflow-hidden">
+<div class="bg-background-light dark:bg-[#3d3834] p-2 flex gap-1 border-b border-[#e5e1de] dark:border-[#4d4742]">
+<button class="p-2 hover:bg-white dark:hover:bg-background-dark rounded-lg transition-colors"><span class="material-symbols-outlined text-[18px]">format_bold</span></button>
+<button class="p-2 hover:bg-white dark:hover:bg-background-dark rounded-lg transition-colors"><span class="material-symbols-outlined text-[18px]">format_italic</span></button>
+<button class="p-2 hover:bg-white dark:hover:bg-background-dark rounded-lg transition-colors"><span class="material-symbols-outlined text-[18px]">format_list_bulleted</span></button>
+<button class="p-2 hover:bg-white dark:hover:bg-background-dark rounded-lg transition-colors"><span class="material-symbols-outlined text-[18px]">link</span></button>
+</div>
+<textarea class="w-full p-4 border-none focus:ring-0 bg-transparent resize-none" placeholder="Write a captivating description..." rows="4"></textarea>
+</div>
+</div>
+<div class="space-y-4">
+<label class="text-sm font-bold uppercase tracking-wider text-[#7c6e74]">Ingredients</label>
+<div class="rounded-xl border border-[#e5e1de] dark:border-[#4d4742] overflow-hidden">
+<div class="bg-background-light dark:bg-[#3d3834] p-2 flex gap-1 border-b border-[#e5e1de] dark:border-[#4d4742]">
+<button class="p-2 hover:bg-white dark:hover:bg-background-dark rounded-lg transition-colors"><span class="material-symbols-outlined text-[18px]">list</span></button>
+<button class="p-2 hover:bg-white dark:hover:bg-background-dark rounded-lg transition-colors"><span class="material-symbols-outlined text-[18px]">science</span></button>
+</div>
+<textarea class="w-full p-4 border-none focus:ring-0 bg-transparent resize-none" placeholder="List the premium ingredients..." rows="3"></textarea>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Footer Actions -->
+<div class="fixed bottom-8 left-1/2 -translate-x-1/2 w-full max-w-4xl px-4 z-50">
+<div class="bg-surface-light/90 dark:bg-surface-dark/90 backdrop-blur-lg border border-[#e5e1de] dark:border-[#3d3834] shadow-2xl rounded-2xl p-4 flex items-center justify-between">
+<div class="hidden md:flex flex-col">
+<span class="text-xs uppercase font-bold text-[#7c6e74]">Draft status</span>
+<span class="text-sm font-medium">Unsaved changes detected</span>
+</div>
+<div class="flex items-center gap-4 w-full md:w-auto">
+<button class="flex-1 md:flex-none px-8 py-3 rounded-xl border-2 border-accent-gold text-accent-gold font-bold hover:bg-accent-gold hover:text-white transition-all">
+                        Cancel
+                    </button>
+<button class="flex-1 md:flex-none px-12 py-3 rounded-xl bg-primary text-white font-bold shadow-lg shadow-primary/30 hover:scale-[1.02] active:scale-95 transition-all">
+                        Save Product
+                    </button>
+</div>
+</div>
+</div>
+<!-- Spacer for floating footer -->
+<div class="h-24"></div>
+</main>
+</body></html>

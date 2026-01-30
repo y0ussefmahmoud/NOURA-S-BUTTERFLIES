@@ -1,0 +1,52 @@
+{
+  "header": {
+    "logo": "نورا الفراشات",
+    "menu": {
+      "shopAll": "تسوق الكل",
+      "newArrivals": "وصل حديثاً",
+      "veganCollections": "مجموعات نباتية",
+      "ourStory": "قصتنا"
+    },
+    "actions": {
+      "search": "بحث",
+      "notifications": "الإشعارات",
+      "wishlist": "قائمة الأمنيات",
+      "cart": "السلة",
+      "cartWithItems": "السلة تحتوي على {{count}} عناصر",
+      "login": "تسجيل الدخول",
+      "signUp": "إنشاء حساب",
+      "account": "الحساب",
+      "logout": "تسجيل الخروج"
+    }
+  },
+  "footer": {
+    "description": "اكتشف جمال مستحضرات التجميل المستوحاة من الطبيعة. منتجاتنا النباتية الخالية من القسوة مصنوعة بحب وعناية لبشرتك وكوكبنا.",
+    "shop": {
+      "title": "التسوق",
+      "allProducts": "جميع المنتجات",
+      "newArrivals": "وصل حديثاً",
+      "veganCollection": "المجموعة النباتية",
+      "bestSellers": "الأكثر مبيعاً",
+      "giftSets": "مجموعات الهدايا"
+    },
+    "company": {
+      "title": "الشركة",
+      "ourStory": "قصتنا",
+      "sustainability": "الاستدامة",
+      "blog": "المدونة",
+      "press": "الصحافة",
+      "careers": "الوظائف"
+    },
+    "support": {
+      "title": "الدعم",
+      "contactUs": "اتصل بنا",
+      "shippingInfo": "معلومات الشحن",
+      "returns": "المرتجعات",
+      "sizeGuide": "دليل المقاسات",
+      "faq": "الأسئلة الشائعة"
+    },
+    "copyright": "© 2024 نورا الفراشات. جميع الحقوق محفوظة.",
+    "privacyPolicy": "سياسة الخصوصية",
+    "termsOfService": "شروط الخدمة"
+  }
+}

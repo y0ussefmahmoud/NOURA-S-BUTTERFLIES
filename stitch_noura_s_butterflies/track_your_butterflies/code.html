@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;family=Epilogue:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e699ac",
+                        "accent-gold": "#E8B92C",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#1f1316",
+                        "card-light": "#ffffff",
+                        "card-dark": "#2a1a1e",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "heading": ["Epilogue", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .butterfly-glow {
+            filter: drop-shadow(0 0 8px rgba(232, 185, 44, 0.6));
+        }
+        .soft-shadow {
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#171213] dark:text-[#f4f1f1] min-h-screen">
+<!-- Navigation -->
+<header class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-[#f4f1f1] dark:border-[#332528] px-4 lg:px-20 py-4">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="text-primary">
+<span class="material-symbols-outlined text-3xl">flutter_dash</span>
+</div>
+<h2 class="font-heading text-xl font-bold tracking-tight">Noura's Butterflies</h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Shop All</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">New Arrivals</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Our Story</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="p-2 rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+<div class="size-9 rounded-full bg-cover bg-center border border-primary/20" data-alt="Customer profile avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuByAxsQ9eV2Wo47sxr_KLem5kMFRm1aErUHj8K9Q2-l2dalL1LVdhsJTfK30iZzLG9xKRXcBVQb7pv5-55XX-rRGYQ0cmaZSEur7rLGzq_1ooLP-SkkTTZGbbzb-6YF60w8-WgSUNKfKNzhA3umiBw8fww_BsrFyfVwRnQXFpjHe0xDvC3W6QxiO_N-A1kh9hNXpPUTfkGpDL_6xObPUD632Zy4_NF6PRW1t1ds6sgu9yj61-pfI9FzKu0_o5JXtqQ4SYdcOHqHiHY')"></div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-4 lg:px-20 py-12">
+<!-- Search Section -->
+<div class="mb-12 text-center">
+<h1 class="font-heading text-4xl font-bold mb-3">Track Your Butterflies</h1>
+<p class="text-[#83676e] dark:text-[#a38e94] max-w-lg mx-auto mb-8">Enter your details below to follow your order's magical journey from our garden to your doorstep.</p>
+<div class="max-w-2xl mx-auto bg-white dark:bg-card-dark p-6 rounded-xl soft-shadow flex flex-col md:flex-row gap-4 items-end">
+<label class="flex flex-col flex-1 text-left">
+<span class="text-sm font-semibold mb-2 ml-1">Order Number</span>
+<input class="w-full rounded-lg border-[#e4dddf] dark:border-[#4a353a] dark:bg-[#2a1a1e] h-12 px-4 focus:ring-primary focus:border-primary" placeholder="e.g. #NB12345" type="text"/>
+</label>
+<label class="flex flex-col flex-1 text-left">
+<span class="text-sm font-semibold mb-2 ml-1">Email Address</span>
+<input class="w-full rounded-lg border-[#e4dddf] dark:border-[#4a353a] dark:bg-[#2a1a1e] h-12 px-4 focus:ring-primary focus:border-primary" placeholder="butterfly@nature.com" type="email"/>
+</label>
+<button class="bg-primary text-white font-bold px-8 h-12 rounded-lg hover:brightness-105 transition-all whitespace-nowrap">
+                    Track Journey
+                </button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Left Column: Status & History -->
+<div class="lg:col-span-2 space-y-6">
+<!-- Progress Tracker Card -->
+<div class="bg-white dark:bg-card-dark p-8 rounded-xl soft-shadow">
+<div class="flex justify-between items-center mb-10">
+<div>
+<span class="text-xs font-bold uppercase tracking-widest text-primary mb-1 block">Current Status</span>
+<h3 class="text-2xl font-bold">Your butterflies are on the way!</h3>
+</div>
+<div class="text-right">
+<span class="text-xs font-bold uppercase tracking-widest text-[#83676e] mb-1 block">Est. Delivery</span>
+<p class="font-bold text-lg">Oct 24, 2023</p>
+</div>
+</div>
+<!-- Butterfly Progress Bar -->
+<div class="relative px-4">
+<div class="absolute top-1/2 left-0 w-full h-0.5 bg-[#f4f1f1] dark:bg-[#4a353a] -translate-y-1/2"></div>
+<div class="absolute top-1/2 left-0 w-3/4 h-0.5 bg-accent-gold -translate-y-1/2 transition-all duration-1000"></div>
+<div class="relative flex justify-between">
+<!-- Step 1: Completed -->
+<div class="flex flex-col items-center gap-3">
+<div class="size-10 rounded-full bg-accent-gold text-white flex items-center justify-center butterfly-glow z-10">
+<span class="material-symbols-outlined text-xl">done</span>
+</div>
+<span class="text-xs font-bold text-center">Order<br/>Placed</span>
+</div>
+<!-- Step 2: Completed -->
+<div class="flex flex-col items-center gap-3">
+<div class="size-10 rounded-full bg-accent-gold text-white flex items-center justify-center butterfly-glow z-10">
+<span class="material-symbols-outlined text-xl">inventory_2</span>
+</div>
+<span class="text-xs font-bold text-center">Processing</span>
+</div>
+<!-- Step 3: Completed -->
+<div class="flex flex-col items-center gap-3">
+<div class="size-10 rounded-full bg-accent-gold text-white flex items-center justify-center butterfly-glow z-10">
+<span class="material-symbols-outlined text-xl">local_shipping</span>
+</div>
+<span class="text-xs font-bold text-center">Shipped</span>
+</div>
+<!-- Step 4: Active -->
+<div class="flex flex-col items-center gap-3">
+<div class="size-12 rounded-full border-2 border-accent-gold bg-white dark:bg-card-dark text-accent-gold flex items-center justify-center butterfly-glow z-10 -mt-1 scale-110">
+<span class="material-symbols-outlined text-2xl animate-pulse">flutter_dash</span>
+</div>
+<span class="text-xs font-extrabold text-accent-gold text-center">Out for<br/>Delivery</span>
+</div>
+<!-- Step 5: Future -->
+<div class="flex flex-col items-center gap-3">
+<div class="size-10 rounded-full bg-[#f4f1f1] dark:bg-[#4a353a] text-[#83676e] flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-xl">home</span>
+</div>
+<span class="text-xs font-bold text-[#83676e] text-center">Delivered</span>
+</div>
+</div>
+</div>
+</div>
+<!-- History Log -->
+<div class="bg-white dark:bg-card-dark rounded-xl soft-shadow overflow-hidden">
+<div class="px-8 py-5 border-b border-[#f4f1f1] dark:border-[#332528] flex items-center justify-between">
+<h4 class="font-bold">Tracking History</h4>
+<span class="text-xs font-medium text-[#83676e]">Local Time: Paris, FR</span>
+</div>
+<div class="p-0">
+<table class="w-full text-left text-sm">
+<thead class="bg-background-light dark:bg-[#25181b] text-[#83676e] uppercase text-[10px] tracking-widest font-bold">
+<tr>
+<th class="px-8 py-3">Date &amp; Time</th>
+<th class="px-8 py-3">Location</th>
+<th class="px-8 py-3">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#f4f1f1] dark:divide-[#332528]">
+<tr class="hover:bg-primary/5 transition-colors">
+<td class="px-8 py-4 font-medium">Oct 22, 09:14 AM</td>
+<td class="px-8 py-4">London Hub, UK</td>
+<td class="px-8 py-4 text-accent-gold font-bold">In Transit to Destination</td>
+</tr>
+<tr class="hover:bg-primary/5 transition-colors">
+<td class="px-8 py-4 font-medium text-[#83676e]">Oct 21, 04:30 PM</td>
+<td class="px-8 py-4 text-[#83676e]">Sorting Center</td>
+<td class="px-8 py-4 text-[#83676e]">Package Processed</td>
+</tr>
+<tr class="hover:bg-primary/5 transition-colors">
+<td class="px-8 py-4 font-medium text-[#83676e]">Oct 21, 11:05 AM</td>
+<td class="px-8 py-4 text-[#83676e]">Paris Garden HQ</td>
+<td class="px-8 py-4 text-[#83676e]">Shipped</td>
+</tr>
+<tr class="hover:bg-primary/5 transition-colors">
+<td class="px-8 py-4 font-medium text-[#83676e]">Oct 20, 02:45 PM</td>
+<td class="px-8 py-4 text-[#83676e]">Paris Garden HQ</td>
+<td class="px-8 py-4 text-[#83676e]">Order Confirmed</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Right Column: Summary -->
+<div class="lg:col-span-1 space-y-6">
+<!-- Order Card -->
+<div class="bg-white dark:bg-card-dark p-6 rounded-xl soft-shadow sticky top-28">
+<h4 class="font-heading font-bold text-lg mb-6">Order Summary</h4>
+<div class="space-y-4 mb-8">
+<!-- Product Item -->
+<div class="flex gap-4">
+<div class="size-20 rounded-lg bg-cover bg-center border border-[#f4f1f1] dark:border-[#332528]" data-alt="Natural glow serum bottle" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAaePd4MiSMBIDYxlfRR233DgcBRCDKlRErpoyAtU4ob9g7edlOlRAirJySkcXtrjkn-oQ0F2xDNxF-VT0kIKKyeJEuDphDHq1NwOD_Fhgbh9-VYI347qT0_wLiPSSjKriFLxTC_VqNMRbkBPjUhRbcqw_PsVvnq3F2dx0nVi4HsPQDAXo3q-NMVLlHyZlisn0IOIU-4NxEHXKXJsYSVeV_UNA26b5TN8Mfhb2fHW4hzdM5BoArEC161T0i2AE8qqdbF0qPUWo1sGU')"></div>
+<div class="flex-1">
+<p class="font-bold text-sm">Natural Glow Serum</p>
+<p class="text-xs text-[#83676e] mb-1">30ml / Vegan</p>
+<p class="text-sm font-semibold">Qty: 1</p>
+</div>
+<p class="text-sm font-bold">$42.00</p>
+</div>
+<!-- Product Item -->
+<div class="flex gap-4">
+<div class="size-20 rounded-lg bg-cover bg-center border border-[#f4f1f1] dark:border-[#332528]" data-alt="Butterfly wings eyeshadow palette" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC0sy8Sxr1mh9U8xXWzRCYWxPf0QPqs45D8albX3va4gOMVvHrEz2b_lDAvMha3vIeeIXpt-hiPY1rzcxozvfSM2lYmbPWIyDYGFiw4JtA14hkowc19cDeOE9ukFwmdaYf05Nmq0c7UQoq5CMKdGWGIuUvUomYCbC66dducQc-Y6xkgGb4ZJPKhOQJ99EX2bHsBMaPywA-UVRS5RulLbL0tjOXYvv8w5OTKmCtwrBmvyN4Ul-g683hMRravwHk8b8VybgFLIqQ_3RQ')"></div>
+<div class="flex-1">
+<p class="font-bold text-sm">Butterfly Wings Palette</p>
+<p class="text-xs text-[#83676e] mb-1">Limited Edition</p>
+<p class="text-sm font-semibold">Qty: 1</p>
+</div>
+<p class="text-sm font-bold">$38.00</p>
+</div>
+</div>
+<div class="border-t border-[#f4f1f1] dark:border-[#332528] pt-4 space-y-2 mb-6">
+<div class="flex justify-between text-sm">
+<span class="text-[#83676e]">Subtotal</span>
+<span class="font-medium">$80.00</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-[#83676e]">Shipping (Express)</span>
+<span class="font-medium">$12.00</span>
+</div>
+<div class="flex justify-between text-lg font-bold pt-2">
+<span>Total</span>
+<span class="text-primary">$92.00</span>
+</div>
+</div>
+<div class="bg-background-light dark:bg-[#25181b] p-4 rounded-lg">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-sm">location_on</span>
+<span class="text-xs font-bold uppercase tracking-wider">Shipping To</span>
+</div>
+<p class="text-sm leading-relaxed">
+                            Sarah Jenkins<br/>
+                            22 Baker Street, Marylebone<br/>
+                            London NW1 6XE, UK
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Action Button -->
+<a class="fixed bottom-8 right-8 z-50 flex items-center gap-3 bg-primary text-white px-6 py-4 rounded-full shadow-xl hover:scale-105 transition-transform group" href="https://wa.me/yournumber" target="_blank">
+<span class="material-symbols-outlined text-2xl group-hover:rotate-12 transition-transform">chat</span>
+<span class="font-bold">Need Help?</span>
+</a>
+<!-- Footer -->
+<footer class="max-w-7xl mx-auto px-4 lg:px-20 py-12 border-t border-[#f4f1f1] dark:border-[#332528] mt-12 text-center">
+<div class="flex justify-center gap-6 mb-8 text-[#83676e]">
+<a class="hover:text-primary" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="hover:text-primary" href="#"><span class="material-symbols-outlined">photo_camera</span></a>
+<a class="hover:text-primary" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+<p class="text-xs text-[#83676e]">© 2023 Noura's Butterflies. Handcrafted with love &amp; natural ingredients.</p>
+</footer>
+</body></html>

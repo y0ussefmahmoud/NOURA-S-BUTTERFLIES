@@ -1,0 +1,63 @@
+{
+  "catalog": {
+    "title": "Products",
+    "subtitle": "Discover our collection",
+    "filters": {
+      "title": "Filters",
+      "categories": "Categories",
+      "priceRange": "Price Range",
+      "brand": "Brand",
+      "size": "Size",
+      "color": "Color",
+      "sortBy": "Sort By",
+      "options": {
+        "featured": "Featured",
+        "priceLowHigh": "Price: Low to High",
+        "priceHighLow": "Price: High to Low",
+        "newest": "Newest",
+        "bestselling": "Bestselling",
+        "rating": "Rating"
+      }
+    },
+    "noResults": "No products found",
+    "resetFilters": "Reset Filters",
+    "results": "{{count}} products found"
+  },
+  "details": {
+    "addToCart": "Add to Cart",
+    "buyNow": "Buy Now",
+    "outOfStock": "Out of Stock",
+    "inStock": "In Stock",
+    "description": "Description",
+    "ingredients": "Ingredients",
+    "howToUse": "How to Use",
+    "reviews": "Reviews",
+    "writeReview": "Write a Review",
+    "relatedProducts": "Related Products",
+    "youMayAlsoLike": "You May Also Like",
+    "share": "Share",
+    "addToWishlist": "Add to Wishlist",
+    "removeFromWishlist": "Remove from Wishlist",
+    "compare": "Compare",
+    "zoom": "Zoom",
+    "quantity": "Quantity",
+    "size": "Size",
+    "color": "Color"
+  },
+  "reviews": {
+    "title": "Customer Reviews",
+    "rating": "Rating",
+    "verifiedPurchase": "Verified Purchase",
+    "helpful": "Helpful",
+    "notHelpful": "Not Helpful",
+    "report": "Report",
+    "noReviews": "No reviews yet",
+    "beFirst": "Be the first to review this product",
+    "writeReview": "Write a Review",
+    "yourReview": "Your Review",
+    "ratingRequired": "Please select a rating",
+    "reviewRequired": "Please write a review",
+    "submitReview": "Submit Review",
+    "thankYou": "Thank you for your review!"
+  }
+}

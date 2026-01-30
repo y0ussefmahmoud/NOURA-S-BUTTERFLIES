@@ -1,0 +1,209 @@
+/* Custom Content Styles */
+
+/* Butterfly bullet points for FAQ and policy lists */
+.butterfly-bullet {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.butterfly-bullet::before {
+  content: '🦋';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: theme('colors.primary');
+  font-size: 0.875rem;
+}
+
+/* Elegant form inputs for contact forms */
+.form-input-elegant {
+  border: none;
+  border-bottom: 2px solid theme('colors.gray.300');
+  border-radius: 0;
+  background: transparent;
+  transition: border-color 0.3s ease;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.form-input-elegant:focus {
+  border-bottom-color: theme('colors.primary');
+  outline: none;
+  box-shadow: none;
+}
+
+.dark .form-input-elegant {
+  border-bottom-color: theme('colors.gray.600');
+}
+
+.dark .form-input-elegant:focus {
+  border-bottom-color: theme('colors.primary');
+}
+
+/* Luxury shadow for policy page cards */
+.luxury-shadow {
+  box-shadow:
+    0 10px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Butterfly background pattern for rewards page */
+.butterfly-bg {
+  position: relative;
+}
+
+.butterfly-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    radial-gradient(circle at 20% 80%, theme('colors.primary') 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, theme('colors.gold') 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, theme('colors.primary') 0%, transparent 50%);
+  background-size:
+    60% 60%,
+    40% 40%,
+    50% 50%;
+  background-position:
+    0% 100%,
+    100% 0%,
+    50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.03;
+  z-index: -1;
+}
+
+/* Ethereal blur backdrop for headers */
+.ethereal-blur {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.dark .ethereal-blur {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Shimmer effect for progress bars */
+.shimmer-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-effect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Gold hover effect for buttons */
+.btn-gold-hover {
+  background: linear-gradient(135deg, theme('colors.gold'), theme('colors.primary'));
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-gold-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-gold-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-gold-hover:hover::before {
+  left: 100%;
+}
+
+/* Scrollbar hide for horizontal scroll */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Line clamp utility */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Soft pink background utility */
+.bg-soft-pink {
+  background-color: #fdf2f8;
+}
+
+.dark .bg-soft-pink {
+  background-color: rgba(252, 242, 248, 0.1);
+}
+
+/* Accent gold utilities */
+.text-accent-gold {
+  color: #d4a574;
+}
+
+.bg-accent-gold {
+  background-color: #d4a574;
+}
+
+.border-accent-gold {
+  border-color: #d4a574;
+}
+
+/* Responsive typography */
+@media (max-width: 640px) {
+  .responsive-text {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .responsive-text {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .responsive-text {
+    font-size: 1.875rem;
+  }
+}

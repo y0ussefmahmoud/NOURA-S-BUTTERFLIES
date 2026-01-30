@@ -1,0 +1,168 @@
+/* Product-specific CSS utilities */
+
+/* Custom shadow for product cards */
+.product-card-shadow {
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease;
+}
+
+.product-card-shadow:hover {
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Soft glow hover effect */
+.soft-glow:hover {
+  box-shadow: 0 0 20px rgba(255, 182, 196, 0.3);
+}
+
+/* Image zoom animations */
+.product-image-zoom {
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-image-zoom:hover {
+  transform: scale(1.1);
+}
+
+/* Overlay gradient for quick-add */
+.quick-add-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
+}
+
+/* Smooth transitions for all interactive elements */
+.product-interactive {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Fade-in animation for cards on scroll */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Shade selector animations */
+.shade-selector {
+  transition: all 0.2s ease;
+}
+
+.shade-selector:hover {
+  transform: scale(1.05);
+}
+
+.shade-selector.active {
+  transform: scale(1.1);
+  box-shadow: 0 0 0 3px rgba(255, 182, 196, 0.3);
+}
+
+/* Quantity picker styles */
+.quantity-picker {
+  border: 2px solid #e5e7eb;
+  transition: border-color 0.2s ease;
+}
+
+.quantity-picker:focus-within {
+  border-color: #ffb6c4;
+}
+
+/* Product gallery swipe indicators */
+.swipe-indicator {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+}
+
+.swipe-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.swipe-dot.active {
+  background: white;
+  transform: scale(1.2);
+}
+
+/* Loading skeleton for products */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .product-card-shadow {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .soft-glow:hover {
+    box-shadow: 0 0 10px rgba(255, 182, 196, 0.2);
+  }
+
+  .product-image-zoom:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* Touch-friendly targets for mobile */
+@media (pointer: coarse) {
+  .product-interactive {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .shade-selector {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .product-card-shadow {
+    border: 2px solid #000;
+  }
+
+  .quantity-picker {
+    border-width: 3px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .product-image-zoom,
+  .product-interactive,
+  .shade-selector,
+  .fade-in-up {
+    transition: none;
+    animation: none;
+  }
+}

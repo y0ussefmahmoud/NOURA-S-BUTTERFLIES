@@ -1,0 +1,79 @@
+# Flutter Build Configuration for Performance Optimization
+# This file defines build strategies for optimal performance and size
+
+# Tree-shaking configuration
+tree-shake:
+  enabled: true
+  remove-unused-code: true
+  remove-unused-assets: true
+  aggressive: true
+
+# Asset optimization
+assets:
+  compression:
+    enabled: true
+    quality: 85
+    formats: ["jpg", "png", "webp"]
+  
+  lazy-loading:
+    enabled: true
+    preload-critical: true
+    threshold: 500kb
+
+# Code splitting
+code-splitting:
+  enabled: true
+  deferred-components:
+    - name: "charts"
+      path: "lib/presentation/widgets/charts"
+      load-when: "charts_needed"
+    - name: "forms"
+      path: "lib/presentation/widgets/forms"
+      load-when: "form_interaction"
+    - name: "admin_panels"
+      path: "lib/presentation/widgets/admin"
+      load-when: "admin_access"
+
+# Build optimization flags
+optimization:
+  minify: true
+  obfuscate: false  # Keep readable for debugging
+  dead-code-elimination: true
+  constant-folding: true
+  inline-functions: true
+
+# Platform-specific optimizations
+android:
+  proguard:
+    enabled: true
+    rules-file: "android/app/proguard-rules.pro"
+    optimization-passes: 5
+  
+  gradle:
+    parallel-build: true
+    build-cache: true
+    configuration-cache: true
+
+ios:
+  bitcode: false
+  strip-symbols: true
+  optimization-level: "fast"
+
+# Performance monitoring
+performance:
+  build-time-tracking: true
+  size-analysis: true
+  dependency-analysis: true
+
+# Development vs Production profiles
+profiles:
+  development:
+    optimization-level: "none"
+    debug-info: true
+    source-maps: true
+    
+  production:
+    optimization-level: "maximum"
+    debug-info: false
+    source-maps: false
+    performance-monitoring: true

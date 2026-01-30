@@ -1,0 +1,423 @@
+/* Admin-specific styles for Noura's Butterflies */
+
+/* Custom scrollbar for admin interface */
+.admin-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.admin-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.admin-scrollbar::-webkit-scrollbar-thumb {
+  background: #c18b98;
+  border-radius: 3px;
+}
+
+.admin-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #a57580;
+}
+
+/* Table hover effects */
+.admin-table-hover {
+  transition: all 0.2s ease;
+}
+
+.admin-table-hover:hover {
+  background-color: rgba(193, 139, 152, 0.05);
+  transform: translateX(2px);
+}
+
+/* Chart animations */
+@keyframes growBar {
+  from {
+    height: 0%;
+    opacity: 0;
+  }
+  to {
+    height: var(--bar-height, 100%);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.admin-chart-bar {
+  animation: growBar 0.8s ease-out forwards;
+}
+
+.admin-chart-line {
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.admin-stats-card {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* Sidebar transitions */
+.admin-sidebar {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.admin-sidebar-enter {
+  transform: translateX(-100%);
+}
+
+.admin-sidebar-enter-active {
+  transform: translateX(0);
+}
+
+.admin-sidebar-exit {
+  transform: translateX(0);
+}
+
+.admin-sidebar-exit-active {
+  transform: translateX(-100%);
+}
+
+/* Mobile drawer animations */
+.admin-drawer-overlay {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.admin-drawer {
+  animation: slideInLeft 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Loading skeleton shimmer */
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.admin-skeleton {
+  background: linear-gradient(90deg, #f0f0f0 0px, #f8f8f8 40px, #f0f0f0 80px);
+  background-size: 200px 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.dark .admin-skeleton {
+  background: linear-gradient(90deg, #374151 0px, #4b5563 40px, #374151 80px);
+  background-size: 200px 100%;
+}
+
+/* Status badge animations */
+.admin-status-badge {
+  transition: all 0.2s ease;
+}
+
+.admin-status-badge:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Button hover effects */
+.admin-button-primary {
+  background: linear-gradient(135deg, #c18b98 0%, #d5a0b0 100%);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.admin-button-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.admin-button-primary:hover::before {
+  left: 100%;
+}
+
+.admin-button-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(193, 139, 152, 0.3);
+}
+
+/* Card hover effects */
+.admin-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.admin-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.admin-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #c18b98, #d1b16d, #6c816e);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.admin-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Form input focus effects */
+.admin-input {
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.admin-input:focus {
+  box-shadow: 0 0 0 3px rgba(193, 139, 152, 0.1);
+  border-color: #c18b98;
+}
+
+.admin-input:focus + .admin-input-label {
+  color: #c18b98;
+  transform: translateY(-1.5rem) scale(0.85);
+}
+
+/* Modal animations */
+.admin-modal-overlay {
+  animation: fadeIn 0.2s ease-out;
+}
+
+.admin-modal-content {
+  animation: scaleIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Notification animations */
+.admin-notification {
+  animation: slideInRight 0.3s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.admin-notification-exit {
+  animation: slideOutRight 0.3s ease-in;
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* Data table row animations */
+.admin-table-row {
+  transition: all 0.2s ease;
+}
+
+.admin-table-row-enter {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+.admin-table-row-hover:hover {
+  background-color: rgba(193, 139, 152, 0.03);
+}
+
+/* Pagination animations */
+.admin-pagination-button {
+  transition: all 0.2s ease;
+}
+
+.admin-pagination-button:hover:not(:disabled) {
+  background-color: #c18b98;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.admin-pagination-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Filter dropdown animations */
+.admin-filter-dropdown {
+  animation: dropDown 0.2s ease-out;
+}
+
+@keyframes dropDown {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Search bar animations */
+.admin-search-bar {
+  transition: all 0.3s ease;
+}
+
+.admin-search-bar:focus-within {
+  box-shadow: 0 0 0 3px rgba(193, 139, 152, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .admin-sidebar {
+    transform: translateX(-100%);
+  }
+
+  .admin-sidebar.open {
+    transform: translateX(0);
+  }
+
+  .admin-table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .admin-table-container table {
+    min-width: 600px;
+  }
+
+  .admin-stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .admin-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .admin-chart-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .admin-scrollbar::-webkit-scrollbar-track {
+    background: #374151;
+  }
+
+  .admin-scrollbar::-webkit-scrollbar-thumb {
+    background: #c18b98;
+  }
+
+  .admin-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Print styles */
+@media print {
+  .admin-sidebar,
+  .admin-top-nav,
+  .admin-button,
+  .admin-pagination {
+    display: none !important;
+  }
+
+  .admin-main-content {
+    margin-left: 0 !important;
+  }
+
+  .admin-table {
+    border: 1px solid #000 !important;
+  }
+
+  .admin-table th,
+  .admin-table td {
+    border: 1px solid #000 !important;
+    padding: 8px !important;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .admin-sidebar,
+  .admin-card,
+  .admin-button-primary,
+  .admin-table-row,
+  .admin-notification,
+  .admin-modal-content,
+  .admin-filter-dropdown {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .admin-button-primary {
+    border: 2px solid #000;
+  }
+
+  .admin-card {
+    border: 2px solid #000;
+  }
+
+  .admin-input {
+    border: 2px solid #000;
+  }
+}

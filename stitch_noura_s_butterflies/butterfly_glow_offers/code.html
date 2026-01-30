@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Butterfly Glow Offers | Noura's Butterflies</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#cab281",
+                        "background-light": "#ffffff",
+                        "background-dark": "#292b2e",
+                        "blush": "#fbf4f6",
+                        "cream": "#f8f5ee",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .butterfly-glow {
+            box-shadow: 0 10px 30px -15px rgba(202, 178, 129, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-stone-50 dark:bg-background-dark font-sans text-[#161513]">
+<!-- Main Page Overlay Simulation -->
+<div class="fixed inset-0 bg-black/20 backdrop-blur-sm z-40"></div>
+<!-- Notification Drawer -->
+<div class="fixed top-0 right-0 h-full w-full max-w-[480px] bg-background-light dark:bg-background-dark shadow-2xl z-50 flex flex-col overflow-hidden">
+<!-- Header Section -->
+<div class="px-6 py-8 border-b border-stone-100 dark:border-stone-800">
+<div class="flex items-center justify-between mb-2">
+<h1 class="text-3xl font-display font-medium text-[#161513] dark:text-white">Current Offers</h1>
+<button class="text-stone-400 hover:text-stone-600 dark:hover:text-stone-200 transition-colors">
+<span class="material-symbols-outlined text-3xl">close</span>
+</button>
+</div>
+<div class="flex items-center justify-between">
+<p class="text-[#7f786c] text-sm font-normal">Your personal beauty alerts</p>
+<button class="text-xs font-bold uppercase tracking-widest text-primary hover:text-[#b09a6e] transition-colors">
+                    Clear All
+                </button>
+</div>
+</div>
+<!-- Notification List -->
+<div class="flex-1 overflow-y-auto p-6 space-y-6">
+<!-- Promo Card 1: 15% Off -->
+<div class="group relative flex flex-col items-stretch justify-start rounded-xl border border-transparent bg-blush dark:bg-pink-900/10 p-5 butterfly-glow transition-all hover:-translate-y-1">
+<div class="absolute top-4 right-4 text-primary">
+<span class="material-symbols-outlined fill-1" style="font-variation-settings: 'FILL' 1;">flutter_dash</span>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex flex-col gap-1">
+<span class="text-primary text-[10px] font-bold uppercase tracking-[0.2em]">New Promo</span>
+<h3 class="text-[#161513] dark:text-white text-xl font-display font-bold leading-tight">15% Off Your Next Order</h3>
+</div>
+<div class="w-full h-40 bg-center bg-no-repeat bg-cover rounded-lg mb-2" data-alt="Luxury organic facial oils in glass bottles" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCwMJZJpXltWtBAnzM1AK-iXlh9dX9HDEECltRIrPQpc06z_9iFjJ7D2sXryMImOHU3wEzZR6mOPoreONlUYl5VXUhlomLGUQ-Ibs2YKt6pBu_xO0uypoMb1-YJ2y44mPIWGRyzrOg_T0KOXFOpjBNwwAuSksozSBMzNn9PBJV5_mMnD2PpTC4rN9OfBaZ0eu_xYR5rClgfbptW-rGAMj8wkynbeVCcRefUQThURv0-Ay-_qFAV0C3X17RJcKrT4bTn8e3hTrZvigU");'></div>
+<p class="text-[#7f786c] dark:text-stone-400 text-sm leading-relaxed">Use code <span class="font-bold text-[#161513] dark:text-white">BUTTERFLY15</span> at checkout. Exclusive for our natural beauty community.</p>
+<div class="mt-2">
+<button class="w-full bg-primary hover:bg-[#b09a6e] text-[#161513] text-sm font-bold uppercase tracking-wider py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
+<span>Shop the Offer</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Restock Alert Card -->
+<div class="group relative flex flex-col items-stretch justify-start rounded-xl border border-transparent bg-cream dark:bg-stone-800 p-5 butterfly-glow transition-all hover:-translate-y-1">
+<div class="absolute top-4 right-4 text-primary">
+<span class="material-symbols-outlined fill-1" style="font-variation-settings: 'FILL' 1;">flutter_dash</span>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex flex-col gap-1">
+<span class="text-primary text-[10px] font-bold uppercase tracking-[0.2em]">Restock Alert</span>
+<h3 class="text-[#161513] dark:text-white text-xl font-display font-bold leading-tight">Rose Balm is Back!</h3>
+</div>
+<div class="w-full h-40 bg-center bg-no-repeat bg-cover rounded-lg mb-2" data-alt="Soft pink botanical rose lip balm tin" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBNulNf7tDJF_kbrRrd_BIe4IcqIAEJIEH-d6BeLHwkDmGY-TSXOCsNWv6u8t_gnGmwGvyjwuKq4G5b6lUNtMtw_tz0ITLx24cxFjS9DesnhpWFr8-HSO5NxHFb5ymuZMGYjOvZIptVDW1bCxNTRncFofoT7iSfFJBT8Nw3Tp21Xq1tOjFctk1ma09byJtccRkgq-zstHqes7dyxSsWXTSVNP_6rUJ-vpt-x7o5cUOPlWghMTpKkbhbQC8Sp5RqKPWzifjFr8EVIlU");'></div>
+<p class="text-[#7f786c] dark:text-stone-400 text-sm leading-relaxed">Your favorite vegan balm is back in stock. Hand-pressed with organic petals. Grab yours before it's gone.</p>
+<div class="mt-2">
+<button class="w-full bg-primary hover:bg-[#b09a6e] text-[#161513] text-sm font-bold uppercase tracking-wider py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
+<span>Shop Now</span>
+<span class="material-symbols-outlined text-sm">shopping_bag</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Shipping Alert Card -->
+<div class="group flex flex-col items-stretch justify-start rounded-xl border border-stone-100 dark:border-stone-800 bg-white dark:bg-background-dark p-5 shadow-sm transition-all hover:shadow-md">
+<div class="flex flex-col gap-3">
+<div class="flex flex-col gap-1">
+<span class="text-stone-400 text-[10px] font-bold uppercase tracking-[0.2em]">Limited Time</span>
+<h3 class="text-[#161513] dark:text-white text-xl font-display font-bold leading-tight">Free Shipping Weekend</h3>
+</div>
+<p class="text-[#7f786c] dark:text-stone-400 text-sm leading-relaxed">Enjoy free shipping on all orders over $50 until Sunday midnight. No code needed.</p>
+<div class="mt-2 flex items-center justify-between">
+<a class="text-primary text-xs font-bold uppercase tracking-widest border-b border-primary/40 hover:border-primary pb-1 transition-all" href="#">
+                            Details
+                        </a>
+<button class="bg-primary/20 hover:bg-primary/30 text-[#161513] dark:text-white text-xs font-bold uppercase tracking-wider px-4 py-2 rounded transition-colors">
+                            Start Shopping
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Actions -->
+<div class="p-6 bg-stone-50 dark:bg-stone-900/50 border-t border-stone-100 dark:border-stone-800">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between group cursor-pointer">
+<div class="flex flex-col">
+<p class="text-[#161513] dark:text-white text-sm font-bold leading-tight">Notification Settings</p>
+<p class="text-[#7f786c] text-xs font-normal">Manage how you receive your glow alerts.</p>
+</div>
+<div class="text-primary transition-transform group-hover:translate-x-1">
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+<div class="flex justify-center pt-2">
+<p class="text-[10px] text-stone-400 font-display italic">Noura's Butterflies — Natural. Vegan. Pure.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Background Content Mock (Blurred) -->
+<main class="h-screen w-full flex flex-col items-center justify-center p-20">
+<div class="max-w-4xl w-full space-y-12 opacity-50">
+<nav class="flex justify-between items-center">
+<div class="text-2xl font-display tracking-tighter">NOURA'S</div>
+<div class="flex gap-8 text-sm uppercase tracking-widest">
+<span>Shop All</span>
+<span>Best Sellers</span>
+<span>Our Story</span>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined">search</span>
+<span class="material-symbols-outlined">person</span>
+<span class="material-symbols-outlined">shopping_cart</span>
+</div>
+</nav>
+<div class="aspect-video bg-stone-200 rounded-2xl flex items-center justify-center">
+<p class="font-display text-4xl italic text-stone-400">Main Content Blurred</p>
+</div>
+</div>
+</main>
+</body></html>

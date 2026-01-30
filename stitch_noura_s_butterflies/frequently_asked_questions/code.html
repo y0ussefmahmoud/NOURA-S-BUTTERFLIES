@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FAQ | Noura's Butterflies</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Tajawal:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eebfc5",
+                        "accent-gold": "#CCB44D",
+                        "background-light": "#fbfaf9",
+                        "background-dark": "#1f1315",
+                        "surface-light": "#F2EDD9",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "Tajawal", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-item:hover .accordion-trigger {
+            background-color: rgba(238, 191, 197, 0.1);
+        }
+        .butterfly-bullet::before {
+            content: "🦋";
+            margin-right: 8px;
+            font-size: 0.8em;
+            filter: sepia(1) saturate(5) hue-rotate(10deg); /* Mimic gold look */
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#171213] dark:text-white transition-colors duration-300">
+<!-- Navbar Container -->
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#f4f1f1] dark:border-[#332a2b] px-10 py-3 bg-background-light dark:bg-background-dark sticky top-0 z-50">
+<div class="flex items-center gap-4 text-[#171213] dark:text-white">
+<div class="size-8 text-primary">
+<span class="material-symbols-outlined text-3xl">flutter_dash</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Noura's Butterflies</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="hidden md:flex items-center gap-9">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Shop</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Sustainability</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<div class="flex gap-2">
+<button class="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined">person</span>
+</button>
+<button class="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex flex-1 justify-center py-12 px-6">
+<div class="max-w-[800px] w-full flex flex-col">
+<!-- Hero Section -->
+<div class="text-center mb-10">
+<h1 class="text-[#171213] dark:text-white tracking-tight text-[40px] font-extrabold leading-tight pb-6 pt-2">How can we help you?</h1>
+<!-- Search Bar -->
+<div class="max-w-[600px] mx-auto mb-8">
+<label class="flex flex-col min-w-40 h-14 w-full group">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full shadow-sm group-focus-within:ring-2 ring-primary/30 transition-all">
+<div class="text-[#83676b] flex border-none bg-surface-light dark:bg-[#2d1f21] items-center justify-center pl-5 rounded-l-xl" data-icon="search">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#171213] dark:text-white focus:outline-0 focus:ring-0 border-none bg-surface-light dark:bg-[#2d1f21] h-full placeholder:text-[#83676b] px-4 rounded-l-none border-l-0 pl-3 text-lg font-normal" placeholder="Search for ingredients, shipping, returns..." value=""/>
+</div>
+</label>
+</div>
+<!-- Category Chips -->
+<div class="flex gap-3 justify-center flex-wrap">
+<button class="flex h-10 items-center justify-center gap-x-2 rounded-full bg-primary text-white px-6 text-sm font-semibold transition-transform hover:scale-105">
+                            All Topics
+                        </button>
+<button class="flex h-10 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-[#2d1f21] border border-[#f4f1f1] dark:border-[#332a2b] px-6 text-sm font-medium hover:border-primary transition-all">
+                            Orders &amp; Shipping
+                        </button>
+<button class="flex h-10 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-[#2d1f21] border border-[#f4f1f1] dark:border-[#332a2b] px-6 text-sm font-medium hover:border-primary transition-all">
+                            Product Info
+                        </button>
+<button class="flex h-10 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-[#2d1f21] border border-[#f4f1f1] dark:border-[#332a2b] px-6 text-sm font-medium hover:border-primary transition-all">
+                            Returns
+                        </button>
+</div>
+</div>
+<!-- FAQ Content -->
+<div class="space-y-12">
+<!-- Section: Orders & Shipping -->
+<section>
+<div class="flex items-center gap-3 border-b border-primary/20 pb-4 mb-6 px-2">
+<span class="material-symbols-outlined text-primary">local_shipping</span>
+<h2 class="text-[#171213] dark:text-white text-2xl font-bold">Orders &amp; Shipping</h2>
+</div>
+<div class="space-y-4">
+<!-- Accordion Item 1 -->
+<div class="accordion-item bg-white dark:bg-[#241a1c] rounded-xl border border-[#f4f1f1] dark:border-[#332a2b] overflow-hidden shadow-sm">
+<button class="accordion-trigger w-full flex items-center justify-between p-5 text-left transition-colors">
+<span class="font-semibold text-lg">When will my order arrive?</span>
+<span class="material-symbols-outlined text-primary">expand_more</span>
+</button>
+<div class="px-5 pb-5 text-[#5e4d4f] dark:text-[#c4b5b7] leading-relaxed">
+<p class="mb-3">Our standard shipping usually takes 3-5 business days within the country. International shipping can take 7-14 business days depending on the destination.</p>
+<ul class="space-y-2">
+<li class="butterfly-bullet flex items-center">Track your package via the email link provided.</li>
+<li class="butterfly-bullet flex items-center">Free shipping on all orders over $50.</li>
+</ul>
+</div>
+</div>
+<!-- Accordion Item 2 -->
+<div class="accordion-item bg-white dark:bg-[#241a1c] rounded-xl border border-[#f4f1f1] dark:border-[#332a2b] overflow-hidden shadow-sm">
+<button class="accordion-trigger w-full flex items-center justify-between p-5 text-left transition-colors">
+<span class="font-semibold text-lg">Do you ship to my country?</span>
+<span class="material-symbols-outlined text-primary">expand_more</span>
+</button>
+<div class="px-5 pb-5 text-[#5e4d4f] dark:text-[#c4b5b7] leading-relaxed">
+                                    We currently ship to over 50 countries worldwide including most of Europe, North America, and the GCC region. You can check the shipping calculator at checkout for specific rates.
+                                </div>
+</div>
+</div>
+</section>
+<!-- Section: Product Information -->
+<section>
+<div class="flex items-center gap-3 border-b border-primary/20 pb-4 mb-6 px-2">
+<span class="material-symbols-outlined text-primary">eco</span>
+<h2 class="text-[#171213] dark:text-white text-2xl font-bold">Product Information</h2>
+</div>
+<div class="space-y-4">
+<div class="accordion-item bg-white dark:bg-[#241a1c] rounded-xl border border-[#f4f1f1] dark:border-[#332a2b] overflow-hidden shadow-sm">
+<button class="accordion-trigger w-full flex items-center justify-between p-5 text-left transition-colors">
+<span class="font-semibold text-lg">Are your products 100% vegan and cruelty-free?</span>
+<span class="material-symbols-outlined text-primary">expand_more</span>
+</button>
+<div class="px-5 pb-5 text-[#5e4d4f] dark:text-[#c4b5b7] leading-relaxed">
+                                    Absolutely. At Noura's Butterflies, we believe in beauty without harm.
+                                    <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="p-4 bg-surface-light/50 dark:bg-[#2d1f21] rounded-lg border border-primary/10">
+<h4 class="font-bold text-primary mb-1">Vegan Certified</h4>
+<p class="text-sm">No animal by-products like beeswax or carmine are ever used.</p>
+</div>
+<div class="p-4 bg-surface-light/50 dark:bg-[#2d1f21] rounded-lg border border-primary/10">
+<h4 class="font-bold text-primary mb-1">Leaping Bunny</h4>
+<p class="text-sm">We are proud to be certified cruelty-free by international standards.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="accordion-item bg-white dark:bg-[#241a1c] rounded-xl border border-[#f4f1f1] dark:border-[#332a2b] overflow-hidden shadow-sm">
+<button class="accordion-trigger w-full flex items-center justify-between p-5 text-left transition-colors">
+<span class="font-semibold text-lg">What is the shelf life of your cosmetics?</span>
+<span class="material-symbols-outlined text-primary">expand_more</span>
+</button>
+<div class="px-5 pb-5 text-[#5e4d4f] dark:text-[#c4b5b7] leading-relaxed">
+                                    Since we use natural preservatives, our products typically have a shelf life of 12-18 months unopened. Once opened, we recommend using them within 6 months for maximum potency. Look for the "open jar" icon on the back of each package.
+                                </div>
+</div>
+</div>
+</section>
+<!-- Section: Returns & Refunds -->
+<section>
+<div class="flex items-center gap-3 border-b border-primary/20 pb-4 mb-6 px-2">
+<span class="material-symbols-outlined text-primary">assignment_return</span>
+<h2 class="text-[#171213] dark:text-white text-2xl font-bold">Returns &amp; Refunds</h2>
+</div>
+<div class="bg-primary/5 dark:bg-primary/10 rounded-xl p-8 border border-primary/20 flex flex-col md:flex-row gap-8 items-center">
+<div class="flex-1">
+<h3 class="text-xl font-bold mb-3">30-Day Happiness Guarantee</h3>
+<p class="text-[#5e4d4f] dark:text-[#c4b5b7] mb-4">If you're not completely in love with your purchase, we offer a hassle-free return within 30 days of receipt.</p>
+<button class="px-6 py-3 bg-primary text-white font-bold rounded-xl hover:bg-[#e4a8b0] transition-colors shadow-lg shadow-primary/20">
+                                    Start a Return
+                                </button>
+</div>
+<div class="w-full md:w-48 h-48 rounded-2xl bg-gradient-to-br from-primary/30 to-surface-light overflow-hidden flex items-center justify-center relative">
+<span class="material-symbols-outlined text-7xl text-white/80">sentiment_very_satisfied</span>
+<!-- Abstract decorative element -->
+<div class="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl"></div>
+</div>
+</div>
+</section>
+</div>
+<!-- Still have questions footer -->
+<div class="mt-20 p-10 rounded-3xl bg-[#171213] text-white text-center relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+<div class="absolute top-10 left-10 w-32 h-32 rounded-full bg-primary blur-3xl"></div>
+<div class="absolute bottom-10 right-10 w-48 h-48 rounded-full bg-primary blur-3xl"></div>
+</div>
+<h2 class="text-3xl font-bold mb-4 relative z-10">Still have questions?</h2>
+<p class="text-gray-400 mb-8 relative z-10">Our butterfly support team is here to help you bloom.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4 relative z-10">
+<a class="flex items-center justify-center gap-2 px-8 py-4 bg-white text-[#171213] rounded-xl font-bold hover:bg-gray-100 transition-all" href="mailto:hello@nourasbutterflies.com">
+<span class="material-symbols-outlined">mail</span>
+                            Email Us
+                        </a>
+<button class="flex items-center justify-center gap-2 px-8 py-4 bg-primary text-white rounded-xl font-bold hover:bg-primary/90 transition-all">
+<span class="material-symbols-outlined">chat</span>
+                            Live Chat
+                        </button>
+</div>
+</div>
+<footer class="mt-20 pb-10 text-center text-sm text-[#83676b]">
+<div class="flex justify-center gap-6 mb-6">
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<a class="hover:text-primary" href="#">Terms of Service</a>
+<a class="hover:text-primary" href="#">Cookie Policy</a>
+</div>
+<p>© 2024 Noura's Butterflies. All Rights Reserved. Naturally beautiful, like you.</p>
+</footer>
+</div>
+</main>
+</div>
+</body></html>

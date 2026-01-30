@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Noura's Butterflies - Glow Story Feedback</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c8a95f",
+                        "background-light": "#fbfbf9",
+                        "background-dark": "#191f1e",
+                        "soft-pink": "#FADCE3",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .butterfly-glow:hover {
+            filter: drop-shadow(0 0 8px rgba(200, 169, 95, 0.6));
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #c8a95f 0%, #e5d2a2 100%);
+        }
+        .card-blur-bg {
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen flex items-center justify-center relative overflow-hidden">
+<!-- Background Layer with Blurred Ingredients -->
+<div class="fixed inset-0 z-0">
+<div class="absolute inset-0 bg-cover bg-center scale-110 blur-xl opacity-40" data-alt="Blurred aesthetic shot of natural botanical ingredients like rose petals and herbs" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBIKagagmnetAjkCNHwR7NvQhGHKnZHRglBD6TJh_zI0PtIm16_3Buw7N-2oC-5Jj_ExF2fxuKOaiIuv3mz9BmFP7ZLzQGSdjI9TCH-oY_neuutEZwFpvlpOhBTQi-cwP6FkrgZSIRJt0cTz87-0GR9K34JIzvHpMC1A9OyuuteE435cXyphrM5_VoPAG72yOoF2maQqDcZo0-f6CnQhJoz8P_XJqMKDuA7u8z2_LxRK4uoREZqhGRqzs5MR5HFX3hmR9r1TxvDgi0');">
+</div>
+<div class="absolute inset-0 bg-background-light/60 dark:bg-background-dark/80"></div>
+</div>
+<main class="relative z-10 w-full max-w-4xl px-4 py-12">
+<!-- Main Review Card -->
+<div class="bg-white dark:bg-[#252a29] rounded-xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] overflow-hidden flex flex-col min-h-[700px]">
+<!-- SectionHeader / Navigation -->
+<div class="pt-10 pb-2">
+<h4 class="text-primary text-sm font-bold leading-normal tracking-[0.2em] uppercase text-center">Noura's Butterflies</h4>
+</div>
+<!-- Tabs / Progress Step Indicator -->
+<div class="px-8 sm:px-20">
+<div class="flex border-b border-[#e3e2dd] dark:border-white/10 justify-center gap-12 sm:gap-24">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-primary pb-[13px] pt-4" href="#">
+<p class="text-xs sm:text-sm font-bold tracking-[0.05em]">1. RATE</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-primary text-[#161512] dark:text-white pb-[13px] pt-4" href="#">
+<p class="text-xs sm:text-sm font-bold tracking-[0.05em]">2. COMMENT</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#817a6a] dark:text-[#817a6a] pb-[13px] pt-4" href="#">
+<p class="text-xs sm:text-sm font-bold tracking-[0.05em]">3. SHARE</p>
+</a>
+</div>
+</div>
+<!-- Content Area -->
+<div class="flex-1 flex flex-col items-center px-8 sm:px-24 py-12">
+<!-- HeadlineText -->
+<h1 class="text-[#161512] dark:text-white tracking-tight text-3xl sm:text-4xl font-bold leading-tight text-center pb-8">
+                    How did your skin feel?
+                </h1>
+<!-- ActionsBar / Butterfly Rating -->
+<div class="w-full flex justify-center gap-4 sm:gap-6 mb-12">
+<button class="group flex flex-col items-center gap-3">
+<div class="rounded-full bg-background-light dark:bg-white/5 p-4 butterfly-glow transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1, 'wght' 200;">
+                                flutter_dash
+                            </span>
+</div>
+<p class="text-[#161512] dark:text-white/70 text-xs font-medium uppercase tracking-wider">Radiant</p>
+</button>
+<button class="group flex flex-col items-center gap-3">
+<div class="rounded-full bg-background-light dark:bg-white/5 p-4 butterfly-glow transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1, 'wght' 200;">
+                                flutter_dash
+                            </span>
+</div>
+<p class="text-[#161512] dark:text-white/70 text-xs font-medium uppercase tracking-wider">Luminous</p>
+</button>
+<button class="group flex flex-col items-center gap-3">
+<div class="rounded-full bg-background-light dark:bg-white/5 p-4 butterfly-glow transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1, 'wght' 200;">
+                                flutter_dash
+                            </span>
+</div>
+<p class="text-[#161512] dark:text-white/70 text-xs font-medium uppercase tracking-wider">Glowing</p>
+</button>
+<button class="group flex flex-col items-center gap-3">
+<div class="rounded-full bg-background-light dark:bg-white/5 p-4 butterfly-glow transition-all duration-300 opacity-40">
+<span class="material-symbols-outlined text-[#817a6a] text-4xl" style="font-variation-settings: 'FILL' 0, 'wght' 200;">
+                                flutter_dash
+                            </span>
+</div>
+<p class="text-[#817a6a] dark:text-white/40 text-xs font-medium uppercase tracking-wider">Ethereal</p>
+</button>
+<button class="group flex flex-col items-center gap-3">
+<div class="rounded-full bg-background-light dark:bg-white/5 p-4 butterfly-glow transition-all duration-300 opacity-40">
+<span class="material-symbols-outlined text-[#817a6a] text-4xl" style="font-variation-settings: 'FILL' 0, 'wght' 200;">
+                                flutter_dash
+                            </span>
+</div>
+<p class="text-[#817a6a] dark:text-white/40 text-xs font-medium uppercase tracking-wider">Divine</p>
+</button>
+</div>
+<!-- Glow Story Text Area -->
+<div class="w-full mb-8">
+<label class="block text-[#817a6a] dark:text-white/50 text-xs font-bold uppercase tracking-[0.1em] mb-4">Your Glow Story</label>
+<textarea class="w-full h-40 bg-background-light dark:bg-white/5 border-none focus:ring-1 focus:ring-primary rounded-xl p-6 text-lg text-[#161512] dark:text-white italic placeholder:text-gray-300 dark:placeholder:text-white/20" placeholder="Write your glow story..."></textarea>
+</div>
+<!-- Media Upload Zone -->
+<div class="w-full">
+<label class="block text-[#817a6a] dark:text-white/50 text-xs font-bold uppercase tracking-[0.1em] mb-4">Show your glow</label>
+<div class="border-2 border-dashed border-[#e3e2dd] dark:border-white/10 rounded-xl p-8 flex flex-col items-center justify-center cursor-pointer hover:bg-background-light dark:hover:bg-white/5 transition-colors">
+<div class="bg-soft-pink dark:bg-primary/20 rounded-full p-4 mb-3">
+<span class="material-symbols-outlined text-[#161512] dark:text-primary">
+                                add
+                            </span>
+</div>
+<p class="text-sm text-[#161512] dark:text-white/80 font-medium">Add photos or videos</p>
+<p class="text-xs text-[#817a6a] dark:text-white/40 mt-1">Drag and drop or click to upload</p>
+</div>
+</div>
+</div>
+<!-- Footer Action -->
+<div class="px-8 sm:px-24 pb-12">
+<button class="w-full gold-gradient py-5 rounded-xl text-white font-bold text-lg tracking-[0.1em] uppercase shadow-lg shadow-primary/20 hover:shadow-xl transition-all duration-300">
+                    Submit Review
+                </button>
+<p class="text-center text-[10px] text-[#817a6a] dark:text-white/30 uppercase tracking-[0.2em] mt-6">
+                    By submitting, you agree to our terms of service
+                </p>
+</div>
+</div>
+</main>
+<!-- Decorative Elements -->
+<div class="fixed bottom-10 right-10 hidden xl:block opacity-20 rotate-12">
+<span class="material-symbols-outlined text-primary text-[120px]" style="font-variation-settings: 'FILL' 0, 'wght' 100;">
+            flutter_dash
+        </span>
+</div>
+<div class="fixed top-10 left-10 hidden xl:block opacity-10 -rotate-45">
+<span class="material-symbols-outlined text-primary text-[180px]" style="font-variation-settings: 'FILL' 0, 'wght' 100;">
+            flutter_dash
+        </span>
+</div>
+</body></html>

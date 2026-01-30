@@ -1,0 +1,52 @@
+{
+  "header": {
+    "logo": "NOURA'S BUTTERFLIES",
+    "menu": {
+      "shopAll": "Shop All",
+      "newArrivals": "New Arrivals",
+      "veganCollections": "Vegan Collections",
+      "ourStory": "Our Story"
+    },
+    "actions": {
+      "search": "Search",
+      "notifications": "Notifications",
+      "wishlist": "Wishlist",
+      "cart": "Cart",
+      "cartWithItems": "Cart with {{count}} items",
+      "login": "Login",
+      "signUp": "Sign Up",
+      "account": "Account",
+      "logout": "Logout"
+    }
+  },
+  "footer": {
+    "description": "Discover the beauty of nature-inspired cosmetics. Our vegan, cruelty-free products are crafted with love and care for your skin and the planet.",
+    "shop": {
+      "title": "Shop",
+      "allProducts": "All Products",
+      "newArrivals": "New Arrivals",
+      "veganCollection": "Vegan Collection",
+      "bestSellers": "Best Sellers",
+      "giftSets": "Gift Sets"
+    },
+    "company": {
+      "title": "Company",
+      "ourStory": "Our Story",
+      "sustainability": "Sustainability",
+      "blog": "Blog",
+      "press": "Press",
+      "careers": "Careers"
+    },
+    "support": {
+      "title": "Support",
+      "contactUs": "Contact Us",
+      "shippingInfo": "Shipping Info",
+      "returns": "Returns",
+      "sizeGuide": "Size Guide",
+      "faq": "FAQ"
+    },
+    "copyright": "© 2024 NOURA'S BUTTERFLIES. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  }
+}

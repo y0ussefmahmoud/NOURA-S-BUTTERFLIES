@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Access Your Account | Noura's Butterflies</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Poppins:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e996b1",
+                        "gold-accent": "#E0C29E",
+                        "background-light": "#f8f8f6",
+                        "background-dark": "#22252a",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Poppins", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .soft-glow-shadow {
+            box-shadow: 0 20px 50px rgba(233, 150, 177, 0.15);
+        }
+        .gold-glow-btn {
+            background: linear-gradient(135deg, #e996b1 0%, #f3b1c5 50%, #e996b1 100%);
+            box-shadow: 0 4px 15px rgba(224, 194, 158, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+        .gold-glow-btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(224, 194, 158, 0.2) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .floating-label-input:focus-within label,
+        .floating-label-input input:not(:placeholder-shown) + label {
+            transform: translateY(-1.5rem) scale(0.85);
+            color: #e996b1;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-sans text-slate-800 dark:text-slate-200">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Top Navigation Bar Component -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md px-6 md:px-20 py-4 fixed w-full z-50">
+<div class="flex items-center gap-3">
+<div class="text-primary">
+<span class="material-symbols-outlined text-3xl">flutter_dash</span>
+</div>
+<h2 class="font-display text-xl font-bold leading-tight tracking-tight text-slate-900 dark:text-white">Noura's Butterflies</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Shop</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">About Us</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Philosophy</a>
+</nav>
+<div class="flex gap-3">
+<button class="flex items-center justify-center rounded-xl h-10 w-10 bg-primary/10 text-primary hover:bg-primary/20 transition-all">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex flex-1 pt-18 md:pt-0">
+<div class="grid grid-cols-1 lg:grid-cols-2 w-full min-h-screen">
+<!-- Left Side: Visual Storytelling Panel -->
+<div class="relative hidden lg:flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0 bg-cover bg-center transition-transform duration-700 hover:scale-105" data-alt="Dreamy lifestyle image of pink flower petals and aesthetic cosmetic oils" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDlSCkgWur-Gs3P3Ani5Nb3VAIviod5DzI8jBZoiHbV6VQ6AEssuZCHi9_imkBby3lePbyuHVF7UIgdkDg2R2rPIiyI69BW4CvFbSAd5eofiSXH0wlmIyl6wLDrj1lFCqkDMeIakqSaXwc2wX0WJO9Im0yRiB0NgayRkgYpYH3PYRiFomYd7wC7GNpu4NBhAWsEPBgwdO-t9ZbfpIYV7FmRwi5Ulj4-jWg2LllqJPNZ6XM7Y8r6lht7RqsfnS6-dqVaTYU5G3PNK0o");'>
+<div class="absolute inset-0 bg-black/20 backdrop-blur-[2px]"></div>
+</div>
+<div class="relative z-10 text-center px-12">
+<h1 class="font-display text-5xl md:text-6xl text-white italic leading-tight drop-shadow-lg mb-6">
+                        Welcome back to your<br/><span class="not-italic font-bold">natural glow.</span>
+</h1>
+<div class="w-24 h-1 bg-primary/60 mx-auto rounded-full"></div>
+</div>
+<div class="absolute bottom-10 left-10 text-white/70 text-sm flex items-center gap-2">
+<span class="material-symbols-outlined">eco</span>
+<span class="tracking-widest uppercase font-light">100% Vegan • Ethical • Natural</span>
+</div>
+</div>
+<!-- Right Side: Auth Forms Panel -->
+<div class="flex flex-col items-center justify-center p-6 md:p-20 bg-background-light dark:bg-background-dark">
+<div class="w-full max-w-[480px] bg-white dark:bg-slate-900 rounded-xl p-8 md:p-10 soft-glow-shadow border border-primary/5">
+<!-- SectionHeader Component -->
+<div class="text-center mb-8">
+<h2 class="font-display text-3xl font-bold text-slate-900 dark:text-white mb-2">Access Your Account</h2>
+<p class="text-slate-500 text-sm italic">Reveal your inner beauty</p>
+</div>
+<!-- SegmentedButtons Component -->
+<div class="flex p-1 bg-background-light dark:bg-slate-800 rounded-xl mb-8">
+<label class="flex cursor-pointer h-10 grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-slate-700 has-[:checked]:shadow-sm has-[:checked]:text-primary text-slate-500 text-sm font-medium transition-all">
+<span class="truncate">Login</span>
+<input checked="" class="invisible w-0" name="auth-toggle" type="radio" value="Login"/>
+</label>
+<label class="flex cursor-pointer h-10 grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-slate-700 has-[:checked]:shadow-sm has-[:checked]:text-primary text-slate-500 text-sm font-medium transition-all">
+<span class="truncate">Create Account</span>
+<input class="invisible w-0" name="auth-toggle" type="radio" value="Create Account"/>
+</label>
+</div>
+<!-- ActionsBar (Social Login) Component -->
+<div class="mb-8">
+<div class="flex items-center gap-4 mb-6">
+<div class="h-[1px] flex-1 bg-slate-200 dark:bg-slate-700"></div>
+<span class="text-xs uppercase tracking-widest text-slate-400 font-semibold">Social Sign-in</span>
+<div class="h-[1px] flex-1 bg-slate-200 dark:bg-slate-700"></div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-2 py-3 px-4 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors text-sm font-medium">
+<span class="material-symbols-outlined text-primary text-[20px]">brand_awareness</span>
+                                Google
+                            </button>
+<button class="flex items-center justify-center gap-2 py-3 px-4 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors text-sm font-medium">
+<span class="material-symbols-outlined text-primary text-[20px]">ios</span>
+                                Apple
+                            </button>
+</div>
+</div>
+<!-- Form Section -->
+<form class="space-y-6">
+<div class="relative floating-label-input">
+<input class="peer w-full bg-transparent border-0 border-b border-gold-accent/40 focus:ring-0 focus:border-primary py-3 transition-all placeholder:text-transparent" placeholder=" " type="email"/>
+<label class="absolute left-0 top-3 text-slate-400 text-sm transition-all pointer-events-none origin-left">Email Address</label>
+</div>
+<div class="relative floating-label-input">
+<input class="peer w-full bg-transparent border-0 border-b border-gold-accent/40 focus:ring-0 focus:border-primary py-3 transition-all placeholder:text-transparent" placeholder=" " type="password"/>
+<label class="absolute left-0 top-3 text-slate-400 text-sm transition-all pointer-events-none origin-left">Password</label>
+</div>
+<div class="flex items-center justify-between">
+<label class="flex items-center gap-2 cursor-pointer group">
+<div class="relative flex items-center">
+<input class="rounded border-gold-accent/50 text-primary focus:ring-primary w-4 h-4 bg-transparent" type="checkbox"/>
+</div>
+<span class="text-xs text-slate-500 group-hover:text-primary transition-colors">Keep me signed in</span>
+</label>
+<a class="text-xs text-primary hover:underline font-medium" href="#">Forgot Password?</a>
+</div>
+<button class="gold-glow-btn w-full py-4 text-white font-bold rounded-lg tracking-widest uppercase text-sm hover:opacity-90 transition-all active:scale-[0.98]" type="submit">
+                            Sign In to Account
+                        </button>
+</form>
+<p class="mt-8 text-center text-xs text-slate-400 leading-relaxed">
+                        By continuing, you agree to our <a class="underline" href="#">Terms of Service</a> and <a class="underline" href="#">Privacy Policy</a>.
+                    </p>
+</div>
+<!-- Floating Butterfly Decoration -->
+<div class="mt-12 opacity-20 hidden md:block">
+<span class="material-symbols-outlined text-primary text-5xl">flutter_dash</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Simple Footer for Legal -->
+<footer class="absolute bottom-6 left-1/2 -translate-x-1/2 lg:left-auto lg:right-20 lg:translate-x-0 z-20">
+<p class="text-[10px] uppercase tracking-widest text-slate-400">© 2024 Noura's Butterflies Cosmetics. All Rights Reserved.</p>
+</footer>
+</div>
+</body></html>

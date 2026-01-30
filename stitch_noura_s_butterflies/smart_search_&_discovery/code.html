@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Smart Search &amp; Discovery - Noura's Butterflies</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c65379",
+                        "background-light": "#fbfaf9",
+                        "background-dark": "#22252a",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .frosted-glass {
+            backdrop-filter: blur(12px);
+            background-color: rgba(251, 250, 249, 0.85);
+        }
+        .dark .frosted-glass {
+            background-color: rgba(34, 37, 42, 0.9);
+        }
+        .butterfly-accent {
+            opacity: 0.15;
+            pointer-events: none;
+            position: absolute;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-sans text-[#161214] dark:text-white antialiased">
+<!-- Main Content Background (Simulated) -->
+<div class="fixed inset-0 z-0 overflow-hidden opacity-30 grayscale pointer-events-none">
+<div class="max-w-[1200px] mx-auto p-20">
+<div class="h-96 w-full bg-gray-200 rounded-xl mb-10"></div>
+<div class="grid grid-cols-3 gap-8">
+<div class="h-64 bg-gray-200 rounded-xl"></div>
+<div class="h-64 bg-gray-200 rounded-xl"></div>
+<div class="h-64 bg-gray-200 rounded-xl"></div>
+</div>
+</div>
+</div>
+<!-- Search Overlay Container -->
+<div class="fixed inset-0 z-50 overflow-y-auto frosted-glass transition-all duration-300">
+<!-- Decorative Butterflies -->
+<div class="butterfly-accent top-10 left-10 text-primary">
+<span class="material-symbols-outlined !text-[120px]">flutter_dash</span>
+</div>
+<div class="butterfly-accent bottom-10 right-10 text-primary rotate-45">
+<span class="material-symbols-outlined !text-[180px]">flutter_dash</span>
+</div>
+<div class="relative z-10 max-w-[1100px] mx-auto min-h-screen flex flex-col px-6 lg:px-10 py-8">
+<!-- Top Bar / Close -->
+<div class="flex justify-end items-center mb-12">
+<button class="group flex items-center gap-2 text-[#816a71] dark:text-gray-400 hover:text-primary transition-colors">
+<span class="text-sm font-medium tracking-widest uppercase font-display">Close</span>
+<span class="material-symbols-outlined text-3xl">close</span>
+</button>
+</div>
+<!-- Central Search Interface -->
+<div class="w-full max-w-3xl mx-auto mb-16">
+<div class="relative group">
+<div class="absolute inset-y-0 left-6 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-primary text-3xl">search</span>
+</div>
+<input autofocus="" class="w-full h-20 pl-16 pr-8 bg-white/50 dark:bg-white/5 border-b-2 border-primary/30 focus:border-primary focus:ring-0 outline-none text-2xl font-display text-[#161214] dark:text-white placeholder:text-[#816a71]/50 rounded-t-xl transition-all" placeholder="Search for your natural glow..." type="text"/>
+<div class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-focus-within:w-full transition-all duration-500"></div>
+</div>
+</div>
+<!-- Content Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 flex-1">
+<!-- Left: Instant Suggestions -->
+<div class="lg:col-span-8">
+<div class="flex items-center justify-between mb-8 border-b border-gray-200 dark:border-gray-800 pb-4">
+<h2 class="text-2xl font-display font-bold text-[#161214] dark:text-white">Instant Suggestions</h2>
+<span class="text-sm text-primary font-medium">4 results found</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
+<!-- Product Item 1 -->
+<div class="group flex flex-col gap-3 cursor-pointer">
+<div class="relative w-full aspect-[3/4] overflow-hidden rounded-xl bg-white dark:bg-background-dark shadow-sm border border-gray-100 dark:border-gray-800">
+<div class="absolute inset-0 bg-center bg-cover transition-transform duration-500 group-hover:scale-110" data-alt="Rose Water Glow Mist product bottle" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA0ZlUAtpLtXKMFmZYgTOJHGkQbLZmJybJ_1bA6rIZKDBgSNyBvTmvnDYYrJ065G0mMkqn_kwbtNjNPqxXUBNLlq7yvLdAu0-F-p5J8Z-0QCL4vEWd40-FAdihfrRj5xefPuyyW4YqD6xckeqLjkKyd8zW_Au8vWKX2yJuDba_i49pAUXH3lwu3AKzraFba2NMjvOzHN83hv4mIabvZppApqf5tOtKz65InGS3IBgwjEpQ9IpfKQ1gqyw2yMSSMdcgMyf7S2EElDJw");'>
+</div>
+<div class="absolute top-2 right-2 bg-white/90 dark:bg-black/50 p-1.5 rounded-full shadow-sm opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary text-lg">favorite</span>
+</div>
+</div>
+<div>
+<h3 class="text-[#161214] dark:text-white font-medium text-sm leading-tight mb-1">Rose Water Glow Mist</h3>
+<p class="text-primary text-base font-bold">$24.00</p>
+</div>
+</div>
+<!-- Product Item 2 -->
+<div class="group flex flex-col gap-3 cursor-pointer">
+<div class="relative w-full aspect-[3/4] overflow-hidden rounded-xl bg-white dark:bg-background-dark shadow-sm border border-gray-100 dark:border-gray-800">
+<div class="absolute inset-0 bg-center bg-cover transition-transform duration-500 group-hover:scale-110" data-alt="Vegan Silk Lip Stain in soft red" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAN9wEU-T0DjzRLpYq72kA75XXGTiu-JA0feFyi8KnIn5LIJtTVGW2hcjpFf1pmwAsj-P_yRVw2hYiu7Qa5dSbFkHr5lKdt1l3mcy5Tn12vUkNLBRTQeHLDtLztmRojnNQsPrKhsNCnu7rrc2OlG7ai5N0zUnXOmjzG9cSI01WXw1onfZe6iDiIdCSNe4I75yKFIkwx3UqmjZldNlrOl_88JGdNwFGuYyfZPHMR50j4mlEWHgrlQ9Au2BN1NtpJnfuSl7XYXuUK7P8");'>
+</div>
+<div class="absolute top-2 right-2 bg-white/90 dark:bg-black/50 p-1.5 rounded-full shadow-sm opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary text-lg">favorite</span>
+</div>
+</div>
+<div>
+<h3 class="text-[#161214] dark:text-white font-medium text-sm leading-tight mb-1">Vegan Silk Lip Stain</h3>
+<p class="text-primary text-base font-bold">$18.00</p>
+</div>
+</div>
+<!-- Product Item 3 -->
+<div class="group flex flex-col gap-3 cursor-pointer">
+<div class="relative w-full aspect-[3/4] overflow-hidden rounded-xl bg-white dark:bg-background-dark shadow-sm border border-gray-100 dark:border-gray-800">
+<div class="absolute inset-0 bg-center bg-cover transition-transform duration-500 group-hover:scale-110" data-alt="Butterfly Wing Palette multi-color eyeshadows" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBBnljx-ap4bcUzFqhtoJ5U2nhgEn8q6NkFwXlAthaIXrPOyEJjop4FTJQeTF30BIbR87f3AmTzVPiqaGPecw8Kq_PJTNAzUsWMji7JqY3DegSS_dpBZirJD0zY6ZkwIPne-92rwy5_pH2YtVKjH-eY_5f5Vqn2d9MIAkJR3pYfP8PewduWqEtNeEX-phyLPPAXzYHWbEQx2JNuxKEyrZFw0fUy3xw5QX9lVuVSMIqBzAdfG5lJs_M3FoHxTw823S0dKEDz28ULL2s");'>
+</div>
+<div class="absolute top-2 right-2 bg-white/90 dark:bg-black/50 p-1.5 rounded-full shadow-sm opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary text-lg">favorite</span>
+</div>
+</div>
+<div>
+<h3 class="text-[#161214] dark:text-white font-medium text-sm leading-tight mb-1">Butterfly Wing Palette</h3>
+<p class="text-primary text-base font-bold">$42.00</p>
+</div>
+</div>
+<!-- Product Item 4 -->
+<div class="group flex flex-col gap-3 cursor-pointer">
+<div class="relative w-full aspect-[3/4] overflow-hidden rounded-xl bg-white dark:bg-background-dark shadow-sm border border-gray-100 dark:border-gray-800">
+<div class="absolute inset-0 bg-center bg-cover transition-transform duration-500 group-hover:scale-110" data-alt="Luminous Cheek Tint soft pink tube" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAySfZIr6oU31wYjXQRaeoqDcQFAzn0QntV51DJyP6jC_0m68Y6RPSI-Wjj38M8scrlbOcrfY8IsFRnxLR-H71-4DBpAFASY3TNOnRMs_17it1mJ_9aUahrU-QTxyv3nftYIEVoizDkJfgxDTmJWET07sHUjRfHIYAqRKQz4zrMZx7c-Ft8A5E-MWxpmt2S9c8JHfnCt6siCmbBPkTaZM37UUmJEZPIJQrz79zA5Dci5LK65hc9EdEkcx16kfArr0oaCmW-BgDYPpI");'>
+</div>
+<div class="absolute top-2 right-2 bg-white/90 dark:bg-black/50 p-1.5 rounded-full shadow-sm opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary text-lg">favorite</span>
+</div>
+</div>
+<div>
+<h3 class="text-[#161214] dark:text-white font-medium text-sm leading-tight mb-1">Luminous Cheek Tint</h3>
+<p class="text-primary text-base font-bold">$22.00</p>
+</div>
+</div>
+</div>
+<!-- Collections Empty State Mockup -->
+<div class="mt-12 bg-white/40 dark:bg-white/5 rounded-xl p-8 border border-white dark:border-gray-800">
+<p class="text-sm font-display italic text-[#816a71] dark:text-gray-400 mb-2">Can't find what you need?</p>
+<p class="text-lg text-[#161214] dark:text-white font-bold">Discover our <span class="text-primary border-b border-primary">Spring Blossom Collection</span> for fresh, natural looks.</p>
+</div>
+</div>
+<!-- Right Sidebar: Discovery -->
+<div class="lg:col-span-4 space-y-12">
+<!-- Trending Searches -->
+<section>
+<h3 class="text-lg font-display font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">trending_up</span>
+                            Trending Searches
+                        </h3>
+<div class="flex flex-wrap gap-2">
+<a class="px-4 py-2 bg-white dark:bg-white/10 rounded-full border border-gray-100 dark:border-gray-800 text-sm hover:border-primary hover:text-primary transition-all" href="#">#LuminousSkin</a>
+<a class="px-4 py-2 bg-white dark:bg-white/10 rounded-full border border-gray-100 dark:border-gray-800 text-sm hover:border-primary hover:text-primary transition-all" href="#">#VeganCheekTint</a>
+<a class="px-4 py-2 bg-white dark:bg-white/10 rounded-full border border-gray-100 dark:border-gray-800 text-sm hover:border-primary hover:text-primary transition-all" href="#">#ButterflyEyes</a>
+<a class="px-4 py-2 bg-white dark:bg-white/10 rounded-full border border-gray-100 dark:border-gray-800 text-sm hover:border-primary hover:text-primary transition-all" href="#">#SummerGlow</a>
+<a class="px-4 py-2 bg-white dark:bg-white/10 rounded-full border border-gray-100 dark:border-gray-800 text-sm hover:border-primary hover:text-primary transition-all" href="#">#BotanicalOil</a>
+</div>
+</section>
+<!-- Recently Viewed -->
+<section>
+<h3 class="text-lg font-display font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">history</span>
+                            Recently Viewed
+                        </h3>
+<div class="space-y-4">
+<div class="flex items-center gap-4 group cursor-pointer">
+<div class="size-16 rounded-lg bg-cover bg-center border border-gray-100 dark:border-gray-800" data-alt="Small thumbnail of Silk Lip Stain" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAkXdwKZJJzgezy9Y_GPAqOeJaXc_OatbUe0jEOl44zQPhkVHPFJBOjwxZIuVC0svc5xr9xMmtAfBYwjeQO58ufUkD-XQSHcMlNJE91ZdjRFSk76VXQeo_1w-ccEL176DIXKGLq6hqd8yBRYMz_PJCCMsdZGiPhkqZOaSLf_XG50l7e-TQjebzJ6SJQkh0MhCfOht_UVgit2lhAtFFKXERyrcPJ16k9kGOmOsVAWhHBzHYPFrAWqWVvYuxEHl5sVZY6Eu-N_pY_RBg");'></div>
+<div>
+<p class="text-sm font-medium group-hover:text-primary transition-colors">Vegan Silk Lip Stain</p>
+<p class="text-xs text-[#816a71] dark:text-gray-400">$18.00</p>
+</div>
+</div>
+<div class="flex items-center gap-4 group cursor-pointer">
+<div class="size-16 rounded-lg bg-cover bg-center border border-gray-100 dark:border-gray-800" data-alt="Small thumbnail of Glow Mist" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDjeq9YfgeKxCYgzVXrk3I2neFyH5FFuldBEBD3wPxevOepg4yXgmbdj3Vqe5m9ty6s-Zl9NURCgJ3APmPDuIA7VL1nIim9joFH2meQiLJe_ov_TAzvrSznI6GevGXniyq52JGqvDdxDpGFxZqMJP5r8HxpoDn5hSQeDWaFxj34XXbHjARGZOYxpQir2STEiqetKlCTUWwcydIUUdIeh2UTNEhbSaetRgYPeJD_ZDc2xHX3r496Evls3jhgg2vpLzDo09g-bjp_udM");'></div>
+<div>
+<p class="text-sm font-medium group-hover:text-primary transition-colors">Rose Water Glow Mist</p>
+<p class="text-xs text-[#816a71] dark:text-gray-400">$24.00</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Promotional Badge -->
+<div class="bg-primary/10 border border-primary/20 rounded-xl p-6 text-center">
+<span class="material-symbols-outlined text-primary text-4xl mb-2">loyalty</span>
+<h4 class="font-display font-bold text-primary mb-1">Butterfly Rewards</h4>
+<p class="text-sm text-[#816a71] dark:text-gray-300">Sign in to earn 20 points on your next purchase.</p>
+<button class="mt-4 w-full py-2 bg-primary text-white rounded-lg text-sm font-bold tracking-wide hover:bg-primary/90 transition-colors">Sign In</button>
+</div>
+</div>
+</div>
+<!-- Footer Decorative / Pagination (Faded) -->
+<div class="mt-auto py-10 flex justify-center opacity-40">
+<div class="flex items-center gap-8">
+<span class="material-symbols-outlined">eco</span>
+<span class="material-symbols-outlined">cruelty_free</span>
+<span class="material-symbols-outlined">recycling</span>
+</div>
+</div>
+</div>
+</div>
+</body></html>
